@@ -1,0 +1,269 @@
+<pre class='metadata'>
+Title: DRAFT Carbon Call - Metadata Workgroup
+Shortname: CC-Metadata
+Level: 1
+Status: LD
+URL: https://github.com/marleyg/cc-metadata
+Editor: Marley Gray (Microsoft), https://microsoft.com, marleyg@microsoft.com
+Editor: 
+Abstract: This document is the working specification Carbon Call Metadata Expert Workgroup.
+Markup Shorthands: markdown yes, idl yes, dfn yes
+Boilerplate: omit copyright, omit conformance
+</pre>
+
+# Introduction # {#intro}
+
+This document is the working specification for the Carbon Call Metadata workgroup and is a work in progress.
+
+Advisement:
+  This specification is a work in progress and is subject to change. It is not a final or otherwise published version.
+
+## Status of this Document ## {#doc-status}
+
+Comments regarding the document are welcome, please file issues directly on [GitHub](https://github.com/marleyg/cc-metadata/index.bs).
+
+
+## Scope ## {#scope}
+
+The scope of this document is to reach consensus on a metadata framework.
+
+## Intended Audience ## {#audience}
+
+This technical specification is for
+
+- software developers who want to build software to edit, exchange or store data in the format defined by this specification
+- business analysts who want to understand the data model and data dictionary defined by this specification
+- data scientists who want to understand the data model and data dictionary defined by this specification
+- anyone else who wants to understand the data model and data dictionary defined by this specification
+
+## About the Carbon Call Metadata Expert Workgroup ## {#about}
+
+The Carbon Call Metadata Expert Workgroup is a group of experts from the Carbon Call community who are working to define a metadata framework for the Carbon Call.
+
+## Disclaimer ## {#disclaimer}
+
+While Carbon Call encourages the implementation of the technical specifications by all entities for interoperability, those organiazations and individuals who contributed to the development of this 
+document assume responsibility for any consequences or damages resulting directly or indirectly from the use of this document.
+
+## License ## {#selectionlicense}
+
+The license can be found in [[#license]].
+
+# Terminology # {#terminology}
+
+: <dfn>Metadata</dfn>
+:: 
+    Metadata is data that describes other data. Metadata is used to provide information about the data, such as how it was created, when it was last updated, and how it should be interpreted.
+
+: <dfn>Metadata Framework</dfn>
+:: 
+    A metadata framework is a set of standards, specifications, and tools that enable the creation, management, and use of metadata.
+
+: <dfn>Metadata Schema</dfn>
+:: 
+    A metadata schema is a set of rules that define the structure and meaning of metadata. A metadata schema is often expressed in a machine-readable language.
+
+: <dfn>Metadata Instance</dfn>
+:: 
+    A metadata instance is a specific instance of metadata that conforms to a metadata schema.
+
+: <dfn>Metadata Element</dfn>
+:: 
+    A metadata element is a single piece of metadata that is part of a metadata instance.
+
+: <dfn>Metadata Element Name</dfn>
+:: 
+    A metadata element name is the name of a metadata element.
+
+: <dfn>Metadata Element Value</dfn>
+:: 
+    A metadata element value is the value of a metadata element.
+
+: <dfn>Metadata Element Type</dfn>
+:: 
+    A metadata element type is the type of a metadata element.
+
+: <dfn>Metadata Element Description</dfn>
+:: 
+    A metadata element description is a description of a metadata element.
+
+: <dfn>Metadata Element Definition</dfn>
+:: 
+    A metadata element definition is a definition of a metadata element.
+
+: <dfn>Metadata Element Attribute</dfn>
+:: 
+    A metadata element attribute is an attribute of a metadata element.
+
+: <dfn>Metadata Element Attribute Name</dfn>
+:: 
+    A metadata element attribute name is the name of a metadata element attribute.
+
+: <dfn>Metadata Element Attribute Value</dfn>
+:: 
+    A metadata element attribute value is the value of a metadata element attribute.
+
+: <dfn>Metadata Element Attribute Type</dfn>
+:: 
+    A metadata element attribute type is the type of a metadata element attribute.
+
+: <dfn>Metadata Element Attribute Description</dfn>
+:: 
+    A metadata element attribute description is a description of a metadata element attribute.
+
+: <dfn>Metadata Element Attribute Definition</dfn>
+:: 
+    A metadata element attribute definition is a definition of a metadata element attribute.
+
+: <dfn>Metadata Element Attribute Value Set</dfn>
+:: 
+    A metadata element attribute value set is a set of values that a metadata element attribute can have.
+
+: <dfn>Metadata Element Attribute Value Set Name</dfn>
+:: 
+    A metadata element attribute value set name is the name of a metadata element attribute value set.
+
+: <dfn>Metadata Element Attribute Value Set Value</dfn>
+:: 
+    A metadata element attribute value set value is the value of a metadata element attribute value set.
+
+: <dfn>Metadata Element Attribute Value Set Type</dfn>
+:: 
+    A metadata element attribute value set type is the type of a metadata element attribute value set.
+
+: <dfn>Metadata Element Attribute Value Set Description</dfn>
+:: 
+    A metadata element attribute value set description is a description of a metadata element attribute value set.
+
+: <dfn>Metadata Element Attribute Value Set Definition</dfn>
+:: 
+    A metadata element attribute value set definition is a definition of a metadata element attribute value set.
+
+# Metadata Framework # {#metadata-framework}
+
+## Metadata Framework Overview ## {#metadata-framework-overview}
+
+The Carbon Call Metadata Framework is a set of standards, specifications, and tools that enable the creation, management, and use of metadata.
+
+The Carbon Call Metadata Framework is comprised of the following components:
+
+- Metadata Schema
+- Metadata Instance
+- Metadata Element
+- Metadata Element Name
+- Metadata Element Value
+- Metadata Element Type
+- Metadata Element Description
+- Metadata Element Definition
+- Metadata Element Attribute
+- Metadata Element Attribute Name
+- Metadata Element Attribute Value
+- Metadata Element Attribute Type
+- Metadata Element Attribute Description
+- Metadata Element Attribute Definition
+- Metadata Element Attribute Value Set
+- Metadata Element Attribute Value Set Name
+- Metadata Element Attribute Value Set Value
+- Metadata Element Attribute Value Set Type
+- Metadata Element Attribute Value Set Description
+- Metadata Element Attribute Value Set Definition
+
+## Metadata Schema ## {#metadata-schema}
+
+A metadata schema is a set of rules that define the structure and meaning of metadata. A metadata schema is often expressed in a machine-readable language.
+
+The Carbon Call Metadata Framework uses the JSON-LD format to define the metadata schema.
+
+## Metadata Instance ## {#metadata-instance}
+
+A metadata instance is a specific instance of metadata that conforms to a metadata schema.
+
+The Carbon Call Metadata Framework uses the JSON-LD format to define the metadata instance.
+
+## Metadata Element ## {#metadata-element}
+
+A metadata element is a single piece of metadata that is part of a metadata instance.
+
+### Properties ### {#dt-metadata-element-properties}
+
+A Metadata Element has the following properties:
+
+<figure id="metadata-element-properties-table" dfn-type="element-attr" dfn-for="MetadataElement">
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Property
+        <th>Type
+        <th>Req
+        <th>Specification
+    <tbody>
+      <tr>
+        <td><dfn>id</dfn> : [=Id=]
+        <td>String
+        <td>M
+        <td>The ecological product identifier, See [[#dt-id]] for details.
+      <tr>
+        <td><dfn>name</dfn>
+        <td>String
+        <td>M
+        <td>The name of the ecological project.
+      <tr>
+        <td><dfn>description</dfn> :
+        <td>String
+        <td>M
+        <td>A brief description of the ecological project.
+      <tr>
+        <td><dfn>address</dfn>es : [=Address=]
+        <td>Array
+        <td>M
+        <td>The non-empty set of addresses. Each value can represent physical, mailing and or legal addresses. See [[#dt-address]] for details.
+      <tr>
+        <td><dfn>owners</dfn> : [=Id=]
+        <td>Array
+        <td>M
+        <td>The non-empty set of [=Id=]. Each of the values in the set is supposed to uniquely identify each owner of the project.
+      <tr>
+        <td><dfn>country</dfn> : [=ISO3166CC=]
+        <td>String
+        <td>M
+        <td>
+            The country where the project is located. The value MUST be a valid ISO 3166-1 alpha-2 country code.
+            See [[#dt-iso3166cc]] for details.
+      <tr>
+        <td><dfn>region</dfn> : {{Region}}
+        <td>String
+        <td>M
+        <td>The region the project is located in.
+      <tr>
+        <td><dfn>informationLink</dfn> : [=VerifiedLink=]
+        <td>String
+        <td>M
+        <td>A URI for information, i.e., webpage. See[[#dt-verified-link]]
+      <tr>
+        <td><dfn>mediaLinks</dfn> : [=VerifiedLink=]
+        <td>Array
+        <td>O
+        <td>An array of optional media links. See[[#dt-verified-link]]
+      <tr>
+        <td><dfn>modularBenefitProjects</dfn> : [=ModularBenefitProject=][]
+        <td>Array
+        <td>M
+        <td>A collection of modularBenefitProjects that belong to this ecological project.
+  </table>
+  <figcaption>Properties of data type EcologicalProject</figcaption>
+
+</figure>
+
+
+# Appendix A: License # {#license}
+
+<pre class=include>
+path: LICENSE
+</pre>
+
+# Appendix B: Changelog # {#changelog}
+
+Here we will document changes in the specification as they are made.
+
+## Version 1.0.20230418 (April 18, 2023) ## {#changelog-1.0.20230418}
+
