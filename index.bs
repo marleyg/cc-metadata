@@ -201,59 +201,63 @@ A Metadata Element has the following properties:
         <td><dfn>id</dfn> : [=Id=]
         <td>String
         <td>M
-        <td>The ecological product identifier, See [[#dt-id]] for details.
+        <td>The data element identifier, See [[#dt-id]] for details.
       <tr>
         <td><dfn>name</dfn>
         <td>String
         <td>M
-        <td>The name of the ecological project.
+        <td>The name of the data element.
       <tr>
         <td><dfn>description</dfn> :
         <td>String
         <td>M
-        <td>A brief description of the ecological project.
-      <tr>
-        <td><dfn>address</dfn>es : [=Address=]
-        <td>Array
-        <td>M
-        <td>The non-empty set of addresses. Each value can represent physical, mailing and or legal addresses. See [[#dt-address]] for details.
-      <tr>
-        <td><dfn>owners</dfn> : [=Id=]
-        <td>Array
-        <td>M
-        <td>The non-empty set of [=Id=]. Each of the values in the set is supposed to uniquely identify each owner of the project.
-      <tr>
-        <td><dfn>country</dfn> : [=ISO3166CC=]
-        <td>String
-        <td>M
-        <td>
-            The country where the project is located. The value MUST be a valid ISO 3166-1 alpha-2 country code.
-            See [[#dt-iso3166cc]] for details.
-      <tr>
-        <td><dfn>region</dfn> : {{Region}}
-        <td>String
-        <td>M
-        <td>The region the project is located in.
-      <tr>
-        <td><dfn>informationLink</dfn> : [=VerifiedLink=]
-        <td>String
-        <td>M
-        <td>A URI for information, i.e., webpage. See[[#dt-verified-link]]
-      <tr>
-        <td><dfn>mediaLinks</dfn> : [=VerifiedLink=]
-        <td>Array
-        <td>O
-        <td>An array of optional media links. See[[#dt-verified-link]]
-      <tr>
-        <td><dfn>modularBenefitProjects</dfn> : [=ModularBenefitProject=][]
-        <td>Array
-        <td>M
-        <td>A collection of modularBenefitProjects that belong to this ecological project.
+        <td>A brief description of the data MetadataElement.
+    
   </table>
-  <figcaption>Properties of data type EcologicalProject</figcaption>
+  <figcaption>Properties of data type Element</figcaption>
 
 </figure>
 
+## Data Type: <dfn>Decimal</dfn> ## {#dt-decimal}
+
+A dotted-decimal number. 
+
+Example values:
+<div class=example>
+    - `10`
+    - `42.12`
+    - `-182.84`
+</div>
+
+### JSON Representation ### {#dt-decimal-json}
+
+Each Decimal MUST be encoded as a JSON String.
+
+## Data Type: <dfn>String</dfn> ## {#dt-string}
+
+A regular UTF-8 String.
+
+### JSON Data Representation ### {#dt-string-json}
+
+Each [=String=] MUST be encoded as a JSON String.
+
+## Data Type: <dfn>Id</dfn> ## {#dt-id}
+
+A Id MUST either be a UUID v4 as specified in [[!RFC4122]].
+
+or a unique key that can be represented as a string.
+
+### JSON Representation ### {#dt-id-json}
+
+Each Id MUST be encoded as a JSON String, see [[#dt-string-json]] for details.
+
+Example JSON string value: 
+
+<div class=example>
+```json
+"f4b1225a-bd44-4c8e-861d-079e4e1dfd69"
+```
+</div>
 
 # Appendix A: License # {#license}
 
