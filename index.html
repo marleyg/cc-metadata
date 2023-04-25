@@ -1489,7 +1489,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 739efad8e, updated Thu Mar 23 07:02:40 2023 -0700" name="generator">
   <link href="https://github.com/marleyg/cc-metadata" rel="canonical">
-  <meta content="6664a9aafbaa7b0357a8a8348deec9c86a60d459" name="document-revision">
+  <meta content="a15d7211dbc4c53b8e6b927c5ed516cb4a7cf1ec" name="document-revision">
 <style>/* style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -2059,7 +2059,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">DRAFT Carbon Call - Metadata Workgroup</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2023-04-20">20 April 2023</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2023-04-25">25 April 2023</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2094,31 +2094,50 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      </ol>
     <li><a href="#terminology"><span class="secno">2</span> <span class="content">Terminology</span></a>
     <li>
-     <a href="#metadata-framework①"><span class="secno">3</span> <span class="content">Metadata Framework</span></a>
+     <a href="#sustainabilty-report-metadata"><span class="secno">3</span> <span class="content">Sustainability Report Metadata</span></a>
      <ol class="toc">
-      <li><a href="#metadata-framework-overview"><span class="secno">3.1</span> <span class="content">Metadata Framework Overview</span></a>
-      <li><a href="#metadata-schema①"><span class="secno">3.2</span> <span class="content">Metadata Schema</span></a>
-      <li><a href="#metadata-instance①"><span class="secno">3.3</span> <span class="content">Metadata Instance</span></a>
+      <li><a href="#sustainabilty-report-metadata-overview"><span class="secno">3.1</span> <span class="content">Sustainability Report Metadata Overview</span></a>
       <li>
-       <a href="#metadata-element①"><span class="secno">3.4</span> <span class="content">Metadata Element</span></a>
+       <a href="#sustainabilty-report-metadata-schema"><span class="secno">3.2</span> <span class="content">Sustainability Report Metadata Schema</span></a>
        <ol class="toc">
-        <li><a href="#dt-metadata-element-properties"><span class="secno">3.4.1</span> <span class="content">Properties</span></a>
+        <li><a href="#dt-sustainabilty-report-metadata-properties"><span class="secno">3.2.1</span> <span class="content">Properties</span></a>
        </ol>
       <li>
-       <a href="#dt-decimal"><span class="secno">3.5</span> <span class="content">Data Type: <span>Decimal</span></span></a>
+       <a href="#dt-metadata"><span class="secno">3.3</span> <span class="content">Data Type: Metadata</span></a>
        <ol class="toc">
-        <li><a href="#dt-decimal-json"><span class="secno">3.5.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-metadata-properties"><span class="secno">3.3.1</span> <span class="content">Properties</span></a>
        </ol>
       <li>
-       <a href="#dt-string"><span class="secno">3.6</span> <span class="content">Data Type: <span>String</span></span></a>
+       <a href="#dt-reporting-period"><span class="secno">3.4</span> <span class="content">Data Type: <span>ReportingPeriod</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-string-json"><span class="secno">3.6.1</span> <span class="content">JSON Data Representation</span></a>
+        <li><a href="#dt-reporting-period-properties"><span class="secno">3.4.1</span> <span class="content">Properties</span></a>
        </ol>
       <li>
-       <a href="#dt-id"><span class="secno">3.7</span> <span class="content">Data Type: <span>Id</span></span></a>
+       <a href="#dt-industry"><span class="secno">3.5</span> <span class="content">Data Type: <span>Industry</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-id-json"><span class="secno">3.7.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-industry-properties"><span class="secno">3.5.1</span> <span class="content">Properties</span></a>
        </ol>
+      <li>
+       <a href="#dt-decimal"><span class="secno">3.6</span> <span class="content">Data Type: <span>Decimal</span></span></a>
+       <ol class="toc">
+        <li><a href="#dt-decimal-json"><span class="secno">3.6.1</span> <span class="content">JSON Representation</span></a>
+       </ol>
+      <li>
+       <a href="#dt-string"><span class="secno">3.7</span> <span class="content">Data Type: <span>String</span></span></a>
+       <ol class="toc">
+        <li><a href="#dt-string-json"><span class="secno">3.7.1</span> <span class="content">JSON Data Representation</span></a>
+       </ol>
+      <li>
+       <a href="#dt-grid"><span class="secno">3.8</span> <span class="content">Data Type: <span>GRID</span></span></a>
+       <ol class="toc">
+        <li><a href="#dt-grid-json"><span class="secno">3.8.1</span> <span class="content">JSON Representation</span></a>
+       </ol>
+     </ol>
+    <li>
+     <a href="#samples"><span class="secno">4</span> <span class="content">Samples</span></a>
+     <ol class="toc">
+      <li><a href="#sample-sustainability-report"><span class="secno">4.1</span> <span class="content">Sustainability Report</span></a>
+      <li><a href="#sample-sustainability-report-metadata"><span class="secno">4.2</span> <span class="content">Sustainability Report Metadata</span></a>
      </ol>
     <li><a href="#license"><span class="secno"></span> <span class="content">Appendix A: License</span></a>
     <li>
@@ -2131,11 +2150,6 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      <ol class="toc">
       <li><a href="#index-defined-here"><span class="secno"></span> <span class="content">Terms defined by this specification</span></a>
      </ol>
-    <li>
-     <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
-     <ol class="toc">
-      <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
-     </ol>
    </ol>
   </nav>
   <main>
@@ -2145,7 +2159,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    <h3 class="heading settled" data-level="1.1" id="doc-status"><span class="secno">1.1. </span><span class="content">Status of this Document</span><a class="self-link" href="#doc-status"></a></h3>
    <p>Comments regarding the document are welcome, please file issues directly on <a href="https://github.com/marleyg/cc-metadata/index.bs">GitHub</a>.</p>
    <h3 class="heading settled" data-level="1.2" id="scope"><span class="secno">1.2. </span><span class="content">Scope</span><a class="self-link" href="#scope"></a></h3>
-   <p>The scope of this document is to reach consensus on a metadata framework.</p>
+   <p>The scope of this document is to reach consensus on a Sustainability Report Metadata.</p>
    <h3 class="heading settled" data-level="1.3" id="audience"><span class="secno">1.3. </span><span class="content">Intended Audience</span><a class="self-link" href="#audience"></a></h3>
    <p>This technical specification is for</p>
    <ul>
@@ -2159,7 +2173,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      <p>anyone else who wants to understand the data model and data dictionary defined by this specification</p>
    </ul>
    <h3 class="heading settled" data-level="1.4" id="about"><span class="secno">1.4. </span><span class="content">About the Carbon Call Metadata Expert Workgroup</span><a class="self-link" href="#about"></a></h3>
-   <p>The Carbon Call Metadata Expert Workgroup is a group of experts from the Carbon Call community who are working to define a metadata framework for the Carbon Call.</p>
+   <p>The Carbon Call Metadata Expert Workgroup is a group of experts from the Carbon Call community who are working to define a Sustainability Report Metadata for the Carbon Call.</p>
    <h3 class="heading settled" data-level="1.5" id="disclaimer"><span class="secno">1.5. </span><span class="content">Disclaimer</span><a class="self-link" href="#disclaimer"></a></h3>
    <p>While Carbon Call encourages the implementation of the technical specifications by all entities for interoperability, those organiazations and individuals who contributed to the development of this
 document assume responsibility for any consequences or damages resulting directly or indirectly from the use of this document.</p>
@@ -2170,9 +2184,9 @@ document assume responsibility for any consequences or damages resulting directl
     <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata">Metadata<a class="self-link" href="#metadata"></a></dfn>
     <dd data-md>
      <p>Metadata is data that describes other data. Metadata is used to provide information about the data, such as how it was created, when it was last updated, and how it should be interpreted.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-framework">Metadata Framework<a class="self-link" href="#metadata-framework"></a></dfn>
+    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="sustainability-report-metadata">Sustainability Report Metadata<a class="self-link" href="#sustainability-report-metadata"></a></dfn>
     <dd data-md>
-     <p>A metadata framework is a set of standards, specifications, and tools that enable the creation, management, and use of metadata.</p>
+     <p>A Sustainability Report Metadata is a set of metadata about a sustainability report that is used to discover, understand, and use the sustainability report.</p>
     <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-schema">Metadata Schema<a class="self-link" href="#metadata-schema"></a></dfn>
     <dd data-md>
      <p>A metadata schema is a set of rules that define the structure and meaning of metadata. A metadata schema is often expressed in a machine-readable language.</p>
@@ -2233,18 +2247,22 @@ document assume responsibility for any consequences or damages resulting directl
     <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-attribute-value-set-definition">Metadata Element Attribute Value Set Definition<a class="self-link" href="#metadata-element-attribute-value-set-definition"></a></dfn>
     <dd data-md>
      <p>A metadata element attribute value set definition is a definition of a metadata element attribute value set.</p>
+    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="global-report-identifier-grid">Global Report Identifier (GR.ID)<a class="self-link" href="#global-report-identifier-grid"></a></dfn>
+    <dd data-md>
+     <p>A Global Report Identifier (GR.ID) is a unique identifier for a sustainability report. The Global Report Identifier (GR.ID) is generated by the GR.ID platform
+collects a range of metadata about the report, and then calculates a unique hash (or fingerprint) for the report.</p>
    </dl>
-   <h2 class="heading settled" data-level="3" id="metadata-framework①"><span class="secno">3. </span><span class="content">Metadata Framework</span><a class="self-link" href="#metadata-framework①"></a></h2>
-   <h3 class="heading settled" data-level="3.1" id="metadata-framework-overview"><span class="secno">3.1. </span><span class="content">Metadata Framework Overview</span><a class="self-link" href="#metadata-framework-overview"></a></h3>
-   <p>The Carbon Call Metadata Framework is a set of standards, specifications, and tools that enable the creation, management, and use of metadata.</p>
-   <p>The Carbon Call Metadata Framework is comprised of the following components:</p>
+   <h2 class="heading settled" data-level="3" id="sustainabilty-report-metadata"><span class="secno">3. </span><span class="content">Sustainability Report Metadata</span><a class="self-link" href="#sustainabilty-report-metadata"></a></h2>
+   <h3 class="heading settled" data-level="3.1" id="sustainabilty-report-metadata-overview"><span class="secno">3.1. </span><span class="content">Sustainability Report Metadata Overview</span><a class="self-link" href="#sustainabilty-report-metadata-overview"></a></h3>
+   <p>The Carbon Call Sustainability Report Metadata is a set of metadata for the report that makes it discoverable, understandable, and usable.</p>
+   <p>The Carbon Call Sustainability Report Metadata is comprised of the following components:</p>
    <ul>
     <li data-md>
      <p>Metadata Schema</p>
     <li data-md>
      <p>Metadata Instance</p>
     <li data-md>
-     <p>Metadata Element</p>
+     <p>Collection of Metadata Elements</p>
     <li data-md>
      <p>Metadata Element Name</p>
     <li data-md>
@@ -2268,29 +2286,15 @@ document assume responsibility for any consequences or damages resulting directl
     <li data-md>
      <p>Metadata Element Attribute Definition</p>
     <li data-md>
-     <p>Metadata Element Attribute Value Set</p>
+     <p>Sustainability Report</p>
     <li data-md>
-     <p>Metadata Element Attribute Value Set Name</p>
-    <li data-md>
-     <p>Metadata Element Attribute Value Set Value</p>
-    <li data-md>
-     <p>Metadata Element Attribute Value Set Type</p>
-    <li data-md>
-     <p>Metadata Element Attribute Value Set Description</p>
-    <li data-md>
-     <p>Metadata Element Attribute Value Set Definition</p>
+     <p>Sustainability Report Metadata</p>
    </ul>
-   <h3 class="heading settled" data-level="3.2" id="metadata-schema①"><span class="secno">3.2. </span><span class="content">Metadata Schema</span><a class="self-link" href="#metadata-schema①"></a></h3>
-   <p>A metadata schema is a set of rules that define the structure and meaning of metadata. A metadata schema is often expressed in a machine-readable language.</p>
-   <p>The Carbon Call Metadata Framework uses the JSON-LD format to define the metadata schema.</p>
-   <h3 class="heading settled" data-level="3.3" id="metadata-instance①"><span class="secno">3.3. </span><span class="content">Metadata Instance</span><a class="self-link" href="#metadata-instance①"></a></h3>
-   <p>A metadata instance is a specific instance of metadata that conforms to a metadata schema.</p>
-   <p>The Carbon Call Metadata Framework uses the JSON-LD format to define the metadata instance.</p>
-   <h3 class="heading settled" data-level="3.4" id="metadata-element①"><span class="secno">3.4. </span><span class="content">Metadata Element</span><a class="self-link" href="#metadata-element①"></a></h3>
-   <p>A metadata element is a single piece of metadata that is part of a metadata instance.</p>
-   <h4 class="heading settled" data-level="3.4.1" id="dt-metadata-element-properties"><span class="secno">3.4.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-metadata-element-properties"></a></h4>
-   <p>A Metadata Element has the following properties:</p>
-   <figure id="metadata-element-properties-table">
+   <h3 class="heading settled" data-level="3.2" id="sustainabilty-report-metadata-schema"><span class="secno">3.2. </span><span class="content">Sustainability Report Metadata Schema</span><a class="self-link" href="#sustainabilty-report-metadata-schema"></a></h3>
+   <p>A metadata schema is a set of rules that define the structure and meaning of metadata. A metadata schema is expressed in a machine-readable language.</p>
+   <h4 class="heading settled" data-level="3.2.1" id="dt-sustainabilty-report-metadata-properties"><span class="secno">3.2.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-sustainabilty-report-metadata-properties"></a></h4>
+   <p>The Sustainability Report Metadata has the following properties:</p>
+   <figure id="sustainabilty-report-metadata-properties-table">
     <table class="data">
      <thead>
       <tr>
@@ -2300,24 +2304,181 @@ document assume responsibility for any consequences or damages resulting directl
        <th>Specification 
      <tbody>
       <tr>
-       <td><dfn data-dfn-for="MetadataElement" data-dfn-type="element-attr" data-export id="element-attrdef-metadataelement-id"><code>id</code><a class="self-link" href="#element-attrdef-metadataelement-id"></a></dfn> : <a data-link-type="dfn" href="#id" id="ref-for-id">Id</a> 
+       <td><dfn data-dfn-for="SustainabilityReport" data-dfn-type="element-attr" data-export id="element-attrdef-sustainabilityreport-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-sustainabilityreport-grid"></a></dfn> : <a data-link-type="dfn" href="#grid" id="ref-for-grid">GRID</a> 
        <td>String 
        <td>M 
-       <td>The data element identifier, See <a href="#dt-id">§ 3.7 Data Type: Id</a> for details. 
+       <td>The Sustainabilty Report global identifier, See <a href="#dt-grid">§ 3.8 Data Type: GRID</a> for details. 
       <tr>
-       <td><dfn data-dfn-for="MetadataElement" data-dfn-type="element-attr" data-export id="element-attrdef-metadataelement-name"><code>name</code><a class="self-link" href="#element-attrdef-metadataelement-name"></a></dfn> 
-       <td>String 
+       <td><dfn data-dfn-for="SustainabilityReport" data-dfn-type="element-attr" data-export id="element-attrdef-sustainabilityreport-metadata"><code>metadata</code><a class="self-link" href="#element-attrdef-sustainabilityreport-metadata"></a></dfn> 
+       <td>Object 
        <td>M 
-       <td>The name of the data element. 
+       <td>A metadata object, see <a href="#dt-metadata">§ 3.3 Data Type: Metadata</a> for details. 
       <tr>
-       <td><dfn data-dfn-for="MetadataElement" data-dfn-type="element-attr" data-export id="element-attrdef-metadataelement-description"><code>description</code><a class="self-link" href="#element-attrdef-metadataelement-description"></a></dfn> : 
+       <td><dfn data-dfn-for="SustainabilityReport" data-dfn-type="element-attr" data-export id="element-attrdef-sustainabilityreport-report"><code>report</code><a class="self-link" href="#element-attrdef-sustainabilityreport-report"></a></dfn> : 
        <td>String 
        <td>M 
-       <td>A brief description of the data MetadataElement. 
+       <td>The report data serialized as a bytestring or Base64 encoded string. 
     </table>
-    <figcaption>Properties of data type Element</figcaption>
+    <figcaption>Properties of a Sustainability Report</figcaption>
    </figure>
-   <h3 class="heading settled" data-level="3.5" id="dt-decimal"><span class="secno">3.5. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="decimal">Decimal<a class="self-link" href="#decimal"></a></dfn></span><a class="self-link" href="#dt-decimal"></a></h3>
+   <h3 class="heading settled" data-level="3.3" id="dt-metadata"><span class="secno">3.3. </span><span class="content">Data Type: Metadata</span><a class="self-link" href="#dt-metadata"></a></h3>
+   <p>A metadata object is a set of metadata elements that describe a sustainability report.</p>
+   <h4 class="heading settled" data-level="3.3.1" id="dt-metadata-properties"><span class="secno">3.3.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-metadata-properties"></a></h4>
+   <p>A metadata object has the following properties:</p>
+   <figure id="metadata-properties-table">
+    <table class="data">
+     <thead>
+      <tr>
+       <th>Property 
+       <th>Type 
+       <th>Req 
+       <th>Specification 
+     <tbody>
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-metadata-grid"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The GRID of the report that the metadata is about, see <a href="#dt-grid">§ 3.8 Data Type: GRID</a> for details. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-organizationidentifier"><code>organizationIdentifier</code><a class="self-link" href="#element-attrdef-metadata-organizationidentifier"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>A unique identifier for the organization that produced the report. The identifier MUST include a scheme prefix and the identity code used for the scheme. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-organizationname"><code>organizationName</code><a class="self-link" href="#element-attrdef-metadata-organizationname"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The name of the organization that produced the report. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-domicile"><code>domicile</code><a class="self-link" href="#element-attrdef-metadata-domicile"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The country where the organization is domiciled. The country MUST be specified using the ISO 3166-1 alpha-2 country code. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-operatingcountries"><code>operatingCountries</code><a class="self-link" href="#element-attrdef-metadata-operatingcountries"></a></dfn> 
+       <td>Array 
+       <td>M 
+       <td>The countries where the organization operates. The countries MUST be specified using the ISO 3166-1 alpha-2 country code. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-languages"><code>languages</code><a class="self-link" href="#element-attrdef-metadata-languages"></a></dfn> 
+       <td>Array 
+       <td>M 
+       <td>The languages used in the report. The languages MUST be specified using the ISO 639-1 language code. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reporttype"><code>reportType</code><a class="self-link" href="#element-attrdef-metadata-reporttype"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The type of the report. The report type MUST be specified using the ReportType enumeration. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportissuedate"><code>reportIssueDate</code><a class="self-link" href="#element-attrdef-metadata-reportissuedate"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The date the report was issued. The date MUST be specified using the ISO 8601 date format. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportingperiod"><code>reportingPeriod</code><a class="self-link" href="#element-attrdef-metadata-reportingperiod"></a></dfn> 
+       <td>Object 
+       <td>M 
+       <td>The reporting period of the report. The reporting period MUST be specified using the ReportingPeriod type, see <a href="#dt-reporting-period">§ 3.4 Data Type: ReportingPeriod</a> for details. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportreplaces"><code>reportReplaces</code><a class="self-link" href="#element-attrdef-metadata-reportreplaces"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The GRID of the report that this report replaces, if any. See <a href="#dt-grid">§ 3.8 Data Type: GRID</a> for details. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-location"><code>location</code><a class="self-link" href="#element-attrdef-metadata-location"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The location of the report. The location MUST be specified using a URL or URI. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-industry"><code>industry</code><a class="self-link" href="#element-attrdef-metadata-industry"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The industry of the organization. The industry MUST be specified using the Industry type, see <a href="#dt-industry">§ 3.5 Data Type: Industry</a> for details. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-performance"><code>performance</code><a class="self-link" href="#element-attrdef-metadata-performance"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>xBRL-JSON snippet that provides certain performance information. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportformat"><code>reportFormat</code><a class="self-link" href="#element-attrdef-metadata-reportformat"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The string name for the format of the report. The report format MUST be specified using the ReportFormat enumeration. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportingstandard"><code>reportingStandard</code><a class="self-link" href="#element-attrdef-metadata-reportingstandard"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The string name for the reporting standard used in the report. The reporting standard MUST be specified using the ReportingStandard enumeration. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-assurance"><code>assurance</code><a class="self-link" href="#element-attrdef-metadata-assurance"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>Scheme prefix and identifier for the provider that conducted the assurance or audit. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-priorreport"><code>priorReport</code><a class="self-link" href="#element-attrdef-metadata-priorreport"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The GRID of the report that this report is based on, if any. See <a href="#dt-grid">§ 3.8 Data Type: GRID</a> for details. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reporthash"><code>reportHash</code><a class="self-link" href="#element-attrdef-metadata-reporthash"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>SHA-256 hash of the report. 
+    </table>
+    <figcaption>Properties of a Metadata Object</figcaption>
+   </figure>
+   <h3 class="heading settled" data-level="3.4" id="dt-reporting-period"><span class="secno">3.4. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="reportingperiod">ReportingPeriod<a class="self-link" href="#reportingperiod"></a></dfn></span><a class="self-link" href="#dt-reporting-period"></a></h3>
+   <p>A reporting period is a set of reporting period elements that describe the reporting period of a sustainability report.</p>
+   <h4 class="heading settled" data-level="3.4.1" id="dt-reporting-period-properties"><span class="secno">3.4.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-reporting-period-properties"></a></h4>
+   <figure id="reporting-period-properties-table">
+    <table class="data">
+     <thead>
+      <tr>
+       <th>Property 
+       <th>Type 
+       <th>Req 
+       <th>Specification 
+     <tbody>
+      <tr>
+       <td><dfn data-dfn-for="ReportingPeriod" data-dfn-type="element-attr" data-export id="element-attrdef-reportingperiod-startdate"><code>startDate</code><a class="self-link" href="#element-attrdef-reportingperiod-startdate"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The start date of the reporting period. The date MUST be specified using the ISO 8601 date format. 
+      <tr>
+       <td><dfn data-dfn-for="ReportingPeriod" data-dfn-type="element-attr" data-export id="element-attrdef-reportingperiod-enddate"><code>endDate</code><a class="self-link" href="#element-attrdef-reportingperiod-enddate"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The end date of the reporting period. The date MUST be specified using the ISO 8601 date format. 
+    </table>
+    <figcaption>Properties of a Reporting Period</figcaption>
+   </figure>
+   <h3 class="heading settled" data-level="3.5" id="dt-industry"><span class="secno">3.5. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="industry">Industry<a class="self-link" href="#industry"></a></dfn></span><a class="self-link" href="#dt-industry"></a></h3>
+   <p>An industry is a set of industry elements that describe the industry of an organization.</p>
+   <h4 class="heading settled" data-level="3.5.1" id="dt-industry-properties"><span class="secno">3.5.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-industry-properties"></a></h4>
+   <p>Industry has the following properties:</p>
+   <figure id="industry-properties-table">
+    <table class="data">
+     <thead>
+      <tr>
+       <th>Property 
+       <th>Type 
+       <th>Req 
+       <th>Specification 
+     <tbody>
+      <tr>
+       <td><dfn data-dfn-for="Industry" data-dfn-type="element-attr" data-export id="element-attrdef-industry-sector"><code>sector</code><a class="self-link" href="#element-attrdef-industry-sector"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The sector of the industry. The sector MUST be specified using the Sector enumeration. 
+      <tr>
+       <td><dfn data-dfn-for="Industry" data-dfn-type="element-attr" data-export id="element-attrdef-industry-businessactivity"><code>businessActivity</code><a class="self-link" href="#element-attrdef-industry-businessactivity"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The business activity of the industry. The business activity MUST be specified using the BusinessActivity enumeration. 
+    </table>
+    <figcaption>Properties of an Industry</figcaption>
+   </figure>
+   <h3 class="heading settled" data-level="3.6" id="dt-decimal"><span class="secno">3.6. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="decimal">Decimal<a class="self-link" href="#decimal"></a></dfn></span><a class="self-link" href="#dt-decimal"></a></h3>
    <p>A dotted-decimal number.</p>
    <p>Example values:</p>
    <div class="example" id="example-73d4ac86">
@@ -2331,22 +2492,102 @@ document assume responsibility for any consequences or damages resulting directl
       <p><code>-182.84</code></p>
     </ul>
    </div>
-   <h4 class="heading settled" data-level="3.5.1" id="dt-decimal-json"><span class="secno">3.5.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-decimal-json"></a></h4>
+   <h4 class="heading settled" data-level="3.6.1" id="dt-decimal-json"><span class="secno">3.6.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-decimal-json"></a></h4>
    <p>Each Decimal MUST be encoded as a JSON String.</p>
-   <h3 class="heading settled" data-level="3.6" id="dt-string"><span class="secno">3.6. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="string">String</dfn></span><a class="self-link" href="#dt-string"></a></h3>
+   <h3 class="heading settled" data-level="3.7" id="dt-string"><span class="secno">3.7. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="string">String</dfn></span><a class="self-link" href="#dt-string"></a></h3>
    <p>A regular UTF-8 String.</p>
-   <h4 class="heading settled" data-level="3.6.1" id="dt-string-json"><span class="secno">3.6.1. </span><span class="content">JSON Data Representation</span><a class="self-link" href="#dt-string-json"></a></h4>
+   <h4 class="heading settled" data-level="3.7.1" id="dt-string-json"><span class="secno">3.7.1. </span><span class="content">JSON Data Representation</span><a class="self-link" href="#dt-string-json"></a></h4>
    <p>Each <a data-link-type="dfn" href="#string" id="ref-for-string">String</a> MUST be encoded as a JSON String.</p>
-   <h3 class="heading settled" data-level="3.7" id="dt-id"><span class="secno">3.7. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="id">Id</dfn></span><a class="self-link" href="#dt-id"></a></h3>
-   <p>A Id MUST either be a UUID v4 as specified in <a data-link-type="biblio" href="#biblio-rfc4122" title="A Universally Unique IDentifier (UUID) URN Namespace">[RFC4122]</a>.</p>
-   <p>or a unique key that can be represented as a string.</p>
-   <h4 class="heading settled" data-level="3.7.1" id="dt-id-json"><span class="secno">3.7.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-id-json"></a></h4>
-   <p>Each Id MUST be encoded as a JSON String, see <a href="#dt-string-json">§ 3.6.1 JSON Data Representation</a> for details.</p>
+   <h3 class="heading settled" data-level="3.8" id="dt-grid"><span class="secno">3.8. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="grid">GRID</dfn></span><a class="self-link" href="#dt-grid"></a></h3>
+   <p>A Unique 8 digit alphanumeric identifier. Omits [0/O | 1/I] to avoid ambiguity, case insensitive. Example: <code>R3AK.XF9B.24</code>,
+ where part1 = R3AK and part2 = XF9B, separated by a dot. The postfix checksum is 24 separated by a dot.
+ has a 2 digit numeric checksum, postfix, used to avoid typos in situations where the GRID is retyped.</p>
+   <h4 class="heading settled" data-level="3.8.1" id="dt-grid-json"><span class="secno">3.8.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-grid-json"></a></h4>
+   <p>Each GRID MUST be encoded as a JSON String, see <a href="#dt-string-json">§ 3.7.1 JSON Data Representation</a> for details.</p>
    <p>Example JSON string value:</p>
-   <div class="example" id="example-3ff44a83">
-    <a class="self-link" href="#example-3ff44a83"></a> 
-<pre class="language-json highlight"><c- u>"f4b1225a-bd44-4c8e-861d-079e4e1dfd69"</c->
+   <div class="example" id="example-30f9078a">
+    <a class="self-link" href="#example-30f9078a"></a> 
+<pre class="language-json highlight"><c- u>"7PBR.R569.29"</c->
 </pre>
+   </div>
+   <h2 class="heading settled" data-level="4" id="samples"><span class="secno">4. </span><span class="content">Samples</span><a class="self-link" href="#samples"></a></h2>
+   <h3 class="heading settled" data-level="4.1" id="sample-sustainability-report"><span class="secno">4.1. </span><span class="content">Sustainability Report</span><a class="self-link" href="#sample-sustainability-report"></a></h3>
+   <div class="example" id="example-8d0ffc16">
+    <a class="self-link" href="#example-8d0ffc16"></a> Sustainability Report: 
+<pre class="include-code highlight"><c- p>{</c->
+    <c- f>"grid"</c-><c- p>:</c-> <c- u>"7PBR.R569.29"</c-><c- p>,</c->
+    <c- f>"metadata"</c-><c- p>:</c-> <c- p>{</c->
+      <c- f>"grid"</c-><c- p>:</c-> <c- u>"7PBR.R569.29"</c-><c- p>,</c->
+      <c- f>"organizationIdentifier"</c-><c- p>:</c-> <c- u>"LEI: 254900OPPU84GM83MG36"</c-><c- p>,</c->
+      <c- f>"organizationName"</c-><c- p>:</c-> <c- u>"CarbonCall"</c-><c- p>,</c->
+      <c- f>"domicile"</c-><c- p>:</c-> <c- u>"US"</c-><c- p>,</c->
+      <c- f>"operatingCountries"</c-><c- p>:</c-> <c- p>[</c->
+        <c- u>"US"</c-><c- p>,</c->
+        <c- u>"CN"</c-><c- p>,</c->
+        <c- u>"GB"</c->
+      <c- p>],</c->
+      <c- f>"languages"</c-><c- p>:</c-> <c- p>[</c->
+        <c- u>"En"</c-><c- p>,</c->
+        <c- u>"Zh"</c->
+      <c- p>],</c->
+      <c- f>"reportType"</c-><c- p>:</c-> <c- u>"SustainabilityReport"</c-><c- p>,</c->
+      <c- f>"reportIssueDate"</c-><c- p>:</c-> <c- u>"2021-01-01"</c-><c- p>,</c->
+      <c- f>"reportingPeriod"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"startDate"</c-><c- p>:</c-> <c- u>"2020-01-01"</c-><c- p>,</c->
+        <c- f>"endDate"</c-><c- p>:</c-> <c- u>"2020-12-31"</c->
+      <c- p>},</c->
+      <c- f>"reportReplaces"</c-><c- p>:</c-> <c- u>""</c-><c- p>,</c->
+      <c- f>"location"</c-><c- p>:</c-> <c- u>"https://carboncall.io/reportFromPeriod.json"</c-><c- p>,</c->
+      <c- f>"industry"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"prefix"</c-><c- p>:</c-> <c- u>"ISIC"</c-><c- p>,</c->
+        <c- f>"code"</c-><c- p>:</c-> <c- u>"6201"</c->
+      <c- p>},</c->
+      <c- f>"performance"</c-><c- p>:</c-> <c- u>"{'Perf1':{'name':'Perf1','type':'performance','value':127000,'unit':'tCO2e'},'Perf2':{'name':'Perf2','type':'performance','value':0,'min':0,'max':100,'step':1,'unit':'%'}} "</c-><c- p>,</c->
+      <c- f>"reportFormat"</c-><c- p>:</c-> <c- u>"IXBRL"</c-><c- p>,</c->
+      <c- f>"reportingStandard"</c-><c- p>:</c-> <c- u>"ISSB"</c-><c- p>,</c->
+      <c- f>"assurance"</c-><c- p>:</c-> <c- u>"DE_BaFIN: 1234567890"</c-><c- p>,</c->
+      <c- f>"priorReport"</c-><c- p>:</c-> <c- u>""</c-><c- p>,</c->
+      <c- f>"reportHash"</c-><c- p>:</c-> <c- u>"dftaae3297i89798adsdf832adfs912231azsdf"</c->
+    <c- p>},</c->
+    <c- f>"report"</c-><c- p>:</c-> <c- u>"Cgw3UEJSLlI1NjkuMjkSGUxFSTogMjU0OTAwT1BQVTg0R004M01HMzYaCkNhcmJvbkNhbGwg7AEqBewBLusBMgIAAjgCQgoyMDIxLTAxLTAxShgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzFaK2h0dHBzOi8vY2FyYm9uY2FsbC5pby9yZXBvcnRGcm9tUGVyaW9kLmpzb25iBhIENjIwMWqsAXsnUGVyZjEnOnsnbmFtZSc6J1BlcmYxJywndHlwZSc6J3BlcmZvcm1hbmNlJywndmFsdWUnOjEyNzAwMCwndW5pdCc6J3RDTzJlJ30sJ1BlcmYyJzp7J25hbWUnOidQZXJmMicsJ3R5cGUnOidwZXJmb3JtYW5jZScsJ3ZhbHVlJzowLCdtaW4nOjAsJ21heCc6MTAwLCdzdGVwJzoxLCd1bml0JzonJSd9fSBwAXgCggEUREVfQmFGSU46IDEyMzQ1Njc4OTCSASdkZnRhYWUzMjk3aTg5Nzk4YWRzZGY4MzJhZGZzOTEyMjMxYXpzZGY="</c->
+  <c- p>}</c-></pre>
+   </div>
+   <h3 class="heading settled" data-level="4.2" id="sample-sustainability-report-metadata"><span class="secno">4.2. </span><span class="content">Sustainability Report Metadata</span><a class="self-link" href="#sample-sustainability-report-metadata"></a></h3>
+   <div class="example" id="example-7a7042c9">
+    <a class="self-link" href="#example-7a7042c9"></a> Sustainability Report Metadata: 
+<pre class="include-code highlight"><c- p>{</c->
+    <c- f>"grid"</c-><c- p>:</c-> <c- u>"7PBR.R569.29"</c-><c- p>,</c->
+    <c- f>"organizationIdentifier"</c-><c- p>:</c-> <c- u>"LEI: 254900OPPU84GM83MG36"</c-><c- p>,</c->
+    <c- f>"organizationName"</c-><c- p>:</c-> <c- u>"CarbonCall"</c-><c- p>,</c->
+    <c- f>"domicile"</c-><c- p>:</c-> <c- u>"US"</c-><c- p>,</c->
+    <c- f>"operatingCountries"</c-><c- p>:</c-> <c- p>[</c->
+      <c- u>"US"</c-><c- p>,</c->
+      <c- u>"CN"</c-><c- p>,</c->
+      <c- u>"GB"</c->
+    <c- p>],</c->
+    <c- f>"languages"</c-><c- p>:</c-> <c- p>[</c->
+      <c- u>"En"</c-><c- p>,</c->
+      <c- u>"Zh"</c->
+    <c- p>],</c->
+    <c- f>"reportType"</c-><c- p>:</c-> <c- u>"SustainabilityReport"</c-><c- p>,</c->
+    <c- f>"reportIssueDate"</c-><c- p>:</c-> <c- u>"2021-01-01"</c-><c- p>,</c->
+    <c- f>"reportingPeriod"</c-><c- p>:</c-> <c- p>{</c->
+      <c- f>"startDate"</c-><c- p>:</c-> <c- u>"2020-01-01"</c-><c- p>,</c->
+      <c- f>"endDate"</c-><c- p>:</c-> <c- u>"2020-12-31"</c->
+    <c- p>},</c->
+    <c- f>"reportReplaces"</c-><c- p>:</c-> <c- u>""</c-><c- p>,</c->
+    <c- f>"location"</c-><c- p>:</c-> <c- u>"https://carboncall.io/reportFromPeriod.json"</c-><c- p>,</c->
+    <c- f>"industry"</c-><c- p>:</c-> <c- p>{</c->
+      <c- f>"prefix"</c-><c- p>:</c-> <c- u>"ISIC"</c-><c- p>,</c->
+      <c- f>"code"</c-><c- p>:</c-> <c- u>"6201"</c->
+    <c- p>},</c->
+    <c- f>"performance"</c-><c- p>:</c-> <c- u>"{'Perf1':{'name':'Perf1','type':'performance','value':127000,'unit':'tCO2e'},'Perf2':{'name':'Perf2','type':'performance','value':0,'min':0,'max':100,'step':1,'unit':'%'}} "</c-><c- p>,</c->
+    <c- f>"reportFormat"</c-><c- p>:</c-> <c- u>"IXBRL"</c-><c- p>,</c->
+    <c- f>"reportingStandard"</c-><c- p>:</c-> <c- u>"ISSB"</c-><c- p>,</c->
+    <c- f>"assurance"</c-><c- p>:</c-> <c- u>"DE_BaFIN: 1234567890"</c-><c- p>,</c->
+    <c- f>"priorReport"</c-><c- p>:</c-> <c- u>""</c-><c- p>,</c->
+    <c- f>"reportHash"</c-><c- p>:</c-> <c- u>"dftaae3297i89798adsdf832adfs912231azsdf"</c->
+  <c- p>}</c-></pre>
    </div>
    <h2 class="heading settled" id="license"><span class="content">Appendix A: License</span><a class="self-link" href="#license"></a></h2>
    <p>MIT License</p>
@@ -2502,11 +2743,25 @@ SOFTWARE.</p>
   <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
   <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="index">
-   <li><a href="#decimal">Decimal</a><span>, in § 3.5</span>
-   <li><a href="#element-attrdef-metadataelement-description">description</a><span>, in § 3.4.1</span>
-   <li><a href="#id">Id</a><span>, in § 3.7</span>
-   <li><a href="#element-attrdef-metadataelement-id">id</a><span>, in § 3.4.1</span>
+   <li><a href="#element-attrdef-metadata-assurance">assurance</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-industry-businessactivity">businessActivity</a><span>, in § 3.5.1</span>
+   <li><a href="#decimal">Decimal</a><span>, in § 3.6</span>
+   <li><a href="#element-attrdef-metadata-domicile">domicile</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-reportingperiod-enddate">endDate</a><span>, in § 3.4.1</span>
+   <li><a href="#global-report-identifier-grid">Global Report Identifier (GR.ID)</a><span>, in § 2</span>
+   <li>
+    GRID
+    <ul>
+     <li><a href="#grid">definition of</a><span>, in § 3.8</span>
+     <li><a href="#element-attrdef-metadata-grid">element-attr for Metadata</a><span>, in § 3.3.1</span>
+     <li><a href="#element-attrdef-sustainabilityreport-grid">element-attr for SustainabilityReport</a><span>, in § 3.2.1</span>
+    </ul>
+   <li><a href="#industry">Industry</a><span>, in § 3.5</span>
+   <li><a href="#element-attrdef-metadata-industry">industry</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-languages">languages</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-location">location</a><span>, in § 3.3.1</span>
    <li><a href="#metadata">Metadata</a><span>, in § 2</span>
+   <li><a href="#element-attrdef-sustainabilityreport-metadata">metadata</a><span>, in § 3.2.1</span>
    <li><a href="#metadata-element">Metadata Element</a><span>, in § 2</span>
    <li><a href="#metadata-element-attribute">Metadata Element Attribute</a><span>, in § 2</span>
    <li><a href="#metadata-element-attribute-definition">Metadata Element Attribute Definition</a><span>, in § 2</span>
@@ -2525,28 +2780,37 @@ SOFTWARE.</p>
    <li><a href="#metadata-element-name">Metadata Element Name</a><span>, in § 2</span>
    <li><a href="#metadata-element-type">Metadata Element Type</a><span>, in § 2</span>
    <li><a href="#metadata-element-value">Metadata Element Value</a><span>, in § 2</span>
-   <li><a href="#metadata-framework">Metadata Framework</a><span>, in § 2</span>
    <li><a href="#metadata-instance">Metadata Instance</a><span>, in § 2</span>
    <li><a href="#metadata-schema">Metadata Schema</a><span>, in § 2</span>
-   <li><a href="#element-attrdef-metadataelement-name">name</a><span>, in § 3.4.1</span>
-   <li><a href="#string">String</a><span>, in § 3.6</span>
+   <li><a href="#element-attrdef-metadata-operatingcountries">operatingCountries</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-organizationidentifier">organizationIdentifier</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-organizationname">organizationName</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-performance">performance</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-priorreport">priorReport</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-sustainabilityreport-report">report</a><span>, in § 3.2.1</span>
+   <li><a href="#element-attrdef-metadata-reportformat">reportFormat</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-reporthash">reportHash</a><span>, in § 3.3.1</span>
+   <li><a href="#reportingperiod">ReportingPeriod</a><span>, in § 3.4</span>
+   <li><a href="#element-attrdef-metadata-reportingperiod">reportingPeriod</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-reportingstandard">reportingStandard</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-reportissuedate">reportIssueDate</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-reportreplaces">reportReplaces</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-metadata-reporttype">reportType</a><span>, in § 3.3.1</span>
+   <li><a href="#element-attrdef-industry-sector">sector</a><span>, in § 3.5.1</span>
+   <li><a href="#element-attrdef-reportingperiod-startdate">startDate</a><span>, in § 3.4.1</span>
+   <li><a href="#string">String</a><span>, in § 3.7</span>
+   <li><a href="#sustainability-report-metadata">Sustainability Report Metadata</a><span>, in § 2</span>
   </ul>
-  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
-  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
-  <dl>
-   <dt id="biblio-rfc4122">[RFC4122]
-   <dd>P. Leach; M. Mealling; R. Salz. <a href="https://www.rfc-editor.org/rfc/rfc4122"><cite>A Universally Unique IDentifier (UUID) URN Namespace</cite></a>. July 2005. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc4122">https://www.rfc-editor.org/rfc/rfc4122</a>
-  </dl>
   <aside aria-labelledby="infopaneltitle-for-string" class="dfn-panel" data-for="string" id="infopanel-for-string">
    <span id="infopaneltitle-for-string" style="display:none">Info about the 'String' definition.</span><b><a href="#string">#string</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-string">3.6.1. JSON Data Representation</a>
+    <li><a href="#ref-for-string">3.7.1. JSON Data Representation</a>
    </ul>
   </aside>
-  <aside aria-labelledby="infopaneltitle-for-id" class="dfn-panel" data-for="id" id="infopanel-for-id">
-   <span id="infopaneltitle-for-id" style="display:none">Info about the 'Id' definition.</span><b><a href="#id">#id</a></b><b>Referenced in:</b>
+  <aside aria-labelledby="infopaneltitle-for-grid" class="dfn-panel" data-for="grid" id="infopanel-for-grid">
+   <span id="infopaneltitle-for-grid" style="display:none">Info about the 'GRID' definition.</span><b><a href="#grid">#grid</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-id">3.4.1. Properties</a>
+    <li><a href="#ref-for-grid">3.2.1. Properties</a>
    </ul>
   </aside>
 <script>/* script-dfn-panel */
