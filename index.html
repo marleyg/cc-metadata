@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>DRAFT Carbon Call - Metadata Workgroup</title>
+  <title>DRAFT Carbon Call - Discoverable Data &amp; Metadata</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1238,14 +1238,15 @@ Possible extra rowspan handling
 			grid-column: 2;
 			width: auto;
 			margin-right: 1rem;
+			border-bottom: 3px solid transparent;
+			margin-bottom: -3px;
 		}
 		#toc .content:hover,
 		#toc .content:focus {
 			background: rgba(75%, 75%, 75%, .25);
 			background: var(--a-hover-bg);
-			border-bottom: 3px solid #054572;
-			border-bottom: 3px solid var(--toclink-underline);
-			margin-bottom: -3px;
+			border-bottom-color: #054572;
+			border-bottom-color: var(--toclink-underline);
 		}
 		#toc li li li .content {
 			margin-left: 1rem;
@@ -1487,10 +1488,10 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 739efad8e, updated Thu Mar 23 07:02:40 2023 -0700" name="generator">
+  <meta content="Bikeshed version 5fcd28d6d, updated Tue May 30 13:12:11 2023 -0700" name="generator">
   <link href="https://github.com/marleyg/cc-metadata" rel="canonical">
-  <meta content="5cd2e256e5e09e179ba25ce2aeac9b22a9f0e222" name="document-revision">
-<style>/* style-autolinks */
+  <meta content="deac490582d7497bbd041d503047475c8870c1ac" name="document-revision">
+<style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
     font-size: inherit;
@@ -1551,8 +1552,16 @@ pre .property::before, pre .property::after {
 [data-link-type=biblio] {
     white-space: pre;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --selflink-text: black;
+        --selflink-bg: silver;
+        --selflink-hover-text: white;
+    }
+}
 </style>
-<style>/* style-colors */
+<style>/* Boilerplate: style-colors */
 
 /* Any --*-text not paired with a --*-bg is assumed to have a transparent bg */
 :root {
@@ -1661,216 +1670,6 @@ pre .property::before, pre .property::after {
 
     --editedrec-bg: darkorange;
 }
-</style>
-<style>/* style-counters */
-body {
-    counter-reset: example figure issue;
-}
-.issue {
-    counter-increment: issue;
-}
-.issue:not(.no-marker)::before {
-    content: "Issue " counter(issue);
-}
-
-.example {
-    counter-increment: example;
-}
-.example:not(.no-marker)::before {
-    content: "Example " counter(example);
-}
-.invalid.example:not(.no-marker)::before,
-.illegal.example:not(.no-marker)::before {
-    content: "Invalid Example" counter(example);
-}
-
-figcaption {
-    counter-increment: figure;
-}
-figcaption:not(.no-marker)::before {
-    content: "Figure " counter(figure) " ";
-}
-</style>
-<style>/* style-dfn-panel */
-:root {
-    --dfnpanel-bg: #ddd;
-    --dfnpanel-text: var(--text);
-}
-.dfn-panel {
-    position: absolute;
-    z-index: 35;
-    width: 20em;
-    min-width: min-content;
-    max-width: 300px;
-    height: auto;
-    max-height: 500px;
-    overflow: auto;
-    padding: 0.5em 0.75em;
-    font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
-    background: var(--dfnpanel-bg);
-    color: var(--dfnpanel-text);
-    border: outset 0.2em;
-    white-space: normal; /* in case it's moved into a pre */
-}
-.dfn-panel:not(.on) { display: none; }
-.dfn-panel * { margin: 0; padding: 0; text-indent: 0; }
-.dfn-panel > b { display: block; }
-.dfn-panel a { color: var(--dfnpanel-text); }
-.dfn-panel a:not(:hover) { text-decoration: none !important; border-bottom: none !important; }
-.dfn-panel > b + b { margin-top: 0.25em; }
-.dfn-panel ul { padding: 0; }
-.dfn-panel li { list-style: inside; }
-.dfn-panel.activated {
-    display: inline-block;
-    position: fixed;
-    left: .5em;
-    bottom: 2em;
-    margin: 0 auto;
-    max-width: calc(100vw - 1.5em - .4em - .5em);
-    max-height: 30vh;
-}
-
-.dfn-paneled { cursor: pointer; }
-</style>
-<style>/* style-issues */
-a[href].issue-return {
-    float: right;
-    float: inline-end;
-    color: var(--issueheading-text);
-    font-weight: bold;
-    text-decoration: none;
-}
-</style>
-<style>/* style-md-lists */
-/* This is a weird hack for me not yet following the commonmark spec
-   regarding paragraph and lists. */
-[data-md] > :first-child {
-    margin-top: 0;
-}
-[data-md] > :last-child {
-    margin-bottom: 0;
-}
-</style>
-<style>/* style-selflinks */
-
-:root {
-    --selflink-text: white;
-    --selflink-bg: gray;
-    --selflink-hover-text: black;
-}
-.heading, .issue, .note, .example, li, dt {
-    position: relative;
-}
-a.self-link {
-    position: absolute;
-    top: 0;
-    left: calc(-1 * (3.5rem - 26px));
-    width: calc(3.5rem - 26px);
-    height: 2em;
-    text-align: center;
-    border: none;
-    transition: opacity .2s;
-    opacity: .5;
-}
-a.self-link:hover {
-    opacity: 1;
-}
-.heading > a.self-link {
-    font-size: 83%;
-}
-.example > a.self-link,
-.note > a.self-link,
-.issue > a.self-link {
-    /* These blocks are overflow:auto, so positioning outside
-       doesn't work. */
-    left: auto;
-    right: 0;
-}
-li > a.self-link {
-    left: calc(-1 * (3.5rem - 26px) - 2em);
-}
-dfn > a.self-link {
-    top: auto;
-    left: auto;
-    opacity: 0;
-    width: 1.5em;
-    height: 1.5em;
-    background: var(--selflink-bg);
-    color: var(--selflink-text);
-    font-style: normal;
-    transition: opacity .2s, background-color .2s, color .2s;
-}
-dfn:hover > a.self-link {
-    opacity: 1;
-}
-dfn > a.self-link:hover {
-    color: var(--selflink-hover-text);
-}
-
-a.self-link::before            { content: "¶"; }
-.heading > a.self-link::before { content: "§"; }
-dfn > a.self-link::before      { content: "#"; }
-</style>
-<style>/* style-syntax-highlighting */
-
-code.highlight { padding: .1em; border-radius: .3em; }
-pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
-
-.highlight:not(.idl) { background: rgba(0, 0, 0, .03); }
-c-[a] { color: #990055 } /* Keyword.Declaration */
-c-[b] { color: #990055 } /* Keyword.Type */
-c-[c] { color: #708090 } /* Comment */
-c-[d] { color: #708090 } /* Comment.Multiline */
-c-[e] { color: #0077aa } /* Name.Attribute */
-c-[f] { color: #669900 } /* Name.Tag */
-c-[g] { color: #222222 } /* Name.Variable */
-c-[k] { color: #990055 } /* Keyword */
-c-[l] { color: #000000 } /* Literal */
-c-[m] { color: #000000 } /* Literal.Number */
-c-[n] { color: #0077aa } /* Name */
-c-[o] { color: #999999 } /* Operator */
-c-[p] { color: #999999 } /* Punctuation */
-c-[s] { color: #a67f59 } /* Literal.String */
-c-[t] { color: #a67f59 } /* Literal.String.Single */
-c-[u] { color: #a67f59 } /* Literal.String.Double */
-c-[cp] { color: #708090 } /* Comment.Preproc */
-c-[c1] { color: #708090 } /* Comment.Single */
-c-[cs] { color: #708090 } /* Comment.Special */
-c-[kc] { color: #990055 } /* Keyword.Constant */
-c-[kn] { color: #990055 } /* Keyword.Namespace */
-c-[kp] { color: #990055 } /* Keyword.Pseudo */
-c-[kr] { color: #990055 } /* Keyword.Reserved */
-c-[ld] { color: #000000 } /* Literal.Date */
-c-[nc] { color: #0077aa } /* Name.Class */
-c-[no] { color: #0077aa } /* Name.Constant */
-c-[nd] { color: #0077aa } /* Name.Decorator */
-c-[ni] { color: #0077aa } /* Name.Entity */
-c-[ne] { color: #0077aa } /* Name.Exception */
-c-[nf] { color: #0077aa } /* Name.Function */
-c-[nl] { color: #0077aa } /* Name.Label */
-c-[nn] { color: #0077aa } /* Name.Namespace */
-c-[py] { color: #0077aa } /* Name.Property */
-c-[ow] { color: #999999 } /* Operator.Word */
-c-[mb] { color: #000000 } /* Literal.Number.Bin */
-c-[mf] { color: #000000 } /* Literal.Number.Float */
-c-[mh] { color: #000000 } /* Literal.Number.Hex */
-c-[mi] { color: #000000 } /* Literal.Number.Integer */
-c-[mo] { color: #000000 } /* Literal.Number.Oct */
-c-[sb] { color: #a67f59 } /* Literal.String.Backtick */
-c-[sc] { color: #a67f59 } /* Literal.String.Char */
-c-[sd] { color: #a67f59 } /* Literal.String.Doc */
-c-[se] { color: #a67f59 } /* Literal.String.Escape */
-c-[sh] { color: #a67f59 } /* Literal.String.Heredoc */
-c-[si] { color: #a67f59 } /* Literal.String.Interpol */
-c-[sx] { color: #a67f59 } /* Literal.String.Other */
-c-[sr] { color: #a67f59 } /* Literal.String.Regex */
-c-[ss] { color: #a67f59 } /* Literal.String.Symbol */
-c-[vc] { color: #0077aa } /* Name.Variable.Class */
-c-[vg] { color: #0077aa } /* Name.Variable.Global */
-c-[vi] { color: #0077aa } /* Name.Variable.Instance */
-c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
-</style>
-<style>/* style-darkmode */
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -1983,14 +1782,227 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
        which is quite common in practice... */
     img { background: white; }
 }
+</style>
+<style>/* Boilerplate: style-counters */
+body {
+    counter-reset: example figure issue;
+}
+.issue {
+    counter-increment: issue;
+}
+.issue:not(.no-marker)::before {
+    content: "Issue " counter(issue);
+}
 
+.example {
+    counter-increment: example;
+}
+.example:not(.no-marker)::before {
+    content: "Example " counter(example);
+}
+.invalid.example:not(.no-marker)::before,
+.illegal.example:not(.no-marker)::before {
+    content: "Invalid Example" counter(example);
+}
+
+figcaption {
+    counter-increment: figure;
+}
+figcaption:not(.no-marker)::before {
+    content: "Figure " counter(figure) " ";
+}
+</style>
+<style>/* Boilerplate: style-dfn-panel */
+:root {
+    --dfnpanel-bg: #ddd;
+    --dfnpanel-text: var(--text);
+}
 @media (prefers-color-scheme: dark) {
     :root {
-        --selflink-text: black;
-        --selflink-bg: silver;
-        --selflink-hover-text: white;
+        --dfnpanel-bg: #222;
+        --dfnpanel-text: var(--text);
     }
 }
+.dfn-panel {
+    position: absolute;
+    z-index: 35;
+    width: 20em;
+    width: 300px;
+    height: auto;
+    max-height: 500px;
+    overflow: auto;
+    padding: 0.5em 0.75em;
+    font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
+    background: var(--dfnpanel-bg);
+    color: var(--dfnpanel-text);
+    border: outset 0.2em;
+    white-space: normal; /* in case it's moved into a pre */
+}
+.dfn-panel:not(.on) { display: none; }
+.dfn-panel * { margin: 0; padding: 0; text-indent: 0; }
+.dfn-panel > b { display: block; }
+.dfn-panel a { color: var(--dfnpanel-text); }
+.dfn-panel a:not(:hover) { text-decoration: none !important; border-bottom: none !important; }
+.dfn-panel > b + b { margin-top: 0.25em; }
+.dfn-panel ul { padding: 0 0 0 1em; list-style: none; }
+.dfn-panel li a {
+    white-space: pre;
+    display: inline-block;
+    max-width: calc(300px - 1.5em - 1em);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dfn-panel.activated {
+    display: inline-block;
+    position: fixed;
+    left: .5em;
+    bottom: 2em;
+    margin: 0 auto;
+    max-width: calc(100vw - 1.5em - .4em - .5em);
+    max-height: 30vh;
+}
+
+.dfn-paneled[role="button"] { cursor: pointer; }
+</style>
+<style>/* Boilerplate: style-issues */
+a[href].issue-return {
+    float: right;
+    float: inline-end;
+    color: var(--issueheading-text);
+    font-weight: bold;
+    text-decoration: none;
+}
+</style>
+<style>/* Boilerplate: style-md-lists */
+/* This is a weird hack for me not yet following the commonmark spec
+   regarding paragraph and lists. */
+[data-md] > :first-child {
+    margin-top: 0;
+}
+[data-md] > :last-child {
+    margin-bottom: 0;
+}
+</style>
+<style>/* Boilerplate: style-selflinks */
+
+:root {
+    --selflink-text: white;
+    --selflink-bg: gray;
+    --selflink-hover-text: black;
+}
+.heading, .issue, .note, .example, li, dt {
+    position: relative;
+}
+a.self-link {
+    position: absolute;
+    top: 0;
+    left: calc(-1 * (3.5rem - 26px));
+    width: calc(3.5rem - 26px);
+    height: 2em;
+    text-align: center;
+    border: none;
+    transition: opacity .2s;
+    opacity: .5;
+}
+a.self-link:hover {
+    opacity: 1;
+}
+.heading > a.self-link {
+    font-size: 83%;
+}
+.example > a.self-link,
+.note > a.self-link,
+.issue > a.self-link {
+    /* These blocks are overflow:auto, so positioning outside
+       doesn't work. */
+    left: auto;
+    right: 0;
+}
+li > a.self-link {
+    left: calc(-1 * (3.5rem - 26px) - 2em);
+}
+dfn > a.self-link {
+    top: auto;
+    left: auto;
+    opacity: 0;
+    width: 1.5em;
+    height: 1.5em;
+    background: var(--selflink-bg);
+    color: var(--selflink-text);
+    font-style: normal;
+    transition: opacity .2s, background-color .2s, color .2s;
+}
+dfn:hover > a.self-link {
+    opacity: 1;
+}
+dfn > a.self-link:hover {
+    color: var(--selflink-hover-text);
+}
+
+a.self-link::before            { content: "¶"; }
+.heading > a.self-link::before { content: "§"; }
+dfn > a.self-link::before      { content: "#"; }
+</style>
+<style>/* Boilerplate: style-syntax-highlighting */
+
+code.highlight { padding: .1em; border-radius: .3em; }
+pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+
+.highlight:not(.idl) { background: rgba(0, 0, 0, .03); }
+c-[a] { color: #990055 } /* Keyword.Declaration */
+c-[b] { color: #990055 } /* Keyword.Type */
+c-[c] { color: #708090 } /* Comment */
+c-[d] { color: #708090 } /* Comment.Multiline */
+c-[e] { color: #0077aa } /* Name.Attribute */
+c-[f] { color: #669900 } /* Name.Tag */
+c-[g] { color: #222222 } /* Name.Variable */
+c-[k] { color: #990055 } /* Keyword */
+c-[l] { color: #000000 } /* Literal */
+c-[m] { color: #000000 } /* Literal.Number */
+c-[n] { color: #0077aa } /* Name */
+c-[o] { color: #999999 } /* Operator */
+c-[p] { color: #999999 } /* Punctuation */
+c-[s] { color: #a67f59 } /* Literal.String */
+c-[t] { color: #a67f59 } /* Literal.String.Single */
+c-[u] { color: #a67f59 } /* Literal.String.Double */
+c-[cp] { color: #708090 } /* Comment.Preproc */
+c-[c1] { color: #708090 } /* Comment.Single */
+c-[cs] { color: #708090 } /* Comment.Special */
+c-[kc] { color: #990055 } /* Keyword.Constant */
+c-[kn] { color: #990055 } /* Keyword.Namespace */
+c-[kp] { color: #990055 } /* Keyword.Pseudo */
+c-[kr] { color: #990055 } /* Keyword.Reserved */
+c-[ld] { color: #000000 } /* Literal.Date */
+c-[nc] { color: #0077aa } /* Name.Class */
+c-[no] { color: #0077aa } /* Name.Constant */
+c-[nd] { color: #0077aa } /* Name.Decorator */
+c-[ni] { color: #0077aa } /* Name.Entity */
+c-[ne] { color: #0077aa } /* Name.Exception */
+c-[nf] { color: #0077aa } /* Name.Function */
+c-[nl] { color: #0077aa } /* Name.Label */
+c-[nn] { color: #0077aa } /* Name.Namespace */
+c-[py] { color: #0077aa } /* Name.Property */
+c-[ow] { color: #999999 } /* Operator.Word */
+c-[mb] { color: #000000 } /* Literal.Number.Bin */
+c-[mf] { color: #000000 } /* Literal.Number.Float */
+c-[mh] { color: #000000 } /* Literal.Number.Hex */
+c-[mi] { color: #000000 } /* Literal.Number.Integer */
+c-[mo] { color: #000000 } /* Literal.Number.Oct */
+c-[sb] { color: #a67f59 } /* Literal.String.Backtick */
+c-[sc] { color: #a67f59 } /* Literal.String.Char */
+c-[sd] { color: #a67f59 } /* Literal.String.Doc */
+c-[se] { color: #a67f59 } /* Literal.String.Escape */
+c-[sh] { color: #a67f59 } /* Literal.String.Heredoc */
+c-[si] { color: #a67f59 } /* Literal.String.Interpol */
+c-[sx] { color: #a67f59 } /* Literal.String.Other */
+c-[sr] { color: #a67f59 } /* Literal.String.Regex */
+c-[ss] { color: #a67f59 } /* Literal.String.Symbol */
+c-[vc] { color: #0077aa } /* Name.Variable.Class */
+c-[vg] { color: #0077aa } /* Name.Variable.Global */
+c-[vi] { color: #0077aa } /* Name.Variable.Instance */
+c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
+
 
 @media (prefers-color-scheme: dark) {
     .highlight:not(.idl) { background: rgba(255, 255, 255, .05); }
@@ -2058,8 +2070,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">DRAFT Carbon Call - Metadata Workgroup</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2023-04-25">25 April 2023</time></span></h2>
+   <h1 class="p-name no-ref" id="title">DRAFT Carbon Call - Discoverable Data &amp; Metadata</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2023-06-26">26 June 2023</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2076,7 +2088,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>This document is the working specification Carbon Call Metadata Expert Workgroup.</p>
+   <p>This document is the working specification Carbon Call Discoverable Data &amp; Metadata Expert Workgroups.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
@@ -2088,50 +2100,62 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
       <li><a href="#doc-status"><span class="secno">1.1</span> <span class="content">Status of this Document</span></a>
       <li><a href="#scope"><span class="secno">1.2</span> <span class="content">Scope</span></a>
       <li><a href="#audience"><span class="secno">1.3</span> <span class="content">Intended Audience</span></a>
-      <li><a href="#about"><span class="secno">1.4</span> <span class="content">About the Carbon Call Metadata Expert Workgroup</span></a>
+      <li><a href="#about"><span class="secno">1.4</span> <span class="content">About the Carbon Call Discoverable Data &amp; Metadata Expert Workgroups</span></a>
       <li><a href="#disclaimer"><span class="secno">1.5</span> <span class="content">Disclaimer</span></a>
       <li><a href="#selectionlicense"><span class="secno">1.6</span> <span class="content">License</span></a>
      </ol>
     <li><a href="#terminology"><span class="secno">2</span> <span class="content">Terminology</span></a>
     <li>
-     <a href="#sustainabilty-report-metadata"><span class="secno">3</span> <span class="content">Sustainability Report Metadata</span></a>
+     <a href="#discoverable-data-metadata"><span class="secno">3</span> <span class="content">Discoverable Data and Metadata</span></a>
      <ol class="toc">
-      <li><a href="#sustainabilty-report-metadata-overview"><span class="secno">3.1</span> <span class="content">Sustainability Report Metadata Overview</span></a>
       <li>
-       <a href="#sustainabilty-report-metadata-schema"><span class="secno">3.2</span> <span class="content">Sustainability Report Metadata Schema</span></a>
+       <a href="#sustainabilty-report-schema"><span class="secno">3.1</span> <span class="content">Sustainability Report Schema</span></a>
        <ol class="toc">
-        <li><a href="#dt-sustainabilty-report-metadata-properties"><span class="secno">3.2.1</span> <span class="content">Properties</span></a>
+        <li><a href="#dt-sustainabilty-report-properties"><span class="secno">3.1.1</span> <span class="content">Properties</span></a>
        </ol>
       <li>
-       <a href="#dt-metadata"><span class="secno">3.3</span> <span class="content">Data Type: Metadata</span></a>
+       <a href="#dt-metadata"><span class="secno">3.2</span> <span class="content">Data Type: Metadata</span></a>
        <ol class="toc">
-        <li><a href="#dt-metadata-properties"><span class="secno">3.3.1</span> <span class="content">Properties</span></a>
+        <li><a href="#dt-metadata-properties"><span class="secno">3.2.1</span> <span class="content">Properties</span></a>
        </ol>
       <li>
-       <a href="#dt-reporting-period"><span class="secno">3.4</span> <span class="content">Data Type: <span>ReportingPeriod</span></span></a>
+       <a href="#dt-reporting-period"><span class="secno">3.3</span> <span class="content">Data Type: <span>ReportingPeriod</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-reporting-period-properties"><span class="secno">3.4.1</span> <span class="content">Properties</span></a>
+        <li><a href="#dt-reporting-period-properties"><span class="secno">3.3.1</span> <span class="content">Properties</span></a>
        </ol>
       <li>
-       <a href="#dt-industry"><span class="secno">3.5</span> <span class="content">Data Type: <span>Industry</span></span></a>
+       <a href="#dt-industry"><span class="secno">3.4</span> <span class="content">Data Type: <span>Industry</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-industry-properties"><span class="secno">3.5.1</span> <span class="content">Properties</span></a>
+        <li><a href="#dt-industry-properties"><span class="secno">3.4.1</span> <span class="content">Properties</span></a>
        </ol>
       <li>
-       <a href="#dt-decimal"><span class="secno">3.6</span> <span class="content">Data Type: <span>Decimal</span></span></a>
+       <a href="#dt-metatag"><span class="secno">3.5</span> <span class="content">Data Type: <span>Metatag</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-decimal-json"><span class="secno">3.6.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-metatag-properties"><span class="secno">3.5.1</span> <span class="content">Properties</span></a>
        </ol>
       <li>
-       <a href="#dt-string"><span class="secno">3.7</span> <span class="content">Data Type: <span>String</span></span></a>
+       <a href="#dt-property-context"><span class="secno">3.6</span> <span class="content">Data Type: <span>PropertyContext</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-string-json"><span class="secno">3.7.1</span> <span class="content">JSON Data Representation</span></a>
+        <li><a href="#dt-property-context-properties"><span class="secno">3.6.1</span> <span class="content">Properties</span></a>
        </ol>
       <li>
-       <a href="#dt-grid"><span class="secno">3.8</span> <span class="content">Data Type: <span>GRID</span></span></a>
+       <a href="#dt-decimal"><span class="secno">3.7</span> <span class="content">Data Type: <span>Decimal</span></span></a>
        <ol class="toc">
-        <li><a href="#dt-grid-json"><span class="secno">3.8.1</span> <span class="content">JSON Representation</span></a>
+        <li><a href="#dt-decimal-json"><span class="secno">3.7.1</span> <span class="content">JSON Representation</span></a>
        </ol>
+      <li>
+       <a href="#dt-string"><span class="secno">3.8</span> <span class="content">Data Type: <span>String</span></span></a>
+       <ol class="toc">
+        <li><a href="#dt-string-json"><span class="secno">3.8.1</span> <span class="content">JSON Data Representation</span></a>
+       </ol>
+      <li>
+       <a href="#dt-grid"><span class="secno">3.9</span> <span class="content">Data Type: <span>GRID</span></span></a>
+       <ol class="toc">
+        <li><a href="#dt-grid-json"><span class="secno">3.9.1</span> <span class="content">JSON Representation</span></a>
+       </ol>
+      <li><a href="#dt-report-format"><span class="secno">3.10</span> <span class="content">Data Type: <span><code>ReportFormat</code></span></span></a>
+      <li><a href="#dt-reporting-standard"><span class="secno">3.11</span> <span class="content">Data Type: <span><code>ReportingStandard</code></span></span></a>
+      <li><a href="#dt-report-type"><span class="secno">3.12</span> <span class="content">Data Type: <span><code>ReportType</code></span></span></a>
      </ol>
     <li>
      <a href="#samples"><span class="secno">4</span> <span class="content">Samples</span></a>
@@ -2143,7 +2167,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li>
      <a href="#changelog"><span class="secno"></span> <span class="content">Appendix B: Changelog</span></a>
      <ol class="toc">
-      <li><a href="#changelog-1.0.20230418"><span class="secno"></span> <span class="content">Version 1.0.20230418 (April 18, 2023)</span></a>
+      <li><a href="#changelog-1.0.20230626"><span class="secno"></span> <span class="content">Version 1.0.20230626 (June 26, 2023)</span></a>
      </ol>
     <li>
      <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
@@ -2154,12 +2178,12 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="intro"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#intro"></a></h2>
-   <p>This document is the working specification for the Carbon Call Metadata workgroup and is a work in progress.</p>
+   <p>This document is the working specification for the Carbon Call Discoverable Data &amp; Metadata workgroups and is a work in progress.</p>
    <p><strong class="advisement"> This specification is a work in progress and is subject to change. It is not a final or otherwise published version.</strong></p>
    <h3 class="heading settled" data-level="1.1" id="doc-status"><span class="secno">1.1. </span><span class="content">Status of this Document</span><a class="self-link" href="#doc-status"></a></h3>
    <p>Comments regarding the document are welcome, please file issues directly on <a href="https://github.com/marleyg/cc-metadata/index.bs">GitHub</a>.</p>
    <h3 class="heading settled" data-level="1.2" id="scope"><span class="secno">1.2. </span><span class="content">Scope</span><a class="self-link" href="#scope"></a></h3>
-   <p>The scope of this document is to reach consensus on a Sustainability Report Metadata.</p>
+   <p>The scope of this document is to reach consensus on a Discoverable Sustainability Dat and Metadata.</p>
    <h3 class="heading settled" data-level="1.3" id="audience"><span class="secno">1.3. </span><span class="content">Intended Audience</span><a class="self-link" href="#audience"></a></h3>
    <p>This technical specification is for</p>
    <ul>
@@ -2172,111 +2196,54 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li data-md>
      <p>anyone else who wants to understand the data model and data dictionary defined by this specification</p>
    </ul>
-   <h3 class="heading settled" data-level="1.4" id="about"><span class="secno">1.4. </span><span class="content">About the Carbon Call Metadata Expert Workgroup</span><a class="self-link" href="#about"></a></h3>
-   <p>The Carbon Call Metadata Expert Workgroup is a group of experts from the Carbon Call community who are working to define a Sustainability Report Metadata for the Carbon Call.</p>
+   <h3 class="heading settled" data-level="1.4" id="about"><span class="secno">1.4. </span><span class="content">About the Carbon Call Discoverable Data &amp; Metadata Expert Workgroups</span><a class="self-link" href="#about"></a></h3>
+   <p>The Carbon Call Discoverable Data &amp; Metadata Expert Workgroups is a group of experts from the Carbon Call community who are working to define a how sustainability data can be made discoverable and usable with the
+use of and inclusion of metadata.</p>
    <h3 class="heading settled" data-level="1.5" id="disclaimer"><span class="secno">1.5. </span><span class="content">Disclaimer</span><a class="self-link" href="#disclaimer"></a></h3>
    <p>While Carbon Call encourages the implementation of the technical specifications by all entities for interoperability, those organiazations and individuals who contributed to the development of this
-document assume responsibility for any consequences or damages resulting directly or indirectly from the use of this document.</p>
+document does not assume responsibility for any consequences or damages resulting directly or indirectly from the use of this document.</p>
    <h3 class="heading settled" data-level="1.6" id="selectionlicense"><span class="secno">1.6. </span><span class="content">License</span><a class="self-link" href="#selectionlicense"></a></h3>
    <p>The license can be found in <a href="#license">Appendix A: License</a>.</p>
    <h2 class="heading settled" data-level="2" id="terminology"><span class="secno">2. </span><span class="content">Terminology</span><a class="self-link" href="#terminology"></a></h2>
    <dl>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata">Metadata<a class="self-link" href="#metadata"></a></dfn>
+    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="carbon-call">Carbon Call<a class="self-link" href="#carbon-call"></a></dfn>
+    <dd data-md>
+     <p>Carbon Call is a community of sustainability experts who are working together to define a common data model and data dictionary for sustainability data.</p>
+    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="report">Report<a class="self-link" href="#report"></a></dfn>
+    <dd data-md>
+     <p>A sustainability report is a document that describes the sustainability performance of an organization, a product, or a service. A sustainability report is also known as a sustainability disclosure, a sustainability statement, or a sustainability data sheet.</p>
+    <dt data-md><dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="metadata">Metadata</dfn>
     <dd data-md>
      <p>Metadata is data that describes other data. Metadata is used to provide information about the data, such as how it was created, when it was last updated, and how it should be interpreted.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="sustainability-report-metadata">Sustainability Report Metadata<a class="self-link" href="#sustainability-report-metadata"></a></dfn>
+    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="report-metadata">Report Metadata<a class="self-link" href="#report-metadata"></a></dfn>
     <dd data-md>
      <p>A Sustainability Report Metadata is a set of metadata about a sustainability report that is used to discover, understand, and use the sustainability report.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-schema">Metadata Schema<a class="self-link" href="#metadata-schema"></a></dfn>
+    <dt data-md><a data-link-type="dfn" href="#metatag" id="ref-for-metatag">Metatag</a>
     <dd data-md>
-     <p>A metadata schema is a set of rules that define the structure and meaning of metadata. A metadata schema is often expressed in a machine-readable language.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-instance">Metadata Instance<a class="self-link" href="#metadata-instance"></a></dfn>
+     <p>A simple name/value pair that is used to describe a piece of metadata.</p>
+    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="context">Context<a class="self-link" href="#context"></a></dfn>
     <dd data-md>
-     <p>A metadata instance is a specific instance of metadata that conforms to a metadata schema.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element">Metadata Element<a class="self-link" href="#metadata-element"></a></dfn>
+     <p>Metadata is applied to a <code>context</code>, i.e., a report, a section of a report, a property, etc. The context is the thing that the metadata is describing.</p>
+    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="report-context">Report Context<a class="self-link" href="#report-context"></a></dfn>
     <dd data-md>
-     <p>A metadata element is a single piece of metadata that is part of a metadata instance.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-name">Metadata Element Name<a class="self-link" href="#metadata-element-name"></a></dfn>
+     <p>Metadata that applies to the entire report.</p>
+    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="property-context">Property Context<a class="self-link" href="#property-context"></a></dfn>
     <dd data-md>
-     <p>A metadata element name is the name of a metadata element.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-value">Metadata Element Value<a class="self-link" href="#metadata-element-value"></a></dfn>
-    <dd data-md>
-     <p>A metadata element value is the value of a metadata element.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-type">Metadata Element Type<a class="self-link" href="#metadata-element-type"></a></dfn>
-    <dd data-md>
-     <p>A metadata element type is the type of a metadata element.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-description">Metadata Element Description<a class="self-link" href="#metadata-element-description"></a></dfn>
-    <dd data-md>
-     <p>A metadata element description is a description of a metadata element.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-definition">Metadata Element Definition<a class="self-link" href="#metadata-element-definition"></a></dfn>
-    <dd data-md>
-     <p>A metadata element definition is a definition of a metadata element.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-attribute">Metadata Element Attribute<a class="self-link" href="#metadata-element-attribute"></a></dfn>
-    <dd data-md>
-     <p>A metadata element attribute is an attribute of a metadata element.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-attribute-name">Metadata Element Attribute Name<a class="self-link" href="#metadata-element-attribute-name"></a></dfn>
-    <dd data-md>
-     <p>A metadata element attribute name is the name of a metadata element attribute.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-attribute-value">Metadata Element Attribute Value<a class="self-link" href="#metadata-element-attribute-value"></a></dfn>
-    <dd data-md>
-     <p>A metadata element attribute value is the value of a metadata element attribute.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-attribute-type">Metadata Element Attribute Type<a class="self-link" href="#metadata-element-attribute-type"></a></dfn>
-    <dd data-md>
-     <p>A metadata element attribute type is the type of a metadata element attribute.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-attribute-description">Metadata Element Attribute Description<a class="self-link" href="#metadata-element-attribute-description"></a></dfn>
-    <dd data-md>
-     <p>A metadata element attribute description is a description of a metadata element attribute.</p>
-    <dt data-md><dfn data-dfn-type="dfn" data-noexport id="metadata-element-attribute-definition">Metadata Element Attribute Definition<a class="self-link" href="#metadata-element-attribute-definition"></a></dfn>
-    <dd data-md>
-     <p>A metadata element attribute definition is a definition of a metadata element attribute.</p>
+     <p>Metadata that applies to a property of the report, e.g., a section or an individual property.</p>
     <dt data-md><dfn data-dfn-type="dfn" data-noexport id="global-report-identifier-grid">Global Report Identifier (GR.ID)<a class="self-link" href="#global-report-identifier-grid"></a></dfn>
     <dd data-md>
      <p>A Global Report Identifier (GR.ID) is a unique identifier for a sustainability report. The Global Report Identifier (GR.ID) is generated by the GR.ID platform
 collects a range of metadata about the report, and then calculates a unique hash (or fingerprint) for the report.</p>
    </dl>
-   <h2 class="heading settled" data-level="3" id="sustainabilty-report-metadata"><span class="secno">3. </span><span class="content">Sustainability Report Metadata</span><a class="self-link" href="#sustainabilty-report-metadata"></a></h2>
-   <h3 class="heading settled" data-level="3.1" id="sustainabilty-report-metadata-overview"><span class="secno">3.1. </span><span class="content">Sustainability Report Metadata Overview</span><a class="self-link" href="#sustainabilty-report-metadata-overview"></a></h3>
-   <p>The Carbon Call Sustainability Report Metadata is a set of metadata for the report that makes it discoverable, understandable, and usable.</p>
-   <p>The Carbon Call Sustainability Report Metadata is comprised of the following components:</p>
-   <ul>
-    <li data-md>
-     <p>Metadata Schema</p>
-    <li data-md>
-     <p>Metadata Instance</p>
-    <li data-md>
-     <p>Collection of Metadata Elements</p>
-    <li data-md>
-     <p>Metadata Element Name</p>
-    <li data-md>
-     <p>Metadata Element Value</p>
-    <li data-md>
-     <p>Metadata Element Type</p>
-    <li data-md>
-     <p>Metadata Element Description</p>
-    <li data-md>
-     <p>Metadata Element Definition</p>
-    <li data-md>
-     <p>Metadata Element Attribute</p>
-    <li data-md>
-     <p>Metadata Element Attribute Name</p>
-    <li data-md>
-     <p>Metadata Element Attribute Value</p>
-    <li data-md>
-     <p>Metadata Element Attribute Type</p>
-    <li data-md>
-     <p>Metadata Element Attribute Description</p>
-    <li data-md>
-     <p>Metadata Element Attribute Definition</p>
-    <li data-md>
-     <p>Sustainability Report</p>
-    <li data-md>
-     <p>Sustainability Report Metadata</p>
-   </ul>
-   <h3 class="heading settled" data-level="3.2" id="sustainabilty-report-metadata-schema"><span class="secno">3.2. </span><span class="content">Sustainability Report Metadata Schema</span><a class="self-link" href="#sustainabilty-report-metadata-schema"></a></h3>
-   <p>A metadata schema is a set of rules that define the structure and meaning of metadata. A metadata schema is expressed in a machine-readable language.</p>
-   <h4 class="heading settled" data-level="3.2.1" id="dt-sustainabilty-report-metadata-properties"><span class="secno">3.2.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-sustainabilty-report-metadata-properties"></a></h4>
-   <p>The Sustainability Report Metadata has the following properties:</p>
-   <figure id="sustainabilty-report-metadata-properties-table">
+   <h2 class="heading settled" data-level="3" id="discoverable-data-metadata"><span class="secno">3. </span><span class="content">Discoverable Data and Metadata</span><a class="self-link" href="#discoverable-data-metadata"></a></h2>
+   <p>Discoverable data defines the way data is packaged, identified and made available for discovery. Discoverable data is a key component of the Carbon Call data model and data dictionary. A part of the data be discovered
+are a set of metadata that describes the data. The metadata is used to discover, understand, and use the data.</p>
+   <h3 class="heading settled" data-level="3.1" id="sustainabilty-report-schema"><span class="secno">3.1. </span><span class="content">Sustainability Report Schema</span><a class="self-link" href="#sustainabilty-report-schema"></a></h3>
+   <p>A report schema is a set of normative data elements that identify a report and describe the data contained in the report. The report schema is used to validate the report data and also provide a set of metadata about
+the report.</p>
+   <h4 class="heading settled" data-level="3.1.1" id="dt-sustainabilty-report-properties"><span class="secno">3.1.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-sustainabilty-report-properties"></a></h4>
+   <p>The Sustainability Report has the following properties:</p>
+   <figure id="sustainabilty-report-properties-table">
     <table class="data">
      <thead>
       <tr>
@@ -2289,12 +2256,12 @@ collects a range of metadata about the report, and then calculates a unique hash
        <td><dfn data-dfn-for="SustainabilityReport" data-dfn-type="element-attr" data-export id="element-attrdef-sustainabilityreport-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-sustainabilityreport-grid"></a></dfn> : <a data-link-type="dfn" href="#grid" id="ref-for-grid">GRID</a> 
        <td>String 
        <td>M 
-       <td>The Sustainabilty Report global identifier, See <a href="#dt-grid">§ 3.8 Data Type: GRID</a> for details. 
+       <td>The Sustainabilty Report global identifier, See <a href="#dt-grid">§ 3.9 Data Type: GRID</a> for details. 
       <tr>
        <td><dfn data-dfn-for="SustainabilityReport" data-dfn-type="element-attr" data-export id="element-attrdef-sustainabilityreport-metadata"><code>metadata</code><a class="self-link" href="#element-attrdef-sustainabilityreport-metadata"></a></dfn> 
        <td>Object 
        <td>M 
-       <td>A metadata object, see <a href="#dt-metadata">§ 3.3 Data Type: Metadata</a> for details. 
+       <td>A metadata object, see <a href="#dt-metadata">§ 3.2 Data Type: Metadata</a> for details. 
       <tr>
        <td><dfn data-dfn-for="SustainabilityReport" data-dfn-type="element-attr" data-export id="element-attrdef-sustainabilityreport-report"><code>report</code><a class="self-link" href="#element-attrdef-sustainabilityreport-report"></a></dfn> : 
        <td>String 
@@ -2303,9 +2270,12 @@ collects a range of metadata about the report, and then calculates a unique hash
     </table>
     <figcaption>Properties of a Sustainability Report</figcaption>
    </figure>
-   <h3 class="heading settled" data-level="3.3" id="dt-metadata"><span class="secno">3.3. </span><span class="content">Data Type: Metadata</span><a class="self-link" href="#dt-metadata"></a></h3>
-   <p>A metadata object is a set of metadata elements that describe a sustainability report.</p>
-   <h4 class="heading settled" data-level="3.3.1" id="dt-metadata-properties"><span class="secno">3.3.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-metadata-properties"></a></h4>
+   <h3 class="heading settled" data-level="3.2" id="dt-metadata"><span class="secno">3.2. </span><span class="content">Data Type: Metadata</span><a class="self-link" href="#dt-metadata"></a></h3>
+   <p>Report Metadata contains non-normative information about the targeted report and its contents. Typically a report will follow a normative standard, or a defined set of rules,
+and the metadata will provide information about the report that is not covered by the standard. For example, the metadata may contain information about the organization that produced the report, 
+the reporting period, the industry, the assurance provider, etc.</p>
+   <p>Here we have defined a set of <code>normative</code> metadata tags and also provide a mechanism for adding <code>non-normative</code> metadata tags that can be attached to a report or property context. See <a href="#dt-metatag">§ 3.5 Data Type: Metatag</a> for details.</p>
+   <h4 class="heading settled" data-level="3.2.1" id="dt-metadata-properties"><span class="secno">3.2.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-metadata-properties"></a></h4>
    <p>A metadata object has the following properties:</p>
    <figure id="metadata-properties-table">
     <table class="data">
@@ -2320,7 +2290,7 @@ collects a range of metadata about the report, and then calculates a unique hash
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-metadata-grid"></a></dfn> 
        <td>String 
        <td>M 
-       <td>The GRID of the report that the metadata is about, see <a href="#dt-grid">§ 3.8 Data Type: GRID</a> for details. 
+       <td>The GRID of the report that the metadata is about, see <a href="#dt-grid">§ 3.9 Data Type: GRID</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-organizationidentifier"><code>organizationIdentifier</code><a class="self-link" href="#element-attrdef-metadata-organizationidentifier"></a></dfn> 
        <td>String 
@@ -2347,10 +2317,10 @@ collects a range of metadata about the report, and then calculates a unique hash
        <td>M 
        <td>The languages used in the report. The languages MUST be specified using the ISO 639-1 language code. 
       <tr>
-       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reporttype"><code>reportType</code><a class="self-link" href="#element-attrdef-metadata-reporttype"></a></dfn> 
+       <td>reportType : <code class="idl"><a data-link-type="idl" href="#enumdef-reporttype" id="ref-for-enumdef-reporttype">ReportType</a></code> 
        <td>String 
        <td>M 
-       <td>The type of the report. The report type MUST be specified using the ReportType enumeration. 
+       <td>The type of the report. The report type MUST be specified using the ReportType enumeration, see <a href="#dt-report-type">§ 3.12 Data Type: ReportType</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportissuedate"><code>reportIssueDate</code><a class="self-link" href="#element-attrdef-metadata-reportissuedate"></a></dfn> 
        <td>String 
@@ -2360,12 +2330,12 @@ collects a range of metadata about the report, and then calculates a unique hash
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportingperiod"><code>reportingPeriod</code><a class="self-link" href="#element-attrdef-metadata-reportingperiod"></a></dfn> 
        <td>Object 
        <td>M 
-       <td>The reporting period of the report. The reporting period MUST be specified using the ReportingPeriod type, see <a href="#dt-reporting-period">§ 3.4 Data Type: ReportingPeriod</a> for details. 
+       <td>The reporting period of the report. The reporting period MUST be specified using the ReportingPeriod type, see <a href="#dt-reporting-period">§ 3.3 Data Type: ReportingPeriod</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportreplaces"><code>reportReplaces</code><a class="self-link" href="#element-attrdef-metadata-reportreplaces"></a></dfn> 
        <td>String 
        <td>M 
-       <td>The GRID of the report that this report replaces, if any. See <a href="#dt-grid">§ 3.8 Data Type: GRID</a> for details. 
+       <td>The GRID of the report that this report replaces, if any. See <a href="#dt-grid">§ 3.9 Data Type: GRID</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-location"><code>location</code><a class="self-link" href="#element-attrdef-metadata-location"></a></dfn> 
        <td>String 
@@ -2375,22 +2345,22 @@ collects a range of metadata about the report, and then calculates a unique hash
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-industry"><code>industry</code><a class="self-link" href="#element-attrdef-metadata-industry"></a></dfn> 
        <td>String 
        <td>M 
-       <td>The industry of the organization. The industry MUST be specified using the Industry type, see <a href="#dt-industry">§ 3.5 Data Type: Industry</a> for details. 
+       <td>The industry of the organization. The industry MUST be specified using the Industry type, see <a href="#dt-industry">§ 3.4 Data Type: Industry</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-performance"><code>performance</code><a class="self-link" href="#element-attrdef-metadata-performance"></a></dfn> 
        <td>String 
        <td>M 
        <td>xBRL-JSON snippet that provides certain performance information. 
       <tr>
-       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportformat"><code>reportFormat</code><a class="self-link" href="#element-attrdef-metadata-reportformat"></a></dfn> 
+       <td>reportFormat : <code class="idl"><a data-link-type="idl" href="#enumdef-reportformat" id="ref-for-enumdef-reportformat">ReportFormat</a></code> 
        <td>String 
        <td>M 
-       <td>The string name for the format of the report. The report format MUST be specified using the ReportFormat enumeration. 
+       <td>The string name for the format of the report. The report format MUST be specified using the ReportFormat enumeration, see <a href="#dt-report-format">§ 3.10 Data Type: ReportFormat</a> for details. 
       <tr>
-       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportingstandard"><code>reportingStandard</code><a class="self-link" href="#element-attrdef-metadata-reportingstandard"></a></dfn> 
+       <td>reportingStandard : <code class="idl"><a data-link-type="idl" href="#enumdef-reportingstandard" id="ref-for-enumdef-reportingstandard">ReportingStandard</a></code> 
        <td>String 
        <td>M 
-       <td>The string name for the reporting standard used in the report. The reporting standard MUST be specified using the ReportingStandard enumeration. 
+       <td>The string name for the reporting standard used in the report. The reporting standard MUST be specified using the ReportingStandard enumeration, see <a href="#dt-reporting-standard">§ 3.11 Data Type: ReportingStandard</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-assurance"><code>assurance</code><a class="self-link" href="#element-attrdef-metadata-assurance"></a></dfn> 
        <td>String 
@@ -2400,18 +2370,28 @@ collects a range of metadata about the report, and then calculates a unique hash
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-priorreport"><code>priorReport</code><a class="self-link" href="#element-attrdef-metadata-priorreport"></a></dfn> 
        <td>String 
        <td>M 
-       <td>The GRID of the report that this report is based on, if any. See <a href="#dt-grid">§ 3.8 Data Type: GRID</a> for details. 
+       <td>The GRID of the report that this report is based on, if any. See <a href="#dt-grid">§ 3.9 Data Type: GRID</a> for details. 
       <tr>
        <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reporthash"><code>reportHash</code><a class="self-link" href="#element-attrdef-metadata-reporthash"></a></dfn> 
        <td>String 
        <td>M 
        <td>SHA-256 hash of the report. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-reportcontext"><code>reportContext</code><a class="self-link" href="#element-attrdef-metadata-reportcontext"></a></dfn>: <a data-link-type="dfn" href="#metatag" id="ref-for-metatag①">Metatag</a> 
+       <td>Array 
+       <td>M 
+       <td>A collection of <a data-link-type="dfn" href="#metatag" id="ref-for-metatag②">Metatag</a> for the report context. See <a href="#dt-metatag">§ 3.5 Data Type: Metatag</a> for details. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-propertycontext"><code>propertyContext</code><a class="self-link" href="#element-attrdef-metadata-propertycontext"></a></dfn>: <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext">PropertyContext</a> 
+       <td>Array 
+       <td>M 
+       <td>A collection of Report Property Context metadata using <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext①">PropertyContext</a>. See <a href="#dt-property-context">§ 3.6 Data Type: PropertyContext</a> for details. 
     </table>
     <figcaption>Properties of a Metadata Object</figcaption>
    </figure>
-   <h3 class="heading settled" data-level="3.4" id="dt-reporting-period"><span class="secno">3.4. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="reportingperiod">ReportingPeriod<a class="self-link" href="#reportingperiod"></a></dfn></span><a class="self-link" href="#dt-reporting-period"></a></h3>
+   <h3 class="heading settled" data-level="3.3" id="dt-reporting-period"><span class="secno">3.3. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="reportingperiod">ReportingPeriod<a class="self-link" href="#reportingperiod"></a></dfn></span><a class="self-link" href="#dt-reporting-period"></a></h3>
    <p>A reporting period is a set of reporting period elements that describe the reporting period of a sustainability report.</p>
-   <h4 class="heading settled" data-level="3.4.1" id="dt-reporting-period-properties"><span class="secno">3.4.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-reporting-period-properties"></a></h4>
+   <h4 class="heading settled" data-level="3.3.1" id="dt-reporting-period-properties"><span class="secno">3.3.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-reporting-period-properties"></a></h4>
    <figure id="reporting-period-properties-table">
     <table class="data">
      <thead>
@@ -2434,9 +2414,9 @@ collects a range of metadata about the report, and then calculates a unique hash
     </table>
     <figcaption>Properties of a Reporting Period</figcaption>
    </figure>
-   <h3 class="heading settled" data-level="3.5" id="dt-industry"><span class="secno">3.5. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="industry">Industry<a class="self-link" href="#industry"></a></dfn></span><a class="self-link" href="#dt-industry"></a></h3>
+   <h3 class="heading settled" data-level="3.4" id="dt-industry"><span class="secno">3.4. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="industry">Industry<a class="self-link" href="#industry"></a></dfn></span><a class="self-link" href="#dt-industry"></a></h3>
    <p>An industry is a set of industry elements that describe the industry of an organization.</p>
-   <h4 class="heading settled" data-level="3.5.1" id="dt-industry-properties"><span class="secno">3.5.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-industry-properties"></a></h4>
+   <h4 class="heading settled" data-level="3.4.1" id="dt-industry-properties"><span class="secno">3.4.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-industry-properties"></a></h4>
    <p>Industry has the following properties:</p>
    <figure id="industry-properties-table">
     <table class="data">
@@ -2460,7 +2440,61 @@ collects a range of metadata about the report, and then calculates a unique hash
     </table>
     <figcaption>Properties of an Industry</figcaption>
    </figure>
-   <h3 class="heading settled" data-level="3.6" id="dt-decimal"><span class="secno">3.6. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="decimal">Decimal<a class="self-link" href="#decimal"></a></dfn></span><a class="self-link" href="#dt-decimal"></a></h3>
+   <h3 class="heading settled" data-level="3.5" id="dt-metatag"><span class="secno">3.5. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="metatag">Metatag</dfn></span><a class="self-link" href="#dt-metatag"></a></h3>
+   <p>A metatag is a user defined key-value pair that represents a metadata element. The key is a string that represents the name of the metadata element, and the value is a string that represents the
+ value of the metadata element.</p>
+   <h4 class="heading settled" data-level="3.5.1" id="dt-metatag-properties"><span class="secno">3.5.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-metatag-properties"></a></h4>
+   <p>Metatag has the following properties:</p>
+   <figure id="metatag-properties-table">
+    <table>
+     <thead>
+      <tr>
+       <th>Property 
+       <th>Type 
+       <th>Req 
+       <th>Specification 
+     <tbody>
+      <tr>
+       <td><dfn data-dfn-for="Metatag" data-dfn-type="element-attr" data-export id="element-attrdef-metatag-key"><code>key</code><a class="self-link" href="#element-attrdef-metatag-key"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The key of the metatag. 
+      <tr>
+       <td><dfn data-dfn-for="Metatag" data-dfn-type="element-attr" data-export id="element-attrdef-metatag-value"><code>value</code><a class="self-link" href="#element-attrdef-metatag-value"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The value of the metatag. 
+    </table>
+    <figcaption>Properties of a Metatag</figcaption>
+   </figure>
+   <h3 class="heading settled" data-level="3.6" id="dt-property-context"><span class="secno">3.6. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="propertycontext">PropertyContext</dfn></span><a class="self-link" href="#dt-property-context"></a></h3>
+   <p>A property context allows for a grouping of metatags that are associated with a specific property. For example, a property context may be used to group metatags that are associated with a specific
+indicator, or a specific aspect.</p>
+   <h4 class="heading settled" data-level="3.6.1" id="dt-property-context-properties"><span class="secno">3.6.1. </span><span class="content">Properties</span><a class="self-link" href="#dt-property-context-properties"></a></h4>
+   <p>PropertyContext has the following properties:</p>
+   <figure id="property-context-properties-table">
+    <table>
+     <thead>
+      <tr>
+       <th>Property 
+       <th>Type 
+       <th>Req 
+       <th>Specification 
+     <tbody>
+      <tr>
+       <td><dfn data-dfn-for="PropertyContext" data-dfn-type="element-attr" data-export id="element-attrdef-propertycontext-property"><code>property</code><a class="self-link" href="#element-attrdef-propertycontext-property"></a></dfn> 
+       <td>String 
+       <td>M 
+       <td>The property name for the context. The property MUST be the normative name for the property for the report’s specification. For example, the property name can be <code>section 1.1.1</code>, etc. 
+      <tr>
+       <td>metatags : <a data-link-type="dfn" href="#metatag" id="ref-for-metatag③">Metatag</a> 
+       <td>Array 
+       <td>M 
+       <td>A collection of metatags using <a data-link-type="dfn" href="#metatag" id="ref-for-metatag④">Metatag</a>s. See <a href="#dt-metatag">§ 3.5 Data Type: Metatag</a> for details. 
+    </table>
+    <figcaption>Properties of a Property Context</figcaption>
+   </figure>
+   <h3 class="heading settled" data-level="3.7" id="dt-decimal"><span class="secno">3.7. </span><span class="content">Data Type: <dfn data-dfn-type="dfn" data-noexport id="decimal">Decimal<a class="self-link" href="#decimal"></a></dfn></span><a class="self-link" href="#dt-decimal"></a></h3>
    <p>A dotted-decimal number.</p>
    <p>Example values:</p>
    <div class="example" id="example-73d4ac86">
@@ -2474,24 +2508,99 @@ collects a range of metadata about the report, and then calculates a unique hash
       <p><code>-182.84</code></p>
     </ul>
    </div>
-   <h4 class="heading settled" data-level="3.6.1" id="dt-decimal-json"><span class="secno">3.6.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-decimal-json"></a></h4>
+   <h4 class="heading settled" data-level="3.7.1" id="dt-decimal-json"><span class="secno">3.7.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-decimal-json"></a></h4>
    <p>Each Decimal MUST be encoded as a JSON String.</p>
-   <h3 class="heading settled" data-level="3.7" id="dt-string"><span class="secno">3.7. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="string">String</dfn></span><a class="self-link" href="#dt-string"></a></h3>
+   <h3 class="heading settled" data-level="3.8" id="dt-string"><span class="secno">3.8. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="string">String</dfn></span><a class="self-link" href="#dt-string"></a></h3>
    <p>A regular UTF-8 String.</p>
-   <h4 class="heading settled" data-level="3.7.1" id="dt-string-json"><span class="secno">3.7.1. </span><span class="content">JSON Data Representation</span><a class="self-link" href="#dt-string-json"></a></h4>
+   <h4 class="heading settled" data-level="3.8.1" id="dt-string-json"><span class="secno">3.8.1. </span><span class="content">JSON Data Representation</span><a class="self-link" href="#dt-string-json"></a></h4>
    <p>Each <a data-link-type="dfn" href="#string" id="ref-for-string">String</a> MUST be encoded as a JSON String.</p>
-   <h3 class="heading settled" data-level="3.8" id="dt-grid"><span class="secno">3.8. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="grid">GRID</dfn></span><a class="self-link" href="#dt-grid"></a></h3>
+   <h3 class="heading settled" data-level="3.9" id="dt-grid"><span class="secno">3.9. </span><span class="content">Data Type: <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="grid">GRID</dfn></span><a class="self-link" href="#dt-grid"></a></h3>
    <p>A Unique 8 digit alphanumeric identifier. Omits [0/O | 1/I] to avoid ambiguity, case insensitive. Example: <code>R3AK.XF9B.24</code>,
  where part1 = R3AK and part2 = XF9B, separated by a dot. The postfix checksum is 24 separated by a dot.
  has a 2 digit numeric checksum, postfix, used to avoid typos in situations where the GRID is retyped.</p>
-   <h4 class="heading settled" data-level="3.8.1" id="dt-grid-json"><span class="secno">3.8.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-grid-json"></a></h4>
-   <p>Each GRID MUST be encoded as a JSON String, see <a href="#dt-string-json">§ 3.7.1 JSON Data Representation</a> for details.</p>
+   <h4 class="heading settled" data-level="3.9.1" id="dt-grid-json"><span class="secno">3.9.1. </span><span class="content">JSON Representation</span><a class="self-link" href="#dt-grid-json"></a></h4>
+   <p>Each GRID MUST be encoded as a JSON String, see <a href="#dt-string-json">§ 3.8.1 JSON Data Representation</a> for details.</p>
    <p>Example JSON string value:</p>
    <div class="example" id="example-30f9078a">
     <a class="self-link" href="#example-30f9078a"></a> 
 <pre class="language-json highlight"><c- u>"7PBR.R569.29"</c->
 </pre>
    </div>
+   <h3 class="heading settled" data-level="3.10" id="dt-report-format"><span class="secno">3.10. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-reportformat"><code>ReportFormat</code></dfn></span><a class="self-link" href="#dt-report-format"></a></h3>
+   <p>The format of the report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:</p>
+   <dl>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportFormat" data-dfn-type="enum-value" data-export id="dom-reportformat-no_report_format"><code>NO_REPORT_FORMAT</code><a class="self-link" href="#dom-reportformat-no_report_format"></a></dfn>
+    <dd data-md>
+     <p>for No Report Format</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportFormat" data-dfn-type="enum-value" data-export id="dom-reportformat-pdf"><code>PDF</code><a class="self-link" href="#dom-reportformat-pdf"></a></dfn>
+    <dd data-md>
+     <p>for PDF</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportFormat" data-dfn-type="enum-value" data-export id="dom-reportformat-html"><code>HTML</code><a class="self-link" href="#dom-reportformat-html"></a></dfn>
+    <dd data-md>
+     <p>for HTML</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportFormat" data-dfn-type="enum-value" data-export id="dom-reportformat-docx"><code>DOCX</code><a class="self-link" href="#dom-reportformat-docx"></a></dfn>
+    <dd data-md>
+     <p>for DOCX</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportFormat" data-dfn-type="enum-value" data-export id="dom-reportformat-xlsx"><code>XLSX</code><a class="self-link" href="#dom-reportformat-xlsx"></a></dfn>
+    <dd data-md>
+     <p>for XLSX</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportFormat" data-dfn-type="enum-value" data-export id="dom-reportformat-csv"><code>CSV</code><a class="self-link" href="#dom-reportformat-csv"></a></dfn>
+    <dd data-md>
+     <p>for CSV</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportFormat" data-dfn-type="enum-value" data-export id="dom-reportformat-xml"><code>XML</code><a class="self-link" href="#dom-reportformat-xml"></a></dfn>
+    <dd data-md>
+     <p>for XML</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportFormat" data-dfn-type="enum-value" data-export id="dom-reportformat-json"><code>JSON</code><a class="self-link" href="#dom-reportformat-json"></a></dfn>
+    <dd data-md>
+     <p>for JSON</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportFormat" data-dfn-type="enum-value" data-export id="dom-reportformat-xbrl"><code>XBRL</code><a class="self-link" href="#dom-reportformat-xbrl"></a></dfn>
+    <dd data-md>
+     <p>for XBRL</p>
+   </dl>
+   <h3 class="heading settled" data-level="3.11" id="dt-reporting-standard"><span class="secno">3.11. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-reportingstandard"><code>ReportingStandard</code></dfn></span><a class="self-link" href="#dt-reporting-standard"></a></h3>
+   <p>The reporting standard used for the report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:</p>
+   <dl>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportingStandard" data-dfn-type="enum-value" data-export id="dom-reportingstandard-no_reporting_standard"><code>NO_REPORTING_STANDARD</code><a class="self-link" href="#dom-reportingstandard-no_reporting_standard"></a></dfn>
+    <dd data-md>
+     <p>for No Reporting Standard</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportingStandard" data-dfn-type="enum-value" data-export id="dom-reportingstandard-gri"><code>GRI</code><a class="self-link" href="#dom-reportingstandard-gri"></a></dfn>
+    <dd data-md>
+     <p>for Global Reporting Initiative</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportingStandard" data-dfn-type="enum-value" data-export id="dom-reportingstandard-cdp"><code>CDP</code><a class="self-link" href="#dom-reportingstandard-cdp"></a></dfn>
+    <dd data-md>
+     <p>for CDP, formerly Carbon Disclosure Project</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportingStandard" data-dfn-type="enum-value" data-export id="dom-reportingstandard-sasb"><code>SASB</code><a class="self-link" href="#dom-reportingstandard-sasb"></a></dfn>
+    <dd data-md>
+     <p>for Sustainability Accounting Standards Board</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportingStandard" data-dfn-type="enum-value" data-export id="dom-reportingstandard-ir"><code>IR</code><a class="self-link" href="#dom-reportingstandard-ir"></a></dfn>
+    <dd data-md>
+     <p>for International Integrated Reporting Council</p>
+   </dl>
+   <h3 class="heading settled" data-level="3.12" id="dt-report-type"><span class="secno">3.12. </span><span class="content">Data Type: <dfn class="dfn-paneled idl-code" data-dfn-type="enum" data-export id="enumdef-reporttype"><code>ReportType</code></dfn></span><a class="self-link" href="#dt-report-type"></a></h3>
+   <p>The type of report, this is a non-exhastive list and needs expanding. The value MUST be one of the following:</p>
+   <dl>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportType" data-dfn-type="enum-value" data-export id="dom-reporttype-no_report_type"><code>NO_REPORT_TYPE</code><a class="self-link" href="#dom-reporttype-no_report_type"></a></dfn>
+    <dd data-md>
+     <p>for No Report Type</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportType" data-dfn-type="enum-value" data-export id="dom-reporttype-annual_report"><code>ANNUAL_REPORT</code><a class="self-link" href="#dom-reporttype-annual_report"></a></dfn>
+    <dd data-md>
+     <p>for Annual Report</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportType" data-dfn-type="enum-value" data-export id="dom-reporttype-financial_report"><code>FINANCIAL_REPORT</code><a class="self-link" href="#dom-reporttype-financial_report"></a></dfn>
+    <dd data-md>
+     <p>for Financial Report</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportType" data-dfn-type="enum-value" data-export id="dom-reporttype-proxy_statement"><code>PROXY_STATEMENT</code><a class="self-link" href="#dom-reporttype-proxy_statement"></a></dfn>
+    <dd data-md>
+     <p>for Proxy Statement</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportType" data-dfn-type="enum-value" data-export id="dom-reporttype-csrd_report"><code>CSRD_REPORT</code><a class="self-link" href="#dom-reporttype-csrd_report"></a></dfn>
+    <dd data-md>
+     <p>for Corporate Sustainability Report Declaration Report</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportType" data-dfn-type="enum-value" data-export id="dom-reporttype-cdp"><code>CDP</code><a class="self-link" href="#dom-reporttype-cdp"></a></dfn>
+    <dd data-md>
+     <p>for CDP, formerly Carbon Disclosure Project, Report</p>
+    <dt data-md><dfn class="idl-code" data-dfn-for="ReportType" data-dfn-type="enum-value" data-export id="dom-reporttype-sasb"><code>SASB</code><a class="self-link" href="#dom-reporttype-sasb"></a></dfn>
+    <dd data-md>
+     <p>for Sustainability Accounting Standards Board Report</p>
+   </dl>
    <h2 class="heading settled" data-level="4" id="samples"><span class="secno">4. </span><span class="content">Samples</span><a class="self-link" href="#samples"></a></h2>
    <h3 class="heading settled" data-level="4.1" id="sample-sustainability-report"><span class="secno">4.1. </span><span class="content">Sustainability Report</span><a class="self-link" href="#sample-sustainability-report"></a></h3>
    <div class="example" id="example-8d0ffc16">
@@ -2591,7 +2700,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</p>
    <h2 class="heading settled" id="changelog"><span class="content">Appendix B: Changelog</span><a class="self-link" href="#changelog"></a></h2>
    <p>Here we will document changes in the specification as they are made.</p>
-   <h3 class="heading settled" id="changelog-1.0.20230418"><span class="content">Version 1.0.20230418 (April 18, 2023)</span><a class="self-link" href="#changelog-1.0.20230418"></a></h3>
+   <h3 class="heading settled" id="changelog-1.0.20230626"><span class="content">Version 1.0.20230626 (June 26, 2023)</span><a class="self-link" href="#changelog-1.0.20230626"></a></h3>
+   <ul>
+    <li data-md>
+     <p>Adding <code>ReportType</code> enum, see <a href="#dt-report-type">§ 3.12 Data Type: ReportType</a> for details.</p>
+    <li data-md>
+     <p>Adding <code>reportContext</code> a collection of <a data-link-type="dfn" href="#metatag" id="ref-for-metatag⑤">Metatag</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
+    <li data-md>
+     <p>Adding <code>propertyContexts</code> a collection of <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext②">PropertyContext</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata①">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
+   </ul>
   </main>
 <script>
 (function() {
@@ -2725,85 +2842,147 @@ SOFTWARE.</p>
   <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
   <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="index">
-   <li><a href="#element-attrdef-metadata-assurance">assurance</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-industry-businessactivity">businessActivity</a><span>, in § 3.5.1</span>
-   <li><a href="#decimal">Decimal</a><span>, in § 3.6</span>
-   <li><a href="#element-attrdef-metadata-domicile">domicile</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-reportingperiod-enddate">endDate</a><span>, in § 3.4.1</span>
+   <li><a href="#dom-reporttype-annual_report">ANNUAL_REPORT</a><span>, in § 3.12</span>
+   <li><a href="#element-attrdef-metadata-assurance">assurance</a><span>, in § 3.2.1</span>
+   <li><a href="#element-attrdef-industry-businessactivity">businessActivity</a><span>, in § 3.4.1</span>
+   <li><a href="#carbon-call">Carbon Call</a><span>, in § 2</span>
+   <li>
+    CDP
+    <ul>
+     <li><a href="#dom-reporttype-cdp">enum-value for ReportType</a><span>, in § 3.12</span>
+     <li><a href="#dom-reportingstandard-cdp">enum-value for ReportingStandard</a><span>, in § 3.11</span>
+    </ul>
+   <li><a href="#context">Context</a><span>, in § 2</span>
+   <li><a href="#dom-reporttype-csrd_report">CSRD_REPORT</a><span>, in § 3.12</span>
+   <li><a href="#dom-reportformat-csv">CSV</a><span>, in § 3.10</span>
+   <li><a href="#decimal">Decimal</a><span>, in § 3.7</span>
+   <li><a href="#dom-reportformat-docx">DOCX</a><span>, in § 3.10</span>
+   <li><a href="#element-attrdef-metadata-domicile">domicile</a><span>, in § 3.2.1</span>
+   <li><a href="#element-attrdef-reportingperiod-enddate">endDate</a><span>, in § 3.3.1</span>
+   <li><a href="#dom-reporttype-financial_report">FINANCIAL_REPORT</a><span>, in § 3.12</span>
    <li><a href="#global-report-identifier-grid">Global Report Identifier (GR.ID)</a><span>, in § 2</span>
+   <li><a href="#dom-reportingstandard-gri">GRI</a><span>, in § 3.11</span>
    <li>
     GRID
     <ul>
-     <li><a href="#grid">definition of</a><span>, in § 3.8</span>
-     <li><a href="#element-attrdef-metadata-grid">element-attr for Metadata</a><span>, in § 3.3.1</span>
-     <li><a href="#element-attrdef-sustainabilityreport-grid">element-attr for SustainabilityReport</a><span>, in § 3.2.1</span>
+     <li><a href="#grid">definition of</a><span>, in § 3.9</span>
+     <li><a href="#element-attrdef-metadata-grid">element-attr for Metadata</a><span>, in § 3.2.1</span>
+     <li><a href="#element-attrdef-sustainabilityreport-grid">element-attr for SustainabilityReport</a><span>, in § 3.1.1</span>
     </ul>
-   <li><a href="#industry">Industry</a><span>, in § 3.5</span>
-   <li><a href="#element-attrdef-metadata-industry">industry</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-languages">languages</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-location">location</a><span>, in § 3.3.1</span>
+   <li><a href="#dom-reportformat-html">HTML</a><span>, in § 3.10</span>
+   <li><a href="#industry">Industry</a><span>, in § 3.4</span>
+   <li><a href="#element-attrdef-metadata-industry">industry</a><span>, in § 3.2.1</span>
+   <li><a href="#dom-reportingstandard-ir">IR</a><span>, in § 3.11</span>
+   <li><a href="#dom-reportformat-json">JSON</a><span>, in § 3.10</span>
+   <li><a href="#element-attrdef-metatag-key">key</a><span>, in § 3.5.1</span>
+   <li><a href="#element-attrdef-metadata-languages">languages</a><span>, in § 3.2.1</span>
+   <li><a href="#element-attrdef-metadata-location">location</a><span>, in § 3.2.1</span>
    <li><a href="#metadata">Metadata</a><span>, in § 2</span>
-   <li><a href="#element-attrdef-sustainabilityreport-metadata">metadata</a><span>, in § 3.2.1</span>
-   <li><a href="#metadata-element">Metadata Element</a><span>, in § 2</span>
-   <li><a href="#metadata-element-attribute">Metadata Element Attribute</a><span>, in § 2</span>
-   <li><a href="#metadata-element-attribute-definition">Metadata Element Attribute Definition</a><span>, in § 2</span>
-   <li><a href="#metadata-element-attribute-description">Metadata Element Attribute Description</a><span>, in § 2</span>
-   <li><a href="#metadata-element-attribute-name">Metadata Element Attribute Name</a><span>, in § 2</span>
-   <li><a href="#metadata-element-attribute-type">Metadata Element Attribute Type</a><span>, in § 2</span>
-   <li><a href="#metadata-element-attribute-value">Metadata Element Attribute Value</a><span>, in § 2</span>
-   <li><a href="#metadata-element-definition">Metadata Element Definition</a><span>, in § 2</span>
-   <li><a href="#metadata-element-description">Metadata Element Description</a><span>, in § 2</span>
-   <li><a href="#metadata-element-name">Metadata Element Name</a><span>, in § 2</span>
-   <li><a href="#metadata-element-type">Metadata Element Type</a><span>, in § 2</span>
-   <li><a href="#metadata-element-value">Metadata Element Value</a><span>, in § 2</span>
-   <li><a href="#metadata-instance">Metadata Instance</a><span>, in § 2</span>
-   <li><a href="#metadata-schema">Metadata Schema</a><span>, in § 2</span>
-   <li><a href="#element-attrdef-metadata-operatingcountries">operatingCountries</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-organizationidentifier">organizationIdentifier</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-organizationname">organizationName</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-performance">performance</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-priorreport">priorReport</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-sustainabilityreport-report">report</a><span>, in § 3.2.1</span>
-   <li><a href="#element-attrdef-metadata-reportformat">reportFormat</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-reporthash">reportHash</a><span>, in § 3.3.1</span>
-   <li><a href="#reportingperiod">ReportingPeriod</a><span>, in § 3.4</span>
-   <li><a href="#element-attrdef-metadata-reportingperiod">reportingPeriod</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-reportingstandard">reportingStandard</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-reportissuedate">reportIssueDate</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-reportreplaces">reportReplaces</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-metadata-reporttype">reportType</a><span>, in § 3.3.1</span>
-   <li><a href="#element-attrdef-industry-sector">sector</a><span>, in § 3.5.1</span>
-   <li><a href="#element-attrdef-reportingperiod-startdate">startDate</a><span>, in § 3.4.1</span>
-   <li><a href="#string">String</a><span>, in § 3.7</span>
-   <li><a href="#sustainability-report-metadata">Sustainability Report Metadata</a><span>, in § 2</span>
+   <li><a href="#element-attrdef-sustainabilityreport-metadata">metadata</a><span>, in § 3.1.1</span>
+   <li><a href="#metatag">Metatag</a><span>, in § 3.5</span>
+   <li><a href="#dom-reportformat-no_report_format">NO_REPORT_FORMAT</a><span>, in § 3.10</span>
+   <li><a href="#dom-reportingstandard-no_reporting_standard">NO_REPORTING_STANDARD</a><span>, in § 3.11</span>
+   <li><a href="#dom-reporttype-no_report_type">NO_REPORT_TYPE</a><span>, in § 3.12</span>
+   <li><a href="#element-attrdef-metadata-operatingcountries">operatingCountries</a><span>, in § 3.2.1</span>
+   <li><a href="#element-attrdef-metadata-organizationidentifier">organizationIdentifier</a><span>, in § 3.2.1</span>
+   <li><a href="#element-attrdef-metadata-organizationname">organizationName</a><span>, in § 3.2.1</span>
+   <li><a href="#dom-reportformat-pdf">PDF</a><span>, in § 3.10</span>
+   <li><a href="#element-attrdef-metadata-performance">performance</a><span>, in § 3.2.1</span>
+   <li><a href="#element-attrdef-metadata-priorreport">priorReport</a><span>, in § 3.2.1</span>
+   <li><a href="#element-attrdef-propertycontext-property">property</a><span>, in § 3.6.1</span>
+   <li><a href="#property-context">Property Context</a><span>, in § 2</span>
+   <li><a href="#propertycontext">PropertyContext</a><span>, in § 3.6</span>
+   <li><a href="#element-attrdef-metadata-propertycontext">propertyContext</a><span>, in § 3.2.1</span>
+   <li><a href="#dom-reporttype-proxy_statement">PROXY_STATEMENT</a><span>, in § 3.12</span>
+   <li><a href="#report">Report</a><span>, in § 2</span>
+   <li><a href="#element-attrdef-sustainabilityreport-report">report</a><span>, in § 3.1.1</span>
+   <li><a href="#report-context">Report Context</a><span>, in § 2</span>
+   <li><a href="#element-attrdef-metadata-reportcontext">reportContext</a><span>, in § 3.2.1</span>
+   <li><a href="#enumdef-reportformat">ReportFormat</a><span>, in § 3.10</span>
+   <li><a href="#element-attrdef-metadata-reporthash">reportHash</a><span>, in § 3.2.1</span>
+   <li><a href="#reportingperiod">ReportingPeriod</a><span>, in § 3.3</span>
+   <li><a href="#element-attrdef-metadata-reportingperiod">reportingPeriod</a><span>, in § 3.2.1</span>
+   <li><a href="#enumdef-reportingstandard">ReportingStandard</a><span>, in § 3.11</span>
+   <li><a href="#element-attrdef-metadata-reportissuedate">reportIssueDate</a><span>, in § 3.2.1</span>
+   <li><a href="#report-metadata">Report Metadata</a><span>, in § 2</span>
+   <li><a href="#element-attrdef-metadata-reportreplaces">reportReplaces</a><span>, in § 3.2.1</span>
+   <li><a href="#enumdef-reporttype">ReportType</a><span>, in § 3.12</span>
+   <li>
+    SASB
+    <ul>
+     <li><a href="#dom-reporttype-sasb">enum-value for ReportType</a><span>, in § 3.12</span>
+     <li><a href="#dom-reportingstandard-sasb">enum-value for ReportingStandard</a><span>, in § 3.11</span>
+    </ul>
+   <li><a href="#element-attrdef-industry-sector">sector</a><span>, in § 3.4.1</span>
+   <li><a href="#element-attrdef-reportingperiod-startdate">startDate</a><span>, in § 3.3.1</span>
+   <li><a href="#string">String</a><span>, in § 3.8</span>
+   <li><a href="#element-attrdef-metatag-value">value</a><span>, in § 3.5.1</span>
+   <li><a href="#dom-reportformat-xbrl">XBRL</a><span>, in § 3.10</span>
+   <li><a href="#dom-reportformat-xlsx">XLSX</a><span>, in § 3.10</span>
+   <li><a href="#dom-reportformat-xml">XML</a><span>, in § 3.10</span>
   </ul>
-  <aside aria-labelledby="infopaneltitle-for-string" class="dfn-panel" data-for="string" id="infopanel-for-string">
-   <span id="infopaneltitle-for-string" style="display:none">Info about the 'String' definition.</span><b><a href="#string">#string</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="#ref-for-string">3.7.1. JSON Data Representation</a>
-   </ul>
-  </aside>
-  <aside aria-labelledby="infopaneltitle-for-grid" class="dfn-panel" data-for="grid" id="infopanel-for-grid">
-   <span id="infopaneltitle-for-grid" style="display:none">Info about the 'GRID' definition.</span><b><a href="#grid">#grid</a></b><b>Referenced in:</b>
-   <ul>
-    <li><a href="#ref-for-grid">3.2.1. Properties</a>
-   </ul>
-  </aside>
-<script>/* script-dfn-panel */
+<script>/* Boilerplate: script-dfn-panel */
 "use strict";
 {
-    function queryAll(sel) {
-        return [].slice.call(document.querySelectorAll(sel));
+    const dfnsJson = window.dfnsJson || {};
+
+    function genDfnPanel({dfnID, url, dfnText, refSections, external}) {
+        return mk.aside({
+            class: "dfn-panel",
+            id: `infopanel-for-${dfnID}`,
+            "data-for": dfnID,
+            "aria-labelled-by":`infopaneltitle-for-${dfnID}`,
+            },
+            mk.span({id:`infopaneltitle-for-${dfnID}`, style:"display:none"},
+                `Info about the '${dfnText}' ${external?"external":""} reference.`),
+            mk.a({href:url}, url),
+            mk.b({}, "Referenced in:"),
+            mk.ul({},
+                ...refSections.map(section=>
+                    mk.li({},
+                        ...section.refs.map((ref, refI)=>
+                            [
+                                mk.a({
+                                    href: `#${ref.id}`
+                                    },
+                                    (refI == 0) ? section.title : `(${refI + 1})`
+                                ),
+                                " ",
+                            ]
+                        ),
+                    ),
+                ),
+            ),
+        );
     }
 
-    // Add popup behavior to all dfns to show the corresponding dfn-panel.
-    var dfns = document.querySelectorAll('.dfn-paneled');
-    for (let dfn of dfns) { insertDfnPopupAction(dfn); }
+    function genAllDfnPanels() {
+        for(const panelData of Object.values(window.dfnpanelData)) {
+            const dfnID = panelData.dfnID;
+            const dfn = document.getElementById(dfnID);
+            if(!dfn) {
+                console.log(`Can't find dfn#${dfnID}.`, panelData);
+            } else {
+                const panel = genDfnPanel(panelData);
+                append(document.body, panel);
+                insertDfnPopupAction(dfn, panel)
+            }
+        }
+    }
 
-    document.body.addEventListener("click", (e) => {
-        // If not handled already, just hide all dfn panels.
-        hideAllDfnPanels();
-    });
+    document.addEventListener("DOMContentLoaded", ()=>{
+        genAllDfnPanels();
+
+        // Add popup behavior to all dfns to show the corresponding dfn-panel.
+        var dfns = queryAll('.dfn-paneled');
+        for(let dfn of dfns) { ; }
+
+        document.body.addEventListener("click", (e) => {
+            // If not handled already, just hide all dfn panels.
+            hideAllDfnPanels();
+        });
+    })
+
 
     function hideAllDfnPanels() {
         // Turn off any currently "on" or "activated" panels.
@@ -2853,49 +3032,252 @@ SOFTWARE.</p>
         }
     }
 
-    function insertDfnPopupAction(dfn) {
+    function insertDfnPopupAction(dfn, dfnPanel) {
         // Find dfn panel
-        const dfnPanel = document.querySelector(`.dfn-panel[data-for='${dfn.id}']`);
-        if (dfnPanel) {
-            const panelWrapper = document.createElement('span');
-            panelWrapper.appendChild(dfnPanel);
-            panelWrapper.style.position = "relative";
-            panelWrapper.style.height = "0px";
-            dfn.insertAdjacentElement("afterend", panelWrapper);
-            dfn.setAttribute('role', 'button');
-            dfn.setAttribute('aria-expanded', 'false')
-            dfn.tabIndex = 0;
-            dfn.classList.add('has-dfn-panel');
-            dfn.addEventListener('click', (event) => {
-                showDfnPanel(dfnPanel, dfn);
+        const panelWrapper = document.createElement('span');
+        panelWrapper.appendChild(dfnPanel);
+        panelWrapper.style.position = "relative";
+        panelWrapper.style.height = "0px";
+        dfn.insertAdjacentElement("afterend", panelWrapper);
+        dfn.setAttribute('role', 'button');
+        dfn.setAttribute('aria-expanded', 'false')
+        dfn.tabIndex = 0;
+        dfn.classList.add('has-dfn-panel');
+        dfn.addEventListener('click', (event) => {
+            showDfnPanel(dfnPanel, dfn);
+            event.stopPropagation();
+        });
+        dfn.addEventListener('keypress', (event) => {
+            const kc = event.keyCode;
+            // 32->Space, 13->Enter
+            if(kc == 32 || kc == 13) {
+                toggleDfnPanel(dfnPanel, dfn);
                 event.stopPropagation();
-            });
-            dfn.addEventListener('keypress', (event) => {
-                const kc = event.keyCode;
-                // 32->Space, 13->Enter
-                if(kc == 32 || kc == 13) {
-                    toggleDfnPanel(dfnPanel, dfn);
-                    event.stopPropagation();
-                    event.preventDefault();
-                }
-            });
+                event.preventDefault();
+            }
+        });
 
-            dfnPanel.addEventListener('click', (event) => {
+        dfnPanel.addEventListener('click', (event) => {
+            if (event.target.nodeName == 'A') {
                 pinDfnPanel(dfnPanel);
+            }
+            event.stopPropagation();
+        });
+
+        dfnPanel.addEventListener('keydown', (event) => {
+            if(event.keyCode == 27) { // Escape key
+                hideDfnPanel(dfnPanel, dfn);
                 event.stopPropagation();
-            });
-
-            dfnPanel.addEventListener('keydown', (event) => {
-                if(event.keyCode == 27) { // Escape key
-                    hideDfnPanel(dfnPanel, dfn);
-                    event.stopPropagation();
-                    event.preventDefault();
-                }
-            })
-
-        } else {
-            console.log("Couldn't find .dfn-panel[data-for='" + dfn.id + "']");
-        }
+                event.preventDefault();
+            }
+        })
     }
+}
+</script>
+<script>/* Boilerplate: script-dfn-panel-json */
+window.dfnpanelData = {};
+window.dfnpanelData['metadata'] = {"dfnID": "metadata", "url": "#metadata", "dfnText": "Metadata", "refSections": [{"refs": [{"id": "ref-for-metadata"}, {"id": "ref-for-metadata\u2460"}], "title": "Version 1.0.20230626 (June 26, 2023)"}], "external": false};
+window.dfnpanelData['metatag'] = {"dfnID": "metatag", "url": "#metatag", "dfnText": "Metatag", "refSections": [{"refs": [{"id": "ref-for-metatag"}], "title": "2. Terminology"}, {"refs": [{"id": "ref-for-metatag\u2460"}, {"id": "ref-for-metatag\u2461"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2462"}, {"id": "ref-for-metatag\u2463"}], "title": "3.6.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2464"}], "title": "Version 1.0.20230626 (June 26, 2023)"}], "external": false};
+window.dfnpanelData['propertycontext'] = {"dfnID": "propertycontext", "url": "#propertycontext", "dfnText": "PropertyContext", "refSections": [{"refs": [{"id": "ref-for-propertycontext"}, {"id": "ref-for-propertycontext\u2460"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-propertycontext\u2461"}], "title": "Version 1.0.20230626 (June 26, 2023)"}], "external": false};
+window.dfnpanelData['string'] = {"dfnID": "string", "url": "#string", "dfnText": "String", "refSections": [{"refs": [{"id": "ref-for-string"}], "title": "3.8.1. JSON Data Representation"}], "external": false};
+window.dfnpanelData['grid'] = {"dfnID": "grid", "url": "#grid", "dfnText": "GRID", "refSections": [{"refs": [{"id": "ref-for-grid"}], "title": "3.1.1. Properties"}], "external": false};
+window.dfnpanelData['enumdef-reportformat'] = {"dfnID": "enumdef-reportformat", "url": "#enumdef-reportformat", "dfnText": "ReportFormat", "refSections": [{"refs": [{"id": "ref-for-enumdef-reportformat"}], "title": "3.2.1. Properties"}], "external": false};
+window.dfnpanelData['enumdef-reportingstandard'] = {"dfnID": "enumdef-reportingstandard", "url": "#enumdef-reportingstandard", "dfnText": "ReportingStandard", "refSections": [{"refs": [{"id": "ref-for-enumdef-reportingstandard"}], "title": "3.2.1. Properties"}], "external": false};
+window.dfnpanelData['enumdef-reporttype'] = {"dfnID": "enumdef-reporttype", "url": "#enumdef-reporttype", "dfnText": "ReportType", "refSections": [{"refs": [{"id": "ref-for-enumdef-reporttype"}], "title": "3.2.1. Properties"}], "external": false};
+</script>
+<script>/* Boilerplate: script-dom-helper */
+function query(sel) { return document.querySelector(sel); }
+
+function queryAll(sel) { return [...document.querySelectorAll(sel)]; }
+
+function iter(obj) {
+	if(!obj) return [];
+	var it = obj[Symbol.iterator];
+	if(it) return it;
+	return Object.entries(obj);
+}
+
+function mk(tagname, attrs, ...children) {
+	const el = document.createElement(tagname);
+	for(const [k,v] of iter(attrs)) {
+		if(k.slice(0,3) == "_on") {
+			const eventName = k.slice(3);
+			el.addEventListener(eventName, v);
+		} else if(k[0] == "_") {
+			// property, not attribute
+			el[k.slice(1)] = v;
+		} else {
+			if(v === false || v == null) {
+        continue;
+      } else if(v === true) {
+        el.setAttribute(k, "");
+        continue;
+      } else {
+  			el.setAttribute(k, v);
+      }
+		}
+	}
+	append(el, children);
+	return el;
+}
+
+/* Create shortcuts for every known HTML element */
+[
+  "a",
+  "abbr",
+  "acronym",
+  "address",
+  "applet",
+  "area",
+  "article",
+  "aside",
+  "audio",
+  "b",
+  "base",
+  "basefont",
+  "bdo",
+  "big",
+  "blockquote",
+  "body",
+  "br",
+  "button",
+  "canvas",
+  "caption",
+  "center",
+  "cite",
+  "code",
+  "col",
+  "colgroup",
+  "datalist",
+  "dd",
+  "del",
+  "details",
+  "dfn",
+  "dialog",
+  "div",
+  "dl",
+  "dt",
+  "em",
+  "embed",
+  "fieldset",
+  "figcaption",
+  "figure",
+  "font",
+  "footer",
+  "form",
+  "frame",
+  "frameset",
+  "head",
+  "header",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "hr",
+  "html",
+  "i",
+  "iframe",
+  "img",
+  "input",
+  "ins",
+  "kbd",
+  "label",
+  "legend",
+  "li",
+  "link",
+  "main",
+  "map",
+  "mark",
+  "meta",
+  "meter",
+  "nav",
+  "nobr",
+  "noscript",
+  "object",
+  "ol",
+  "optgroup",
+  "option",
+  "output",
+  "p",
+  "param",
+  "pre",
+  "progress",
+  "q",
+  "s",
+  "samp",
+  "script",
+  "section",
+  "select",
+  "small",
+  "source",
+  "span",
+  "strike",
+  "strong",
+  "style",
+  "sub",
+  "summary",
+  "sup",
+  "table",
+  "tbody",
+  "td",
+  "template",
+  "textarea",
+  "tfoot",
+  "th",
+  "thead",
+  "time",
+  "title",
+  "tr",
+  "u",
+  "ul",
+  "var",
+  "video",
+  "wbr",
+  "xmp",
+].forEach(tagname=>{
+	mk[tagname] = (...args) => mk(tagname, ...args);
+});
+
+function* nodesFromChildList(children) {
+	for(const child of children.flat(Infinity)) {
+		if(child instanceof Node) {
+			yield child;
+		} else {
+			yield new Text(child);
+		}
+	}
+}
+function append(el, ...children) {
+	for(const child of nodesFromChildList(children)) {
+		if(el instanceof Node) el.appendChild(child);
+		else el.push(child);
+	}
+	return el;
+}
+
+function insertAfter(el, ...children) {
+	for(const child of nodesFromChildList(children)) {
+		el.parentNode.insertBefore(child, el.nextSibling);
+	}
+	return el;
+}
+
+function clearContents(el) {
+	el.innerHTML = "";
+	return el;
+}
+
+function parseHTML(markup) {
+	if(markup.toLowerCase().trim().indexOf('<!doctype') === 0) {
+		const doc = document.implementation.createHTMLDocument("");
+		doc.documentElement.innerHTML = markup;
+		return doc;
+	} else {
+		const el = mk.template({});
+		el.innerHTML = markup;
+		return el.content;
+	}
 }
 </script>
