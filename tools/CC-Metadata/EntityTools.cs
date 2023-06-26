@@ -47,9 +47,65 @@ public static class EntityTools
             ReportingStandard = ReportingStandard.ISSB,
             Assurance = "DE_BaFIN: 1234567890",
             PriorReport = "",
-            ReportHash = "dftaae3297i89798adsdf832adfs912231azsdf"
+            ReportHash = "dftaae3297i89798adsdf832adfs912231azsdf",
+            ReportContext = { GetReportMetatags() },
+            PropertyContexts = { GetPropertyContexts() },
         };
         return m;
+    }
+
+    private static IEnumerable<PropertyContext> GetPropertyContexts()
+    {
+        var retVal = new List<PropertyContext>();
+
+        var prop1 = new PropertyContext
+        {
+            Property = "Section 1.2.1",
+            Metatags =
+            {
+                new Metatag
+                {
+                    Key = "Carbon Offset Ratio",
+                    Value = "1.2"
+                }
+            }
+        };
+        
+        var prop2 = new PropertyContext
+        {
+            Property = "Section 1.2.2",
+            Metatags =
+            {
+                new Metatag
+                {
+                    Key = "GHG Adjustment Exception",
+                    Value = "GGP-1_2_2"
+                }
+            }
+        };
+        retVal.Add(prop1);
+        retVal.Add(prop2);
+        return retVal;
+    }
+
+    private static IEnumerable<Metatag> GetReportMetatags()
+    {
+        var retVal = new List<Metatag>();
+        
+        var mt1 = new Metatag
+        {
+            Key = "Author Contact Email",
+            Value = "someone@somewhere.com"
+        };
+        
+        var mt2 = new Metatag
+        {
+            Key = "Author Contact Phone",
+            Value = "123-456-7890"
+        };
+        retVal.Add(mt1);
+        retVal.Add(mt2);
+        return retVal;
     }
 
     //Unique 8 digit alphanumeric identifier. Omits [0/O | 1/I] to avoid ambiguity, case insensitive. Example: R3AK.XF9B.24

@@ -32,6 +32,8 @@ message Metadata{
     string assurance = 16; //Scheme prefix and identifier for the provider that conducted the assurance or audit.
     string prior_report = 17; //GR.ID of the report this report is based on
     string report_hash = 18; //SHA-256 hash of the report
+    repeated Metatag report_context = 19; //Metatags that provide additional context for the report
+    repeated PropertyContext property_contexts = 20; //Property contexts that provide additional context for the report, i.e., section metadata
 }
 
 
@@ -342,4 +344,14 @@ enum ReportingStandard{
     E_F_R_A_G = 3;
     G_R_I = 4;
     //TODO: add more
+}
+
+message Metatag{
+    string key = 1;
+    string value = 2;
+}
+
+message PropertyContext{
+    string property = 1;
+    repeated Metatag metatags = 2;
 }

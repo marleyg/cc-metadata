@@ -273,7 +273,7 @@ public interface MetadataOrBuilder extends
 
   /**
    * <pre>
-   *Scheme prefix and identifier for the provider that conducted the assurnace or audit.bool
+   *Scheme prefix and identifier for the provider that conducted the assurance or audit.
    * </pre>
    *
    * <code>string assurance = 16;</code>
@@ -282,7 +282,7 @@ public interface MetadataOrBuilder extends
   java.lang.String getAssurance();
   /**
    * <pre>
-   *Scheme prefix and identifier for the provider that conducted the assurnace or audit.bool
+   *Scheme prefix and identifier for the provider that conducted the assurance or audit.
    * </pre>
    *
    * <code>string assurance = 16;</code>
@@ -330,4 +330,92 @@ public interface MetadataOrBuilder extends
    */
   com.google.protobuf.ByteString
       getReportHashBytes();
+
+  /**
+   * <pre>
+   *Metatags that provide additional context for the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+   */
+  java.util.List<org.carboncall.metadata.Metatag> 
+      getReportContextList();
+  /**
+   * <pre>
+   *Metatags that provide additional context for the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+   */
+  org.carboncall.metadata.Metatag getReportContext(int index);
+  /**
+   * <pre>
+   *Metatags that provide additional context for the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+   */
+  int getReportContextCount();
+  /**
+   * <pre>
+   *Metatags that provide additional context for the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+   */
+  java.util.List<? extends org.carboncall.metadata.MetatagOrBuilder> 
+      getReportContextOrBuilderList();
+  /**
+   * <pre>
+   *Metatags that provide additional context for the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+   */
+  org.carboncall.metadata.MetatagOrBuilder getReportContextOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   *Property contexts that provide additional context for the report, i.e., section metadata
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+   */
+  java.util.List<org.carboncall.metadata.PropertyContext> 
+      getPropertyContextsList();
+  /**
+   * <pre>
+   *Property contexts that provide additional context for the report, i.e., section metadata
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+   */
+  org.carboncall.metadata.PropertyContext getPropertyContexts(int index);
+  /**
+   * <pre>
+   *Property contexts that provide additional context for the report, i.e., section metadata
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+   */
+  int getPropertyContextsCount();
+  /**
+   * <pre>
+   *Property contexts that provide additional context for the report, i.e., section metadata
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+   */
+  java.util.List<? extends org.carboncall.metadata.PropertyContextOrBuilder> 
+      getPropertyContextsOrBuilderList();
+  /**
+   * <pre>
+   *Property contexts that provide additional context for the report, i.e., section metadata
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+   */
+  org.carboncall.metadata.PropertyContextOrBuilder getPropertyContextsOrBuilder(
+      int index);
 }

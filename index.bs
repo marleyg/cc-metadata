@@ -328,7 +328,7 @@ A metatag is a user defined key-value pair that represents a metadata element. T
 Metatag has the following properties:
 
 <figure id="metatag-properties-table" dfn-type="element-attr" dfn-for="Metatag">
-  <table>
+  <table class="data">
     <thead>
       <tr>
         <th>Property
@@ -360,7 +360,7 @@ indicator, or a specific aspect.
 PropertyContext has the following properties:
 
 <figure id="property-context-properties-table" dfn-type="element-attr" dfn-for="PropertyContext">
-  <table>
+  <table class="data">
     <thead>
       <tr>
         <th>Property

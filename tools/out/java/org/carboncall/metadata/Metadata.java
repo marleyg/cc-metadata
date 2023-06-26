@@ -32,6 +32,8 @@ private static final long serialVersionUID = 0L;
     assurance_ = "";
     priorReport_ = "";
     reportHash_ = "";
+    reportContext_ = java.util.Collections.emptyList();
+    propertyContexts_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -221,6 +223,24 @@ private static final long serialVersionUID = 0L;
             reportHash_ = s;
             break;
           }
+          case 154: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              reportContext_ = new java.util.ArrayList<org.carboncall.metadata.Metatag>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            reportContext_.add(
+                input.readMessage(org.carboncall.metadata.Metatag.parser(), extensionRegistry));
+            break;
+          }
+          case 162: {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              propertyContexts_ = new java.util.ArrayList<org.carboncall.metadata.PropertyContext>();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            propertyContexts_.add(
+                input.readMessage(org.carboncall.metadata.PropertyContext.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -243,6 +263,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((mutable_bitField0_ & 0x00000002) != 0)) {
         languages_ = java.util.Collections.unmodifiableList(languages_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        reportContext_ = java.util.Collections.unmodifiableList(reportContext_);
+      }
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        propertyContexts_ = java.util.Collections.unmodifiableList(propertyContexts_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -823,7 +849,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object assurance_;
   /**
    * <pre>
-   *Scheme prefix and identifier for the provider that conducted the assurnace or audit.bool
+   *Scheme prefix and identifier for the provider that conducted the assurance or audit.
    * </pre>
    *
    * <code>string assurance = 16;</code>
@@ -844,7 +870,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *Scheme prefix and identifier for the provider that conducted the assurnace or audit.bool
+   *Scheme prefix and identifier for the provider that conducted the assurance or audit.
    * </pre>
    *
    * <code>string assurance = 16;</code>
@@ -957,6 +983,126 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int REPORT_CONTEXT_FIELD_NUMBER = 19;
+  private java.util.List<org.carboncall.metadata.Metatag> reportContext_;
+  /**
+   * <pre>
+   *Metatags that provide additional context for the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+   */
+  @java.lang.Override
+  public java.util.List<org.carboncall.metadata.Metatag> getReportContextList() {
+    return reportContext_;
+  }
+  /**
+   * <pre>
+   *Metatags that provide additional context for the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends org.carboncall.metadata.MetatagOrBuilder> 
+      getReportContextOrBuilderList() {
+    return reportContext_;
+  }
+  /**
+   * <pre>
+   *Metatags that provide additional context for the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+   */
+  @java.lang.Override
+  public int getReportContextCount() {
+    return reportContext_.size();
+  }
+  /**
+   * <pre>
+   *Metatags that provide additional context for the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+   */
+  @java.lang.Override
+  public org.carboncall.metadata.Metatag getReportContext(int index) {
+    return reportContext_.get(index);
+  }
+  /**
+   * <pre>
+   *Metatags that provide additional context for the report
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+   */
+  @java.lang.Override
+  public org.carboncall.metadata.MetatagOrBuilder getReportContextOrBuilder(
+      int index) {
+    return reportContext_.get(index);
+  }
+
+  public static final int PROPERTY_CONTEXTS_FIELD_NUMBER = 20;
+  private java.util.List<org.carboncall.metadata.PropertyContext> propertyContexts_;
+  /**
+   * <pre>
+   *Property contexts that provide additional context for the report, i.e., section metadata
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+   */
+  @java.lang.Override
+  public java.util.List<org.carboncall.metadata.PropertyContext> getPropertyContextsList() {
+    return propertyContexts_;
+  }
+  /**
+   * <pre>
+   *Property contexts that provide additional context for the report, i.e., section metadata
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends org.carboncall.metadata.PropertyContextOrBuilder> 
+      getPropertyContextsOrBuilderList() {
+    return propertyContexts_;
+  }
+  /**
+   * <pre>
+   *Property contexts that provide additional context for the report, i.e., section metadata
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+   */
+  @java.lang.Override
+  public int getPropertyContextsCount() {
+    return propertyContexts_.size();
+  }
+  /**
+   * <pre>
+   *Property contexts that provide additional context for the report, i.e., section metadata
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+   */
+  @java.lang.Override
+  public org.carboncall.metadata.PropertyContext getPropertyContexts(int index) {
+    return propertyContexts_.get(index);
+  }
+  /**
+   * <pre>
+   *Property contexts that provide additional context for the report, i.e., section metadata
+   * </pre>
+   *
+   * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+   */
+  @java.lang.Override
+  public org.carboncall.metadata.PropertyContextOrBuilder getPropertyContextsOrBuilder(
+      int index) {
+    return propertyContexts_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1033,6 +1179,12 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportHash_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 18, reportHash_);
+    }
+    for (int i = 0; i < reportContext_.size(); i++) {
+      output.writeMessage(19, reportContext_.get(i));
+    }
+    for (int i = 0; i < propertyContexts_.size(); i++) {
+      output.writeMessage(20, propertyContexts_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -1121,6 +1273,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportHash_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, reportHash_);
     }
+    for (int i = 0; i < reportContext_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, reportContext_.get(i));
+    }
+    for (int i = 0; i < propertyContexts_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, propertyContexts_.get(i));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1172,6 +1332,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPriorReport())) return false;
     if (!getReportHash()
         .equals(other.getReportHash())) return false;
+    if (!getReportContextList()
+        .equals(other.getReportContextList())) return false;
+    if (!getPropertyContextsList()
+        .equals(other.getPropertyContextsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1227,6 +1391,14 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getPriorReport().hashCode();
     hash = (37 * hash) + REPORT_HASH_FIELD_NUMBER;
     hash = (53 * hash) + getReportHash().hashCode();
+    if (getReportContextCount() > 0) {
+      hash = (37 * hash) + REPORT_CONTEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getReportContextList().hashCode();
+    }
+    if (getPropertyContextsCount() > 0) {
+      hash = (37 * hash) + PROPERTY_CONTEXTS_FIELD_NUMBER;
+      hash = (53 * hash) + getPropertyContextsList().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1355,6 +1527,8 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getReportContextFieldBuilder();
+        getPropertyContextsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -1404,6 +1578,18 @@ private static final long serialVersionUID = 0L;
 
       reportHash_ = "";
 
+      if (reportContextBuilder_ == null) {
+        reportContext_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      } else {
+        reportContextBuilder_.clear();
+      }
+      if (propertyContextsBuilder_ == null) {
+        propertyContexts_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      } else {
+        propertyContextsBuilder_.clear();
+      }
       return this;
     }
 
@@ -1465,6 +1651,24 @@ private static final long serialVersionUID = 0L;
       result.assurance_ = assurance_;
       result.priorReport_ = priorReport_;
       result.reportHash_ = reportHash_;
+      if (reportContextBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          reportContext_ = java.util.Collections.unmodifiableList(reportContext_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.reportContext_ = reportContext_;
+      } else {
+        result.reportContext_ = reportContextBuilder_.build();
+      }
+      if (propertyContextsBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          propertyContexts_ = java.util.Collections.unmodifiableList(propertyContexts_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.propertyContexts_ = propertyContexts_;
+      } else {
+        result.propertyContexts_ = propertyContextsBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -1590,6 +1794,58 @@ private static final long serialVersionUID = 0L;
       if (!other.getReportHash().isEmpty()) {
         reportHash_ = other.reportHash_;
         onChanged();
+      }
+      if (reportContextBuilder_ == null) {
+        if (!other.reportContext_.isEmpty()) {
+          if (reportContext_.isEmpty()) {
+            reportContext_ = other.reportContext_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureReportContextIsMutable();
+            reportContext_.addAll(other.reportContext_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.reportContext_.isEmpty()) {
+          if (reportContextBuilder_.isEmpty()) {
+            reportContextBuilder_.dispose();
+            reportContextBuilder_ = null;
+            reportContext_ = other.reportContext_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            reportContextBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getReportContextFieldBuilder() : null;
+          } else {
+            reportContextBuilder_.addAllMessages(other.reportContext_);
+          }
+        }
+      }
+      if (propertyContextsBuilder_ == null) {
+        if (!other.propertyContexts_.isEmpty()) {
+          if (propertyContexts_.isEmpty()) {
+            propertyContexts_ = other.propertyContexts_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensurePropertyContextsIsMutable();
+            propertyContexts_.addAll(other.propertyContexts_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.propertyContexts_.isEmpty()) {
+          if (propertyContextsBuilder_.isEmpty()) {
+            propertyContextsBuilder_.dispose();
+            propertyContextsBuilder_ = null;
+            propertyContexts_ = other.propertyContexts_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            propertyContextsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPropertyContextsFieldBuilder() : null;
+          } else {
+            propertyContextsBuilder_.addAllMessages(other.propertyContexts_);
+          }
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -3010,7 +3266,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object assurance_ = "";
     /**
      * <pre>
-     *Scheme prefix and identifier for the provider that conducted the assurnace or audit.bool
+     *Scheme prefix and identifier for the provider that conducted the assurance or audit.
      * </pre>
      *
      * <code>string assurance = 16;</code>
@@ -3030,7 +3286,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Scheme prefix and identifier for the provider that conducted the assurnace or audit.bool
+     *Scheme prefix and identifier for the provider that conducted the assurance or audit.
      * </pre>
      *
      * <code>string assurance = 16;</code>
@@ -3051,7 +3307,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Scheme prefix and identifier for the provider that conducted the assurnace or audit.bool
+     *Scheme prefix and identifier for the provider that conducted the assurance or audit.
      * </pre>
      *
      * <code>string assurance = 16;</code>
@@ -3070,7 +3326,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Scheme prefix and identifier for the provider that conducted the assurnace or audit.bool
+     *Scheme prefix and identifier for the provider that conducted the assurance or audit.
      * </pre>
      *
      * <code>string assurance = 16;</code>
@@ -3084,7 +3340,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Scheme prefix and identifier for the provider that conducted the assurnace or audit.bool
+     *Scheme prefix and identifier for the provider that conducted the assurance or audit.
      * </pre>
      *
      * <code>string assurance = 16;</code>
@@ -3293,6 +3549,630 @@ private static final long serialVersionUID = 0L;
       reportHash_ = value;
       onChanged();
       return this;
+    }
+
+    private java.util.List<org.carboncall.metadata.Metatag> reportContext_ =
+      java.util.Collections.emptyList();
+    private void ensureReportContextIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        reportContext_ = new java.util.ArrayList<org.carboncall.metadata.Metatag>(reportContext_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        org.carboncall.metadata.Metatag, org.carboncall.metadata.Metatag.Builder, org.carboncall.metadata.MetatagOrBuilder> reportContextBuilder_;
+
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public java.util.List<org.carboncall.metadata.Metatag> getReportContextList() {
+      if (reportContextBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(reportContext_);
+      } else {
+        return reportContextBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public int getReportContextCount() {
+      if (reportContextBuilder_ == null) {
+        return reportContext_.size();
+      } else {
+        return reportContextBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public org.carboncall.metadata.Metatag getReportContext(int index) {
+      if (reportContextBuilder_ == null) {
+        return reportContext_.get(index);
+      } else {
+        return reportContextBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public Builder setReportContext(
+        int index, org.carboncall.metadata.Metatag value) {
+      if (reportContextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReportContextIsMutable();
+        reportContext_.set(index, value);
+        onChanged();
+      } else {
+        reportContextBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public Builder setReportContext(
+        int index, org.carboncall.metadata.Metatag.Builder builderForValue) {
+      if (reportContextBuilder_ == null) {
+        ensureReportContextIsMutable();
+        reportContext_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        reportContextBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public Builder addReportContext(org.carboncall.metadata.Metatag value) {
+      if (reportContextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReportContextIsMutable();
+        reportContext_.add(value);
+        onChanged();
+      } else {
+        reportContextBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public Builder addReportContext(
+        int index, org.carboncall.metadata.Metatag value) {
+      if (reportContextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReportContextIsMutable();
+        reportContext_.add(index, value);
+        onChanged();
+      } else {
+        reportContextBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public Builder addReportContext(
+        org.carboncall.metadata.Metatag.Builder builderForValue) {
+      if (reportContextBuilder_ == null) {
+        ensureReportContextIsMutable();
+        reportContext_.add(builderForValue.build());
+        onChanged();
+      } else {
+        reportContextBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public Builder addReportContext(
+        int index, org.carboncall.metadata.Metatag.Builder builderForValue) {
+      if (reportContextBuilder_ == null) {
+        ensureReportContextIsMutable();
+        reportContext_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        reportContextBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public Builder addAllReportContext(
+        java.lang.Iterable<? extends org.carboncall.metadata.Metatag> values) {
+      if (reportContextBuilder_ == null) {
+        ensureReportContextIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, reportContext_);
+        onChanged();
+      } else {
+        reportContextBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public Builder clearReportContext() {
+      if (reportContextBuilder_ == null) {
+        reportContext_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        reportContextBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public Builder removeReportContext(int index) {
+      if (reportContextBuilder_ == null) {
+        ensureReportContextIsMutable();
+        reportContext_.remove(index);
+        onChanged();
+      } else {
+        reportContextBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public org.carboncall.metadata.Metatag.Builder getReportContextBuilder(
+        int index) {
+      return getReportContextFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public org.carboncall.metadata.MetatagOrBuilder getReportContextOrBuilder(
+        int index) {
+      if (reportContextBuilder_ == null) {
+        return reportContext_.get(index);  } else {
+        return reportContextBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public java.util.List<? extends org.carboncall.metadata.MetatagOrBuilder> 
+         getReportContextOrBuilderList() {
+      if (reportContextBuilder_ != null) {
+        return reportContextBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(reportContext_);
+      }
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public org.carboncall.metadata.Metatag.Builder addReportContextBuilder() {
+      return getReportContextFieldBuilder().addBuilder(
+          org.carboncall.metadata.Metatag.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public org.carboncall.metadata.Metatag.Builder addReportContextBuilder(
+        int index) {
+      return getReportContextFieldBuilder().addBuilder(
+          index, org.carboncall.metadata.Metatag.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     *Metatags that provide additional context for the report
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.Metatag report_context = 19;</code>
+     */
+    public java.util.List<org.carboncall.metadata.Metatag.Builder> 
+         getReportContextBuilderList() {
+      return getReportContextFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        org.carboncall.metadata.Metatag, org.carboncall.metadata.Metatag.Builder, org.carboncall.metadata.MetatagOrBuilder> 
+        getReportContextFieldBuilder() {
+      if (reportContextBuilder_ == null) {
+        reportContextBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            org.carboncall.metadata.Metatag, org.carboncall.metadata.Metatag.Builder, org.carboncall.metadata.MetatagOrBuilder>(
+                reportContext_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        reportContext_ = null;
+      }
+      return reportContextBuilder_;
+    }
+
+    private java.util.List<org.carboncall.metadata.PropertyContext> propertyContexts_ =
+      java.util.Collections.emptyList();
+    private void ensurePropertyContextsIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        propertyContexts_ = new java.util.ArrayList<org.carboncall.metadata.PropertyContext>(propertyContexts_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        org.carboncall.metadata.PropertyContext, org.carboncall.metadata.PropertyContext.Builder, org.carboncall.metadata.PropertyContextOrBuilder> propertyContextsBuilder_;
+
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public java.util.List<org.carboncall.metadata.PropertyContext> getPropertyContextsList() {
+      if (propertyContextsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(propertyContexts_);
+      } else {
+        return propertyContextsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public int getPropertyContextsCount() {
+      if (propertyContextsBuilder_ == null) {
+        return propertyContexts_.size();
+      } else {
+        return propertyContextsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public org.carboncall.metadata.PropertyContext getPropertyContexts(int index) {
+      if (propertyContextsBuilder_ == null) {
+        return propertyContexts_.get(index);
+      } else {
+        return propertyContextsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public Builder setPropertyContexts(
+        int index, org.carboncall.metadata.PropertyContext value) {
+      if (propertyContextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePropertyContextsIsMutable();
+        propertyContexts_.set(index, value);
+        onChanged();
+      } else {
+        propertyContextsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public Builder setPropertyContexts(
+        int index, org.carboncall.metadata.PropertyContext.Builder builderForValue) {
+      if (propertyContextsBuilder_ == null) {
+        ensurePropertyContextsIsMutable();
+        propertyContexts_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        propertyContextsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public Builder addPropertyContexts(org.carboncall.metadata.PropertyContext value) {
+      if (propertyContextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePropertyContextsIsMutable();
+        propertyContexts_.add(value);
+        onChanged();
+      } else {
+        propertyContextsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public Builder addPropertyContexts(
+        int index, org.carboncall.metadata.PropertyContext value) {
+      if (propertyContextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePropertyContextsIsMutable();
+        propertyContexts_.add(index, value);
+        onChanged();
+      } else {
+        propertyContextsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public Builder addPropertyContexts(
+        org.carboncall.metadata.PropertyContext.Builder builderForValue) {
+      if (propertyContextsBuilder_ == null) {
+        ensurePropertyContextsIsMutable();
+        propertyContexts_.add(builderForValue.build());
+        onChanged();
+      } else {
+        propertyContextsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public Builder addPropertyContexts(
+        int index, org.carboncall.metadata.PropertyContext.Builder builderForValue) {
+      if (propertyContextsBuilder_ == null) {
+        ensurePropertyContextsIsMutable();
+        propertyContexts_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        propertyContextsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public Builder addAllPropertyContexts(
+        java.lang.Iterable<? extends org.carboncall.metadata.PropertyContext> values) {
+      if (propertyContextsBuilder_ == null) {
+        ensurePropertyContextsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, propertyContexts_);
+        onChanged();
+      } else {
+        propertyContextsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public Builder clearPropertyContexts() {
+      if (propertyContextsBuilder_ == null) {
+        propertyContexts_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        propertyContextsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public Builder removePropertyContexts(int index) {
+      if (propertyContextsBuilder_ == null) {
+        ensurePropertyContextsIsMutable();
+        propertyContexts_.remove(index);
+        onChanged();
+      } else {
+        propertyContextsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public org.carboncall.metadata.PropertyContext.Builder getPropertyContextsBuilder(
+        int index) {
+      return getPropertyContextsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public org.carboncall.metadata.PropertyContextOrBuilder getPropertyContextsOrBuilder(
+        int index) {
+      if (propertyContextsBuilder_ == null) {
+        return propertyContexts_.get(index);  } else {
+        return propertyContextsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public java.util.List<? extends org.carboncall.metadata.PropertyContextOrBuilder> 
+         getPropertyContextsOrBuilderList() {
+      if (propertyContextsBuilder_ != null) {
+        return propertyContextsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(propertyContexts_);
+      }
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public org.carboncall.metadata.PropertyContext.Builder addPropertyContextsBuilder() {
+      return getPropertyContextsFieldBuilder().addBuilder(
+          org.carboncall.metadata.PropertyContext.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public org.carboncall.metadata.PropertyContext.Builder addPropertyContextsBuilder(
+        int index) {
+      return getPropertyContextsFieldBuilder().addBuilder(
+          index, org.carboncall.metadata.PropertyContext.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     *Property contexts that provide additional context for the report, i.e., section metadata
+     * </pre>
+     *
+     * <code>repeated .carboncall.metadata.PropertyContext property_contexts = 20;</code>
+     */
+    public java.util.List<org.carboncall.metadata.PropertyContext.Builder> 
+         getPropertyContextsBuilderList() {
+      return getPropertyContextsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        org.carboncall.metadata.PropertyContext, org.carboncall.metadata.PropertyContext.Builder, org.carboncall.metadata.PropertyContextOrBuilder> 
+        getPropertyContextsFieldBuilder() {
+      if (propertyContextsBuilder_ == null) {
+        propertyContextsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            org.carboncall.metadata.PropertyContext, org.carboncall.metadata.PropertyContext.Builder, org.carboncall.metadata.PropertyContextOrBuilder>(
+                propertyContexts_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        propertyContexts_ = null;
+      }
+      return propertyContextsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -96,6 +96,16 @@ export class Metadata extends jspb.Message {
   getReportHash(): string;
   setReportHash(value: string): void;
 
+  clearReportContextList(): void;
+  getReportContextList(): Array<Metatag>;
+  setReportContextList(value: Array<Metatag>): void;
+  addReportContext(value?: Metatag, index?: number): Metatag;
+
+  clearPropertyContextsList(): void;
+  getPropertyContextsList(): Array<PropertyContext>;
+  setPropertyContextsList(value: Array<PropertyContext>): void;
+  addPropertyContexts(value?: PropertyContext, index?: number): PropertyContext;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Metadata.AsObject;
   static toObject(includeInstance: boolean, msg: Metadata): Metadata.AsObject;
@@ -126,6 +136,8 @@ export namespace Metadata {
     assurance: string,
     priorReport: string,
     reportHash: string,
+    reportContextList: Array<Metatag.AsObject>,
+    propertyContextsList: Array<PropertyContext.AsObject>,
   }
 }
 
@@ -174,6 +186,56 @@ export namespace Industry {
   export type AsObject = {
     prefix: IndustryCodePrefixMap[keyof IndustryCodePrefixMap],
     code: string,
+  }
+}
+
+export class Metatag extends jspb.Message {
+  getKey(): string;
+  setKey(value: string): void;
+
+  getValue(): string;
+  setValue(value: string): void;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): Metatag.AsObject;
+  static toObject(includeInstance: boolean, msg: Metatag): Metatag.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: Metatag, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Metatag;
+  static deserializeBinaryFromReader(message: Metatag, reader: jspb.BinaryReader): Metatag;
+}
+
+export namespace Metatag {
+  export type AsObject = {
+    key: string,
+    value: string,
+  }
+}
+
+export class PropertyContext extends jspb.Message {
+  getProperty(): string;
+  setProperty(value: string): void;
+
+  clearMetatagsList(): void;
+  getMetatagsList(): Array<Metatag>;
+  setMetatagsList(value: Array<Metatag>): void;
+  addMetatags(value?: Metatag, index?: number): Metatag;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PropertyContext.AsObject;
+  static toObject(includeInstance: boolean, msg: PropertyContext): PropertyContext.AsObject;
+  static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+  static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+  static serializeBinaryToWriter(message: PropertyContext, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PropertyContext;
+  static deserializeBinaryFromReader(message: PropertyContext, reader: jspb.BinaryReader): PropertyContext;
+}
+
+export namespace PropertyContext {
+  export type AsObject = {
+    property: string,
+    metatagsList: Array<Metatag.AsObject>,
   }
 }
 

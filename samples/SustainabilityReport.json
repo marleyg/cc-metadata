@@ -1,37 +1,67 @@
 {
-    "grid": "7PBR.R569.29",
-    "metadata": {
-      "grid": "7PBR.R569.29",
-      "organizationIdentifier": "LEI: 254900OPPU84GM83MG36",
-      "organizationName": "CarbonCall",
-      "domicile": "US",
-      "operatingCountries": [
-        "US",
-        "CN",
-        "GB"
-      ],
-      "languages": [
-        "En",
-        "Zh"
-      ],
-      "reportType": "SustainabilityReport",
-      "reportIssueDate": "2021-01-01",
-      "reportingPeriod": {
-        "startDate": "2020-01-01",
-        "endDate": "2020-12-31"
-      },
-      "reportReplaces": "",
-      "location": "https://carboncall.io/reportFromPeriod.json",
-      "industry": {
-        "prefix": "ISIC",
-        "code": "6201"
-      },
-      "performance": "{'Perf1':{'name':'Perf1','type':'performance','value':127000,'unit':'tCO2e'},'Perf2':{'name':'Perf2','type':'performance','value':0,'min':0,'max':100,'step':1,'unit':'%'}} ",
-      "reportFormat": "IXBRL",
-      "reportingStandard": "ISSB",
-      "assurance": "DE_BaFIN: 1234567890",
-      "priorReport": "",
-      "reportHash": "dftaae3297i89798adsdf832adfs912231azsdf"
+  "grid": "SDJQ.BPUN.15",
+  "metadata": {
+    "grid": "SDJQ.BPUN.15",
+    "organizationIdentifier": "LEI: 254900OPPU84GM83MG36",
+    "organizationName": "CarbonCall",
+    "domicile": "US",
+    "operatingCountries": [
+      "US",
+      "CN",
+      "GB"
+    ],
+    "languages": [
+      "En",
+      "Zh"
+    ],
+    "reportType": "SustainabilityReport",
+    "reportIssueDate": "2021-01-01",
+    "reportingPeriod": {
+      "startDate": "2020-01-01",
+      "endDate": "2020-12-31"
     },
-    "report": "Cgw3UEJSLlI1NjkuMjkSGUxFSTogMjU0OTAwT1BQVTg0R004M01HMzYaCkNhcmJvbkNhbGwg7AEqBewBLusBMgIAAjgCQgoyMDIxLTAxLTAxShgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzFaK2h0dHBzOi8vY2FyYm9uY2FsbC5pby9yZXBvcnRGcm9tUGVyaW9kLmpzb25iBhIENjIwMWqsAXsnUGVyZjEnOnsnbmFtZSc6J1BlcmYxJywndHlwZSc6J3BlcmZvcm1hbmNlJywndmFsdWUnOjEyNzAwMCwndW5pdCc6J3RDTzJlJ30sJ1BlcmYyJzp7J25hbWUnOidQZXJmMicsJ3R5cGUnOidwZXJmb3JtYW5jZScsJ3ZhbHVlJzowLCdtaW4nOjAsJ21heCc6MTAwLCdzdGVwJzoxLCd1bml0JzonJSd9fSBwAXgCggEUREVfQmFGSU46IDEyMzQ1Njc4OTCSASdkZnRhYWUzMjk3aTg5Nzk4YWRzZGY4MzJhZGZzOTEyMjMxYXpzZGY="
-  }
+    "reportReplaces": "",
+    "location": "https://carboncall.io/reportFromPeriod.json",
+    "industry": {
+      "prefix": "ISIC",
+      "code": "6201"
+    },
+    "performance": "{'Perf1':{'name':'Perf1','type':'performance','value':127000,'unit':'tCO2e'},'Perf2':{'name':'Perf2','type':'performance','value':0,'min':0,'max':100,'step':1,'unit':'%'}} ",
+    "reportFormat": "IXBRL",
+    "reportingStandard": "ISSB",
+    "assurance": "DE_BaFIN: 1234567890",
+    "priorReport": "",
+    "reportHash": "dftaae3297i89798adsdf832adfs912231azsdf",
+    "reportContext": [
+      {
+        "key": "Author Contact Email",
+        "value": "someone@somewhere.com"
+      },
+      {
+        "key": "Author Contact Phone",
+        "value": "123-456-7890"
+      }
+    ],
+    "propertyContexts": [
+      {
+        "property": "Section 1.2.1",
+        "metatags": [
+          {
+            "key": "Carbon Offset Ratio",
+            "value": "1.2"
+          }
+        ]
+      },
+      {
+        "property": "Section 1.2.2",
+        "metatags": [
+          {
+            "key": "GHG Adjustment Exception",
+            "value": "GGP-1_2_2"
+          }
+        ]
+      }
+    ]
+  },
+  "report": "CgxTREpRLkJQVU4uMTUSGUxFSTogMjU0OTAwT1BQVTg0R004M01HMzYaCkNhcmJvbkNhbGwg7AEqBewBLusBMgIAAjgCQgoyMDIxLTAxLTAxShgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzFaK2h0dHBzOi8vY2FyYm9uY2FsbC5pby9yZXBvcnRGcm9tUGVyaW9kLmpzb25iBhIENjIwMWqsAXsnUGVyZjEnOnsnbmFtZSc6J1BlcmYxJywndHlwZSc6J3BlcmZvcm1hbmNlJywndmFsdWUnOjEyNzAwMCwndW5pdCc6J3RDTzJlJ30sJ1BlcmYyJzp7J25hbWUnOidQZXJmMicsJ3R5cGUnOidwZXJmb3JtYW5jZScsJ3ZhbHVlJzowLCdtaW4nOjAsJ21heCc6MTAwLCdzdGVwJzoxLCd1bml0JzonJSd9fSBwAXgCggEUREVfQmFGSU46IDEyMzQ1Njc4OTCSASdkZnRhYWUzMjk3aTg5Nzk4YWRzZGY4MzJhZGZzOTEyMjMxYXpzZGaaAS0KFEF1dGhvciBDb250YWN0IEVtYWlsEhVzb21lb25lQHNvbWV3aGVyZS5jb22aASQKFEF1dGhvciBDb250YWN0IFBob25lEgwxMjMtNDU2LTc4OTCiASsKDVNlY3Rpb24gMS4yLjESGgoTQ2FyYm9uIE9mZnNldCBSYXRpbxIDMS4yogE2Cg1TZWN0aW9uIDEuMi4yEiUKGEdIRyBBZGp1c3RtZW50IEV4Y2VwdGlvbhIJR0dQLTFfMl8y"
+}

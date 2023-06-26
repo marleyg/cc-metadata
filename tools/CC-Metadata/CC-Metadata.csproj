@@ -5,12 +5,13 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>CarbonCall.Metadata</RootNamespace>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Google.Protobuf" Version="3.22.3" />
-        <PackageReference Include="Google.Protobuf.Tools" Version="3.22.3" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+        <PackageReference Include="Google.Protobuf" Version="3.23.3" />
+        <PackageReference Include="Google.Protobuf.Tools" Version="3.23.3" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.8" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     </ItemGroup>
 
