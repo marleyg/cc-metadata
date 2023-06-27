@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 5fcd28d6d, updated Tue May 30 13:12:11 2023 -0700" name="generator">
   <link href="https://github.com/marleyg/cc-metadata" rel="canonical">
-  <meta content="9465e08633d1e9f1fe620731cc26fefd0057c374" name="document-revision">
+  <meta content="8d26e7bc17498f815418b732badeb72251052934" name="document-revision">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -2071,7 +2071,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">DRAFT Carbon Call - Discoverable Data &amp; Metadata</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2023-06-26">26 June 2023</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document, <time class="dt-updated" datetime="2023-06-27">27 June 2023</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2167,7 +2167,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li>
      <a href="#changelog"><span class="secno"></span> <span class="content">Appendix B: Changelog</span></a>
      <ol class="toc">
-      <li><a href="#changelog-1.0.20230626"><span class="secno"></span> <span class="content">Version 1.0.20230626 (June 26, 2023)</span></a>
+      <li><a href="#changelog-1.0.20230627"><span class="secno"></span> <span class="content">Version 1.0.20230627 (June 27, 2023)</span></a>
      </ol>
     <li>
      <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
@@ -2287,7 +2287,7 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <th>Specification 
      <tbody>
       <tr>
-       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-metadata-grid"></a></dfn> 
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-grid"><code>GRID</code><a class="self-link" href="#element-attrdef-metadata-grid"></a></dfn> <a data-link-type="dfn" href="#grid" id="ref-for-grid①">GRID</a> 
        <td>String 
        <td>M 
        <td>The GRID of the report that the metadata is about, see <a href="#dt-grid">§ 3.9 Data Type: GRID</a> for details. 
@@ -2386,6 +2386,11 @@ the reporting period, the industry, the assurance provider, etc.</p>
        <td>Array 
        <td>M 
        <td>A collection of Report Property Context metadata using <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext①">PropertyContext</a>. See <a href="#dt-property-context">§ 3.6 Data Type: PropertyContext</a> for details. 
+      <tr>
+       <td><dfn data-dfn-for="Metadata" data-dfn-type="element-attr" data-export id="element-attrdef-metadata-relatedreports"><code>relatedReports</code><a class="self-link" href="#element-attrdef-metadata-relatedreports"></a></dfn> : <a data-link-type="dfn" href="#grid" id="ref-for-grid②">GRID</a> 
+       <td>Array 
+       <td>O 
+       <td>A collection of related reports, by <a data-link-type="dfn" href="#grid" id="ref-for-grid③">GRID</a>. For example, a reference to a financial disclosure, etc. See <a href="#dt-grid">§ 3.9 Data Type: GRID</a> for details. 
     </table>
     <figcaption>Properties of a Metadata Object</figcaption>
    </figure>
@@ -2603,12 +2608,12 @@ indicator, or a specific aspect.</p>
    </dl>
    <h2 class="heading settled" data-level="4" id="samples"><span class="secno">4. </span><span class="content">Samples</span><a class="self-link" href="#samples"></a></h2>
    <h3 class="heading settled" data-level="4.1" id="sample-sustainability-report"><span class="secno">4.1. </span><span class="content">Sustainability Report</span><a class="self-link" href="#sample-sustainability-report"></a></h3>
-   <div class="example" id="example-096044db">
-    <a class="self-link" href="#example-096044db"></a> Sustainability Report: 
+   <div class="example" id="example-a0e4542d">
+    <a class="self-link" href="#example-a0e4542d"></a> Sustainability Report: 
 <pre class="include-code highlight"><c- p>{</c->
-  <c- f>"grid"</c-><c- p>:</c-> <c- u>"SDJQ.BPUN.15"</c-><c- p>,</c->
+  <c- f>"grid"</c-><c- p>:</c-> <c- u>"KFCZ.PNQB.7"</c-><c- p>,</c->
   <c- f>"metadata"</c-><c- p>:</c-> <c- p>{</c->
-    <c- f>"grid"</c-><c- p>:</c-> <c- u>"SDJQ.BPUN.15"</c-><c- p>,</c->
+    <c- f>"grid"</c-><c- p>:</c-> <c- u>"KFCZ.PNQB.7"</c-><c- p>,</c->
     <c- f>"organizationIdentifier"</c-><c- p>:</c-> <c- u>"LEI: 254900OPPU84GM83MG36"</c-><c- p>,</c->
     <c- f>"organizationName"</c-><c- p>:</c-> <c- u>"CarbonCall"</c-><c- p>,</c->
     <c- f>"domicile"</c-><c- p>:</c-> <c- u>"US"</c-><c- p>,</c->
@@ -2668,16 +2673,20 @@ indicator, or a specific aspect.</p>
           <c- p>}</c->
         <c- p>]</c->
       <c- p>}</c->
+    <c- p>],</c->
+    <c- f>"relatedReports"</c-><c- p>:</c-> <c- p>[</c->
+      <c- u>"SDJQ.BPUN.15"</c-><c- p>,</c->
+      <c- u>"ADCF.GPOM.16"</c->
     <c- p>]</c->
   <c- p>},</c->
-  <c- f>"report"</c-><c- p>:</c-> <c- u>"CgxTREpRLkJQVU4uMTUSGUxFSTogMjU0OTAwT1BQVTg0R004M01HMzYaCkNhcmJvbkNhbGwg7AEqBewBLusBMgIAAjgCQgoyMDIxLTAxLTAxShgKCjIwMjAtMDEtMDESCjIwMjAtMTItMzFaK2h0dHBzOi8vY2FyYm9uY2FsbC5pby9yZXBvcnRGcm9tUGVyaW9kLmpzb25iBhIENjIwMWqsAXsnUGVyZjEnOnsnbmFtZSc6J1BlcmYxJywndHlwZSc6J3BlcmZvcm1hbmNlJywndmFsdWUnOjEyNzAwMCwndW5pdCc6J3RDTzJlJ30sJ1BlcmYyJzp7J25hbWUnOidQZXJmMicsJ3R5cGUnOidwZXJmb3JtYW5jZScsJ3ZhbHVlJzowLCdtaW4nOjAsJ21heCc6MTAwLCdzdGVwJzoxLCd1bml0JzonJSd9fSBwAXgCggEUREVfQmFGSU46IDEyMzQ1Njc4OTCSASdkZnRhYWUzMjk3aTg5Nzk4YWRzZGY4MzJhZGZzOTEyMjMxYXpzZGaaAS0KFEF1dGhvciBDb250YWN0IEVtYWlsEhVzb21lb25lQHNvbWV3aGVyZS5jb22aASQKFEF1dGhvciBDb250YWN0IFBob25lEgwxMjMtNDU2LTc4OTCiASsKDVNlY3Rpb24gMS4yLjESGgoTQ2FyYm9uIE9mZnNldCBSYXRpbxIDMS4yogE2Cg1TZWN0aW9uIDEuMi4yEiUKGEdIRyBBZGp1c3RtZW50IEV4Y2VwdGlvbhIJR0dQLTFfMl8y"</c->
+  <c- f>"report"</c-><c- p>:</c-> <c- u>"CgtLRkNaLlBOUUIuNxIZTEVJOiAyNTQ5MDBPUFBVODRHTTgzTUczNhoKQ2FyYm9uQ2FsbCDsASoF7AEu6wEyAgACOAJCCjIwMjEtMDEtMDFKGAoKMjAyMC0wMS0wMRIKMjAyMC0xMi0zMVoraHR0cHM6Ly9jYXJib25jYWxsLmlvL3JlcG9ydEZyb21QZXJpb2QuanNvbmIGEgQ2MjAxaqwBeydQZXJmMSc6eyduYW1lJzonUGVyZjEnLCd0eXBlJzoncGVyZm9ybWFuY2UnLCd2YWx1ZSc6MTI3MDAwLCd1bml0JzondENPMmUnfSwnUGVyZjInOnsnbmFtZSc6J1BlcmYyJywndHlwZSc6J3BlcmZvcm1hbmNlJywndmFsdWUnOjAsJ21pbic6MCwnbWF4JzoxMDAsJ3N0ZXAnOjEsJ3VuaXQnOiclJ319IHABeAKCARRERV9CYUZJTjogMTIzNDU2Nzg5MJIBJ2RmdGFhZTMyOTdpODk3OThhZHNkZjgzMmFkZnM5MTIyMzFhenNkZpoBLQoUQXV0aG9yIENvbnRhY3QgRW1haWwSFXNvbWVvbmVAc29tZXdoZXJlLmNvbZoBJAoUQXV0aG9yIENvbnRhY3QgUGhvbmUSDDEyMy00NTYtNzg5MKIBKwoNU2VjdGlvbiAxLjIuMRIaChNDYXJib24gT2Zmc2V0IFJhdGlvEgMxLjKiATYKDVNlY3Rpb24gMS4yLjISJQoYR0hHIEFkanVzdG1lbnQgRXhjZXB0aW9uEglHR1AtMV8yXzKqAQxTREpRLkJQVU4uMTWqAQxBRENGLkdQT00uMTY="</c->
 <c- p>}</c-></pre>
    </div>
    <h3 class="heading settled" data-level="4.2" id="sample-sustainability-report-metadata"><span class="secno">4.2. </span><span class="content">Sustainability Report Metadata</span><a class="self-link" href="#sample-sustainability-report-metadata"></a></h3>
-   <div class="example" id="example-e388fa30">
-    <a class="self-link" href="#example-e388fa30"></a> Sustainability Report Metadata: 
+   <div class="example" id="example-f9a1690f">
+    <a class="self-link" href="#example-f9a1690f"></a> Sustainability Report Metadata: 
 <pre class="include-code highlight"><c- p>{</c->
-  <c- f>"grid"</c-><c- p>:</c-> <c- u>"SDJQ.BPUN.15"</c-><c- p>,</c->
+  <c- f>"grid"</c-><c- p>:</c-> <c- u>"KFCZ.PNQB.7"</c-><c- p>,</c->
   <c- f>"organizationIdentifier"</c-><c- p>:</c-> <c- u>"LEI: 254900OPPU84GM83MG36"</c-><c- p>,</c->
   <c- f>"organizationName"</c-><c- p>:</c-> <c- u>"CarbonCall"</c-><c- p>,</c->
   <c- f>"domicile"</c-><c- p>:</c-> <c- u>"US"</c-><c- p>,</c->
@@ -2737,6 +2746,10 @@ indicator, or a specific aspect.</p>
         <c- p>}</c->
       <c- p>]</c->
     <c- p>}</c->
+  <c- p>],</c->
+  <c- f>"relatedReports"</c-><c- p>:</c-> <c- p>[</c->
+    <c- u>"SDJQ.BPUN.15"</c-><c- p>,</c->
+    <c- u>"ADCF.GPOM.16"</c->
   <c- p>]</c->
 <c- p>}</c-></pre>
    </div>
@@ -2760,7 +2773,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</p>
    <h2 class="heading settled" id="changelog"><span class="content">Appendix B: Changelog</span><a class="self-link" href="#changelog"></a></h2>
    <p>Here we will document changes in the specification as they are made.</p>
-   <h3 class="heading settled" id="changelog-1.0.20230626"><span class="content">Version 1.0.20230626 (June 26, 2023)</span><a class="self-link" href="#changelog-1.0.20230626"></a></h3>
+   <h3 class="heading settled" id="changelog-1.0.20230627"><span class="content">Version 1.0.20230627 (June 27, 2023)</span><a class="self-link" href="#changelog-1.0.20230627"></a></h3>
    <ul>
     <li data-md>
      <p>Adding <code>ReportType</code> enum, see <a href="#dt-report-type">§ 3.12 Data Type: ReportType</a> for details.</p>
@@ -2768,6 +2781,8 @@ SOFTWARE.</p>
      <p>Adding <code>reportContext</code> a collection of <a data-link-type="dfn" href="#metatag" id="ref-for-metatag⑤">Metatag</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
     <li data-md>
      <p>Adding <code>propertyContexts</code> a collection of <a data-link-type="dfn" href="#propertycontext" id="ref-for-propertycontext②">PropertyContext</a> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata①">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
+    <li data-md>
+     <p>Addition <code>relatedReports</code> to <a data-link-type="dfn" href="#metadata" id="ref-for-metadata②">Metadata</a>, see <a href="#dt-metadata-properties">§ 3.2.1 Properties</a> for details.</p>
    </ul>
   </main>
 <script>
@@ -2954,6 +2969,7 @@ SOFTWARE.</p>
    <li><a href="#propertycontext">PropertyContext</a><span>, in § 3.6</span>
    <li><a href="#element-attrdef-metadata-propertycontext">propertyContext</a><span>, in § 3.2.1</span>
    <li><a href="#dom-reporttype-proxy_statement">PROXY_STATEMENT</a><span>, in § 3.12</span>
+   <li><a href="#element-attrdef-metadata-relatedreports">relatedReports</a><span>, in § 3.2.1</span>
    <li><a href="#report">Report</a><span>, in § 2</span>
    <li><a href="#element-attrdef-sustainabilityreport-report">report</a><span>, in § 3.1.1</span>
    <li><a href="#report-context">Report Context</a><span>, in § 2</span>
@@ -3136,11 +3152,11 @@ SOFTWARE.</p>
 </script>
 <script>/* Boilerplate: script-dfn-panel-json */
 window.dfnpanelData = {};
-window.dfnpanelData['metadata'] = {"dfnID": "metadata", "url": "#metadata", "dfnText": "Metadata", "refSections": [{"refs": [{"id": "ref-for-metadata"}, {"id": "ref-for-metadata\u2460"}], "title": "Version 1.0.20230626 (June 26, 2023)"}], "external": false};
-window.dfnpanelData['metatag'] = {"dfnID": "metatag", "url": "#metatag", "dfnText": "Metatag", "refSections": [{"refs": [{"id": "ref-for-metatag"}], "title": "2. Terminology"}, {"refs": [{"id": "ref-for-metatag\u2460"}, {"id": "ref-for-metatag\u2461"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2462"}, {"id": "ref-for-metatag\u2463"}], "title": "3.6.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2464"}], "title": "Version 1.0.20230626 (June 26, 2023)"}], "external": false};
-window.dfnpanelData['propertycontext'] = {"dfnID": "propertycontext", "url": "#propertycontext", "dfnText": "PropertyContext", "refSections": [{"refs": [{"id": "ref-for-propertycontext"}, {"id": "ref-for-propertycontext\u2460"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-propertycontext\u2461"}], "title": "Version 1.0.20230626 (June 26, 2023)"}], "external": false};
+window.dfnpanelData['metadata'] = {"dfnID": "metadata", "url": "#metadata", "dfnText": "Metadata", "refSections": [{"refs": [{"id": "ref-for-metadata"}, {"id": "ref-for-metadata\u2460"}, {"id": "ref-for-metadata\u2461"}], "title": "Version 1.0.20230627 (June 27, 2023)"}], "external": false};
+window.dfnpanelData['metatag'] = {"dfnID": "metatag", "url": "#metatag", "dfnText": "Metatag", "refSections": [{"refs": [{"id": "ref-for-metatag"}], "title": "2. Terminology"}, {"refs": [{"id": "ref-for-metatag\u2460"}, {"id": "ref-for-metatag\u2461"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2462"}, {"id": "ref-for-metatag\u2463"}], "title": "3.6.1. Properties"}, {"refs": [{"id": "ref-for-metatag\u2464"}], "title": "Version 1.0.20230627 (June 27, 2023)"}], "external": false};
+window.dfnpanelData['propertycontext'] = {"dfnID": "propertycontext", "url": "#propertycontext", "dfnText": "PropertyContext", "refSections": [{"refs": [{"id": "ref-for-propertycontext"}, {"id": "ref-for-propertycontext\u2460"}], "title": "3.2.1. Properties"}, {"refs": [{"id": "ref-for-propertycontext\u2461"}], "title": "Version 1.0.20230627 (June 27, 2023)"}], "external": false};
 window.dfnpanelData['string'] = {"dfnID": "string", "url": "#string", "dfnText": "String", "refSections": [{"refs": [{"id": "ref-for-string"}], "title": "3.8.1. JSON Data Representation"}], "external": false};
-window.dfnpanelData['grid'] = {"dfnID": "grid", "url": "#grid", "dfnText": "GRID", "refSections": [{"refs": [{"id": "ref-for-grid"}], "title": "3.1.1. Properties"}], "external": false};
+window.dfnpanelData['grid'] = {"dfnID": "grid", "url": "#grid", "dfnText": "GRID", "refSections": [{"refs": [{"id": "ref-for-grid"}], "title": "3.1.1. Properties"}, {"refs": [{"id": "ref-for-grid\u2460"}, {"id": "ref-for-grid\u2461"}, {"id": "ref-for-grid\u2462"}], "title": "3.2.1. Properties"}], "external": false};
 window.dfnpanelData['enumdef-reportformat'] = {"dfnID": "enumdef-reportformat", "url": "#enumdef-reportformat", "dfnText": "ReportFormat", "refSections": [{"refs": [{"id": "ref-for-enumdef-reportformat"}], "title": "3.2.1. Properties"}], "external": false};
 window.dfnpanelData['enumdef-reportingstandard'] = {"dfnID": "enumdef-reportingstandard", "url": "#enumdef-reportingstandard", "dfnText": "ReportingStandard", "refSections": [{"refs": [{"id": "ref-for-enumdef-reportingstandard"}], "title": "3.2.1. Properties"}], "external": false};
 window.dfnpanelData['enumdef-reporttype'] = {"dfnID": "enumdef-reporttype", "url": "#enumdef-reporttype", "dfnText": "ReportType", "refSections": [{"refs": [{"id": "ref-for-enumdef-reporttype"}], "title": "3.2.1. Properties"}], "external": false};

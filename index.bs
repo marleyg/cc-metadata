@@ -155,7 +155,7 @@ A metadata object has the following properties:
         <th>Specification
     <tbody>
       <tr>
-        <td><dfn>GRID</dfn>
+        <td><dfn>GRID</dfn> [=GRID=]
         <td>String
         <td>M
         <td>The GRID of the report that the metadata is about, see [[#dt-grid]] for details.
@@ -254,6 +254,11 @@ A metadata object has the following properties:
         <td>Array
         <td>M
         <td>A collection of Report Property Context metadata using [=PropertyContext=]. See [[#dt-property-context]] for details.
+      <tr>
+        <td><dfn>relatedReports</dfn> : [=GRID=]
+        <td>Array
+        <td>O
+        <td>A collection of related reports, by [=GRID=]. For example, a reference to a financial disclosure, etc. See [[#dt-grid]] for details.
      </table>
     <figcaption>Properties of a Metadata Object</figcaption>
   </figure>
@@ -542,9 +547,10 @@ path: LICENSE
 
 Here we will document changes in the specification as they are made.
 
-## Version 1.0.20230626 (June 26, 2023) ## {#changelog-1.0.20230626}
+## Version 1.0.20230627 (June 27, 2023) ## {#changelog-1.0.20230627}
 
 - Adding `ReportType` enum, see [[#dt-report-type]] for details.
 - Adding `reportContext` a collection of [=Metatag=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
 - Adding `propertyContexts` a collection of [=PropertyContext=] to [=Metadata=], see [[#dt-metadata-properties]] for details.
+- Addition `relatedReports` to [=Metadata=], see [[#dt-metadata-properties]] for details.
 

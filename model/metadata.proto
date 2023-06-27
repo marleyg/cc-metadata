@@ -34,6 +34,7 @@ message Metadata{
     string report_hash = 18; //SHA-256 hash of the report
     repeated Metatag report_context = 19; //Metatags that provide additional context for the report
     repeated PropertyContext property_contexts = 20; //Property contexts that provide additional context for the report, i.e., section metadata
+    repeated string related_reports = 21; //GR.IDs of related reports
 }
 
 

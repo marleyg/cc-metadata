@@ -27,7 +27,7 @@ namespace CarbonCall.Metadata {
             "Cg5tZXRhZGF0YS5wcm90bxITY2FyYm9uY2FsbC5tZXRhZGF0YSJoChRTdXN0",
             "YWluYWJpbGl0eVJlcG9ydBIPCgdnX3JfaV9kGAEgASgJEi8KCG1ldGFkYXRh",
             "GAIgASgLMh0uY2FyYm9uY2FsbC5tZXRhZGF0YS5NZXRhZGF0YRIOCgZyZXBv",
-            "cnQYAyABKAkiwQYKCE1ldGFkYXRhEg8KB2dfcl9pX2QYASABKAkSHwoXb3Jn",
+            "cnQYAyABKAki2gYKCE1ldGFkYXRhEg8KB2dfcl9pX2QYASABKAkSHwoXb3Jn",
             "YW5pemF0aW9uX2lkZW50aWZpZXIYAiABKAkSGQoRb3JnYW5pemF0aW9uX25h",
             "bWUYAyABKAkSOgoIZG9taWNpbGUYBCABKA4yKC5jYXJib25jYWxsLm1ldGFk",
             "YXRhLklTTzMxNjZfQ291bnRyeUNvZGUSRQoTb3BlcmF0aW5nX2NvdW50cmll",
@@ -45,83 +45,84 @@ namespace CarbonCall.Metadata {
             "ZRgQIAEoCRIUCgxwcmlvcl9yZXBvcnQYESABKAkSEwoLcmVwb3J0X2hhc2gY",
             "EiABKAkSNAoOcmVwb3J0X2NvbnRleHQYEyADKAsyHC5jYXJib25jYWxsLm1l",
             "dGFkYXRhLk1ldGF0YWcSPwoRcHJvcGVydHlfY29udGV4dHMYFCADKAsyJC5j",
-            "YXJib25jYWxsLm1ldGFkYXRhLlByb3BlcnR5Q29udGV4dCI3Cg9SZXBvcnRp",
-            "bmdQZXJpb2QSEgoKc3RhcnRfZGF0ZRgBIAEoCRIQCghlbmRfZGF0ZRgCIAEo",
-            "CSJRCghJbmR1c3RyeRI3CgZwcmVmaXgYASABKA4yJy5jYXJib25jYWxsLm1l",
-            "dGFkYXRhLkluZHVzdHJ5Q29kZVByZWZpeBIMCgRjb2RlGAIgASgJIiUKB01l",
-            "dGF0YWcSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJIlMKD1Byb3BlcnR5",
-            "Q29udGV4dBIQCghwcm9wZXJ0eRgBIAEoCRIuCghtZXRhdGFncxgCIAMoCzIc",
-            "LmNhcmJvbmNhbGwubWV0YWRhdGEuTWV0YXRhZyrdEgoTSVNPMzE2Nl9Db3Vu",
-            "dHJ5Q29kZRILCgdVTktOT1dOEAASBwoDQV9GEAESBwoDQV9YEAISBwoDQV9M",
-            "EAMSBwoDRF9aEAQSBwoDQV9TEAUSBwoDQV9EEAYSBwoDQV9PEAcSBwoDQV9J",
-            "EAgSBwoDQV9REAkSBwoDQV9HEAoSBwoDQV9SEAsSBwoDQV9NEAwSBwoDQV9X",
-            "EA0SBwoDQV9VEA4SBwoDQV9UEA8SBwoDQV9aEBASBwoDQl9TEBESBwoDQl9I",
-            "EBISBwoDQl9EEBMSBwoDQl9CEBQSBwoDQl9ZEBUSBwoDQl9FEBYSBwoDQl9a",
-            "EBcSBwoDQl9KEBgSBwoDQl9NEBkSBwoDQl9UEBoSBwoDQl9PEBsSBwoDQl9R",
-            "EBwSBwoDQl9BEB0SBwoDQl9XEB4SBwoDQl9WEB8SBwoDQl9SECASBwoDSV9P",
-            "ECESBwoDQl9OECISBwoDQl9HECMSBwoDQl9GECQSBwoDQl9JECUSBwoDQ19W",
-            "ECYSBwoDS19IECcSBwoDQ19NECgSBwoDQ19BECkSBwoDS19ZECoSBwoDQ19G",
-            "ECsSBwoDVF9EECwSBwoDQ19MEC0SBwoDQ19OEC4SBwoDQ19YEC8SBwoDQ19D",
-            "EDASBwoDQ19PEDESBwoDS19NEDISBwoDQ19HEDMSBwoDQ19EEDQSBwoDQ19L",
-            "EDUSBwoDQ19SEDYSBwoDQ19JEDcSBwoDSF9SEDgSBwoDQ19VEDkSBwoDQ19X",
-            "EDoSBwoDQ19ZEDsSBwoDQ19aEDwSBwoDRF9LED0SBwoDRF9KED4SBwoDRF9N",
-            "ED8SBwoDRF9PEEASBwoDRV9DEEESBwoDRV9HEEISBwoDU19WEEMSBwoDR19R",
-            "EEQSBwoDRV9SEEUSBwoDRV9FEEYSBwoDRV9UEEcSBwoDRl9LEEgSBwoDRl9P",
-            "EEkSBwoDRl9KEEoSBwoDRl9JEEsSBwoDRl9SEEwSBwoDR19GEE0SBwoDUF9G",
-            "EE4SBwoDVF9GEE8SBwoDR19BEFASBwoDR19NEFESBwoDR19FEFISBwoDRF9F",
-            "EFMSBwoDR19IEFQSBwoDR19JEFUSBwoDR19SEFYSBwoDR19MEFcSBwoDR19E",
-            "EFgSBwoDR19QEFkSBwoDR19VEFoSBwoDR19UEFsSBwoDR19HEFwSBwoDR19O",
-            "EF0SBwoDR19XEF4SBwoDR19ZEF8SBwoDSF9UEGASBwoDSF9NEGESBwoDVl9B",
-            "EGISBwoDSF9OEGMSBwoDSF9LEGQSBwoDSF9VEGUSBwoDSV9TEGYSBwoDSV9O",
-            "EGcSBwoDSV9EEGgSBwoDSV9SEGkSBwoDSV9REGoSBwoDSV9FEGsSBwoDSV9N",
-            "EGwSBwoDSV9MEG0SBwoDSV9UEG4SBwoDSl9NEG8SBwoDSl9QEHASBwoDSl9F",
-            "EHESBwoDSl9PEHISBwoDS19aEHMSBwoDS19FEHQSBwoDS19JEHUSBwoDS19Q",
-            "EHYSBwoDS19SEHcSBwoDS19XEHgSBwoDS19HEHkSBwoDTF9BEHoSBwoDTF9W",
-            "EHsSBwoDTF9CEHwSBwoDTF9TEH0SBwoDTF9SEH4SBwoDTF9ZEH8SCAoDTF9J",
-            "EIABEggKA0xfVBCBARIICgNMX1UQggESCAoDTV9PEIMBEggKA01fSxCEARII",
-            "CgNNX0cQhQESCAoDTV9XEIYBEggKA01fWRCHARIICgNNX1YQiAESCAoDTV9M",
-            "EIkBEggKA01fVBCKARIICgNNX0gQiwESCAoDTV9REIwBEggKA01fUhCNARII",
-            "CgNNX1UQjgESCAoDWV9UEI8BEggKA01fWBCQARIICgNGX00QkQESCAoDTV9E",
-            "EJIBEggKA01fQxCTARIICgNNX04QlAESCAoDTV9FEJUBEggKA01fUxCWARII",
-            "CgNNX0EQlwESCAoDTV9aEJgBEggKA01fTRCZARIICgNOX0EQmgESCAoDTl9S",
-            "EJsBEggKA05fUBCcARIICgNOX0wQnQESCAoDTl9DEJ4BEggKA05fWhCfARII",
-            "CgNOX0kQoAESCAoDTl9FEKEBEggKA05fRxCiARIICgNOX1UQowESCAoDTl9G",
-            "EKQBEggKA01fUBClARIICgNOX08QpgESCAoDT19NEKcBEggKA1BfSxCoARII",
-            "CgNQX1cQqQESCAoDUF9TEKoBEggKA1BfQRCrARIICgNQX0cQrAESCAoDUF9Z",
-            "EK0BEggKA1BfRRCuARIICgNQX0gQrwESCAoDUF9OELABEggKA1BfTBCxARII",
-            "CgNQX1QQsgESCAoDUF9SELMBEggKA1FfQRC0ARIICgNSX0UQtQESCAoDUl9P",
-            "ELYBEggKA1JfVRC3ARIICgNSX1cQuAESCAoDQl9MELkBEggKA1NfSBC6ARII",
-            "CgNLX04QuwESCAoDTF9DELwBEggKA01fRhC9ARIICgNQX00QvgESCAoDVl9D",
-            "EL8BEggKA1dfUxDAARIICgNTX00QwQESCAoDU19UEMIBEggKA1NfQRDDARII",
-            "CgNTX04QxAESCAoDUl9TEMUBEggKA1NfQxDGARIICgNTX0wQxwESCAoDU19H",
-            "EMgBEggKA1NfWBDJARIICgNTX0sQygESCAoDU19JEMsBEggKA1NfQhDMARII",
-            "CgNTX08QzQESCAoDWl9BEM4BEggKA0dfUxDPARIICgNTX1MQ0AESCAoDRV9T",
-            "ENEBEggKA0xfSxDSARIICgNTX0QQ0wESCAoDU19SENQBEggKA1NfShDVARII",
-            "CgNTX1oQ1gESCAoDU19FENcBEggKA0NfSBDYARIICgNTX1kQ2QESCAoDVF9X",
-            "ENoBEggKA1RfShDbARIICgNUX1oQ3AESCAoDVF9IEN0BEggKA1RfTBDeARII",
-            "CgNUX0cQ3wESCAoDVF9LEOABEggKA1RfTxDhARIICgNUX1QQ4gESCAoDVF9O",
-            "EOMBEggKA1RfUhDkARIICgNUX00Q5QESCAoDVF9DEOYBEggKA1RfVhDnARII",
-            "CgNVX0cQ6AESCAoDVV9BEOkBEggKA0FfRRDqARIICgNHX0IQ6wESCAoDVV9T",
-            "EOwBEggKA1VfTRDtARIICgNVX1kQ7gESCAoDVV9aEO8BEggKA1ZfVRDwARII",
-            "CgNWX0UQ8QESCAoDVl9OEPIBEggKA1ZfRxDzARIICgNWX0kQ9AESCAoDV19G",
-            "EPUBEggKA0VfSBD2ARIICgNZX0UQ9wESCAoDWl9NEPgBEggKA1pfVxD5ASoq",
-            "CghMYW5ndWFnZRIGCgJlbhAAEgYKAmVzEAESBgoCemgQAhIGCgJmchADKtEB",
-            "CgpSZXBvcnRUeXBlEhUKEUlOVEVHUkFURURfUkVQT1JUEAASFAoQRklOQU5D",
-            "SUFMX1JFUE9SVBABEhkKFVNVU1RBSU5BQklMSVRZX1JFUE9SVBACEhEKDUFO",
-            "TlVBTF9SRVBPUlQQAxITCg9QUk9YWV9TVEFURU1FTlQQBBIaChZSRUdJU1RS",
-            "QVRJT05fU1RBVEVNRU5UEAUSFAoQUVVBUlRFUkxZX1JFUE9SVBAGEhYKEkhB",
-            "TEZfWUVBUkxZX1JFUE9SVBAHEgkKBU9USEVSEAgqSAoSSW5kdXN0cnlDb2Rl",
-            "UHJlZml4EgsKB0lfU19JX0MQABINCglOX0FfSV9DX1MQARILCgdHX0lfQ19T",
-            "EAISCQoFU19JX0MQAyo2CgxSZXBvcnRGb3JtYXQSCQoFUF9EX0YQABINCglp",
-            "X1hfQl9SX0wQARIMCghPUEVOX1hNTBACKlQKEVJlcG9ydGluZ1N0YW5kYXJk",
-            "EgsKB0dfQV9BX1AQABILCgdJX0ZfUl9TEAESCwoHSV9TX1NfQhACEg0KCUVf",
-            "Rl9SX0FfRxADEgkKBUdfUl9JEARCMQoXb3JnLmNhcmJvbmNhbGwubWV0YWRh",
-            "dGFQAaoCE0NhcmJvbkNhbGwuTWV0YWRhdGFiBnByb3RvMw=="));
+            "YXJib25jYWxsLm1ldGFkYXRhLlByb3BlcnR5Q29udGV4dBIXCg9yZWxhdGVk",
+            "X3JlcG9ydHMYFSADKAkiNwoPUmVwb3J0aW5nUGVyaW9kEhIKCnN0YXJ0X2Rh",
+            "dGUYASABKAkSEAoIZW5kX2RhdGUYAiABKAkiUQoISW5kdXN0cnkSNwoGcHJl",
+            "Zml4GAEgASgOMicuY2FyYm9uY2FsbC5tZXRhZGF0YS5JbmR1c3RyeUNvZGVQ",
+            "cmVmaXgSDAoEY29kZRgCIAEoCSIlCgdNZXRhdGFnEgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCSJTCg9Qcm9wZXJ0eUNvbnRleHQSEAoIcHJvcGVydHkY",
+            "ASABKAkSLgoIbWV0YXRhZ3MYAiADKAsyHC5jYXJib25jYWxsLm1ldGFkYXRh",
+            "Lk1ldGF0YWcq3RIKE0lTTzMxNjZfQ291bnRyeUNvZGUSCwoHVU5LTk9XThAA",
+            "EgcKA0FfRhABEgcKA0FfWBACEgcKA0FfTBADEgcKA0RfWhAEEgcKA0FfUxAF",
+            "EgcKA0FfRBAGEgcKA0FfTxAHEgcKA0FfSRAIEgcKA0FfURAJEgcKA0FfRxAK",
+            "EgcKA0FfUhALEgcKA0FfTRAMEgcKA0FfVxANEgcKA0FfVRAOEgcKA0FfVBAP",
+            "EgcKA0FfWhAQEgcKA0JfUxAREgcKA0JfSBASEgcKA0JfRBATEgcKA0JfQhAU",
+            "EgcKA0JfWRAVEgcKA0JfRRAWEgcKA0JfWhAXEgcKA0JfShAYEgcKA0JfTRAZ",
+            "EgcKA0JfVBAaEgcKA0JfTxAbEgcKA0JfURAcEgcKA0JfQRAdEgcKA0JfVxAe",
+            "EgcKA0JfVhAfEgcKA0JfUhAgEgcKA0lfTxAhEgcKA0JfThAiEgcKA0JfRxAj",
+            "EgcKA0JfRhAkEgcKA0JfSRAlEgcKA0NfVhAmEgcKA0tfSBAnEgcKA0NfTRAo",
+            "EgcKA0NfQRApEgcKA0tfWRAqEgcKA0NfRhArEgcKA1RfRBAsEgcKA0NfTBAt",
+            "EgcKA0NfThAuEgcKA0NfWBAvEgcKA0NfQxAwEgcKA0NfTxAxEgcKA0tfTRAy",
+            "EgcKA0NfRxAzEgcKA0NfRBA0EgcKA0NfSxA1EgcKA0NfUhA2EgcKA0NfSRA3",
+            "EgcKA0hfUhA4EgcKA0NfVRA5EgcKA0NfVxA6EgcKA0NfWRA7EgcKA0NfWhA8",
+            "EgcKA0RfSxA9EgcKA0RfShA+EgcKA0RfTRA/EgcKA0RfTxBAEgcKA0VfQxBB",
+            "EgcKA0VfRxBCEgcKA1NfVhBDEgcKA0dfURBEEgcKA0VfUhBFEgcKA0VfRRBG",
+            "EgcKA0VfVBBHEgcKA0ZfSxBIEgcKA0ZfTxBJEgcKA0ZfShBKEgcKA0ZfSRBL",
+            "EgcKA0ZfUhBMEgcKA0dfRhBNEgcKA1BfRhBOEgcKA1RfRhBPEgcKA0dfQRBQ",
+            "EgcKA0dfTRBREgcKA0dfRRBSEgcKA0RfRRBTEgcKA0dfSBBUEgcKA0dfSRBV",
+            "EgcKA0dfUhBWEgcKA0dfTBBXEgcKA0dfRBBYEgcKA0dfUBBZEgcKA0dfVRBa",
+            "EgcKA0dfVBBbEgcKA0dfRxBcEgcKA0dfThBdEgcKA0dfVxBeEgcKA0dfWRBf",
+            "EgcKA0hfVBBgEgcKA0hfTRBhEgcKA1ZfQRBiEgcKA0hfThBjEgcKA0hfSxBk",
+            "EgcKA0hfVRBlEgcKA0lfUxBmEgcKA0lfThBnEgcKA0lfRBBoEgcKA0lfUhBp",
+            "EgcKA0lfURBqEgcKA0lfRRBrEgcKA0lfTRBsEgcKA0lfTBBtEgcKA0lfVBBu",
+            "EgcKA0pfTRBvEgcKA0pfUBBwEgcKA0pfRRBxEgcKA0pfTxByEgcKA0tfWhBz",
+            "EgcKA0tfRRB0EgcKA0tfSRB1EgcKA0tfUBB2EgcKA0tfUhB3EgcKA0tfVxB4",
+            "EgcKA0tfRxB5EgcKA0xfQRB6EgcKA0xfVhB7EgcKA0xfQhB8EgcKA0xfUxB9",
+            "EgcKA0xfUhB+EgcKA0xfWRB/EggKA0xfSRCAARIICgNMX1QQgQESCAoDTF9V",
+            "EIIBEggKA01fTxCDARIICgNNX0sQhAESCAoDTV9HEIUBEggKA01fVxCGARII",
+            "CgNNX1kQhwESCAoDTV9WEIgBEggKA01fTBCJARIICgNNX1QQigESCAoDTV9I",
+            "EIsBEggKA01fURCMARIICgNNX1IQjQESCAoDTV9VEI4BEggKA1lfVBCPARII",
+            "CgNNX1gQkAESCAoDRl9NEJEBEggKA01fRBCSARIICgNNX0MQkwESCAoDTV9O",
+            "EJQBEggKA01fRRCVARIICgNNX1MQlgESCAoDTV9BEJcBEggKA01fWhCYARII",
+            "CgNNX00QmQESCAoDTl9BEJoBEggKA05fUhCbARIICgNOX1AQnAESCAoDTl9M",
+            "EJ0BEggKA05fQxCeARIICgNOX1oQnwESCAoDTl9JEKABEggKA05fRRChARII",
+            "CgNOX0cQogESCAoDTl9VEKMBEggKA05fRhCkARIICgNNX1AQpQESCAoDTl9P",
+            "EKYBEggKA09fTRCnARIICgNQX0sQqAESCAoDUF9XEKkBEggKA1BfUxCqARII",
+            "CgNQX0EQqwESCAoDUF9HEKwBEggKA1BfWRCtARIICgNQX0UQrgESCAoDUF9I",
+            "EK8BEggKA1BfThCwARIICgNQX0wQsQESCAoDUF9UELIBEggKA1BfUhCzARII",
+            "CgNRX0EQtAESCAoDUl9FELUBEggKA1JfTxC2ARIICgNSX1UQtwESCAoDUl9X",
+            "ELgBEggKA0JfTBC5ARIICgNTX0gQugESCAoDS19OELsBEggKA0xfQxC8ARII",
+            "CgNNX0YQvQESCAoDUF9NEL4BEggKA1ZfQxC/ARIICgNXX1MQwAESCAoDU19N",
+            "EMEBEggKA1NfVBDCARIICgNTX0EQwwESCAoDU19OEMQBEggKA1JfUxDFARII",
+            "CgNTX0MQxgESCAoDU19MEMcBEggKA1NfRxDIARIICgNTX1gQyQESCAoDU19L",
+            "EMoBEggKA1NfSRDLARIICgNTX0IQzAESCAoDU19PEM0BEggKA1pfQRDOARII",
+            "CgNHX1MQzwESCAoDU19TENABEggKA0VfUxDRARIICgNMX0sQ0gESCAoDU19E",
+            "ENMBEggKA1NfUhDUARIICgNTX0oQ1QESCAoDU19aENYBEggKA1NfRRDXARII",
+            "CgNDX0gQ2AESCAoDU19ZENkBEggKA1RfVxDaARIICgNUX0oQ2wESCAoDVF9a",
+            "ENwBEggKA1RfSBDdARIICgNUX0wQ3gESCAoDVF9HEN8BEggKA1RfSxDgARII",
+            "CgNUX08Q4QESCAoDVF9UEOIBEggKA1RfThDjARIICgNUX1IQ5AESCAoDVF9N",
+            "EOUBEggKA1RfQxDmARIICgNUX1YQ5wESCAoDVV9HEOgBEggKA1VfQRDpARII",
+            "CgNBX0UQ6gESCAoDR19CEOsBEggKA1VfUxDsARIICgNVX00Q7QESCAoDVV9Z",
+            "EO4BEggKA1VfWhDvARIICgNWX1UQ8AESCAoDVl9FEPEBEggKA1ZfThDyARII",
+            "CgNWX0cQ8wESCAoDVl9JEPQBEggKA1dfRhD1ARIICgNFX0gQ9gESCAoDWV9F",
+            "EPcBEggKA1pfTRD4ARIICgNaX1cQ+QEqKgoITGFuZ3VhZ2USBgoCZW4QABIG",
+            "CgJlcxABEgYKAnpoEAISBgoCZnIQAyrRAQoKUmVwb3J0VHlwZRIVChFJTlRF",
+            "R1JBVEVEX1JFUE9SVBAAEhQKEEZJTkFOQ0lBTF9SRVBPUlQQARIZChVTVVNU",
+            "QUlOQUJJTElUWV9SRVBPUlQQAhIRCg1BTk5VQUxfUkVQT1JUEAMSEwoPUFJP",
+            "WFlfU1RBVEVNRU5UEAQSGgoWUkVHSVNUUkFUSU9OX1NUQVRFTUVOVBAFEhQK",
+            "EFFVQVJURVJMWV9SRVBPUlQQBhIWChJIQUxGX1lFQVJMWV9SRVBPUlQQBxIJ",
+            "CgVPVEhFUhAIKkgKEkluZHVzdHJ5Q29kZVByZWZpeBILCgdJX1NfSV9DEAAS",
+            "DQoJTl9BX0lfQ19TEAESCwoHR19JX0NfUxACEgkKBVNfSV9DEAMqNgoMUmVw",
+            "b3J0Rm9ybWF0EgkKBVBfRF9GEAASDQoJaV9YX0JfUl9MEAESDAoIT1BFTl9Y",
+            "TUwQAipUChFSZXBvcnRpbmdTdGFuZGFyZBILCgdHX0FfQV9QEAASCwoHSV9G",
+            "X1JfUxABEgsKB0lfU19TX0IQAhINCglFX0ZfUl9BX0cQAxIJCgVHX1JfSRAE",
+            "QjEKF29yZy5jYXJib25jYWxsLm1ldGFkYXRhUAGqAhNDYXJib25DYWxsLk1l",
+            "dGFkYXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::CarbonCall.Metadata.ISO3166_CountryCode), typeof(global::CarbonCall.Metadata.Language), typeof(global::CarbonCall.Metadata.ReportType), typeof(global::CarbonCall.Metadata.IndustryCodePrefix), typeof(global::CarbonCall.Metadata.ReportFormat), typeof(global::CarbonCall.Metadata.ReportingStandard), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.SustainabilityReport), global::CarbonCall.Metadata.SustainabilityReport.Parser, new[]{ "GRID", "Metadata", "Report" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.Metadata), global::CarbonCall.Metadata.Metadata.Parser, new[]{ "GRID", "OrganizationIdentifier", "OrganizationName", "Domicile", "OperatingCountries", "Languages", "ReportType", "ReportIssueDate", "ReportingPeriod", "ReportReplaces", "Location", "Industry", "Performance", "ReportFormat", "ReportingStandard", "Assurance", "PriorReport", "ReportHash", "ReportContext", "PropertyContexts" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.Metadata), global::CarbonCall.Metadata.Metadata.Parser, new[]{ "GRID", "OrganizationIdentifier", "OrganizationName", "Domicile", "OperatingCountries", "Languages", "ReportType", "ReportIssueDate", "ReportingPeriod", "ReportReplaces", "Location", "Industry", "Performance", "ReportFormat", "ReportingStandard", "Assurance", "PriorReport", "ReportHash", "ReportContext", "PropertyContexts", "RelatedReports" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.ReportingPeriod), global::CarbonCall.Metadata.ReportingPeriod.Parser, new[]{ "StartDate", "EndDate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.Industry), global::CarbonCall.Metadata.Industry.Parser, new[]{ "Prefix", "Code" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::CarbonCall.Metadata.Metatag), global::CarbonCall.Metadata.Metatag.Parser, new[]{ "Key", "Value" }, null, null, null, null),
@@ -1534,6 +1535,7 @@ namespace CarbonCall.Metadata {
       reportHash_ = other.reportHash_;
       reportContext_ = other.reportContext_.Clone();
       propertyContexts_ = other.propertyContexts_.Clone();
+      relatedReports_ = other.relatedReports_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1812,6 +1814,20 @@ namespace CarbonCall.Metadata {
       get { return propertyContexts_; }
     }
 
+    /// <summary>Field number for the "related_reports" field.</summary>
+    public const int RelatedReportsFieldNumber = 21;
+    private static readonly pb::FieldCodec<string> _repeated_relatedReports_codec
+        = pb::FieldCodec.ForString(170);
+    private readonly pbc::RepeatedField<string> relatedReports_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    ///GR.IDs of related reports
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RelatedReports {
+      get { return relatedReports_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1847,6 +1863,7 @@ namespace CarbonCall.Metadata {
       if (ReportHash != other.ReportHash) return false;
       if(!reportContext_.Equals(other.reportContext_)) return false;
       if(!propertyContexts_.Equals(other.propertyContexts_)) return false;
+      if(!relatedReports_.Equals(other.relatedReports_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1874,6 +1891,7 @@ namespace CarbonCall.Metadata {
       if (ReportHash.Length != 0) hash ^= ReportHash.GetHashCode();
       hash ^= reportContext_.GetHashCode();
       hash ^= propertyContexts_.GetHashCode();
+      hash ^= relatedReports_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1960,6 +1978,7 @@ namespace CarbonCall.Metadata {
       }
       reportContext_.WriteTo(output, _repeated_reportContext_codec);
       propertyContexts_.WriteTo(output, _repeated_propertyContexts_codec);
+      relatedReports_.WriteTo(output, _repeated_relatedReports_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2038,6 +2057,7 @@ namespace CarbonCall.Metadata {
       }
       reportContext_.WriteTo(ref output, _repeated_reportContext_codec);
       propertyContexts_.WriteTo(ref output, _repeated_propertyContexts_codec);
+      relatedReports_.WriteTo(ref output, _repeated_relatedReports_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2100,6 +2120,7 @@ namespace CarbonCall.Metadata {
       }
       size += reportContext_.CalculateSize(_repeated_reportContext_codec);
       size += propertyContexts_.CalculateSize(_repeated_propertyContexts_codec);
+      size += relatedReports_.CalculateSize(_repeated_relatedReports_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2170,6 +2191,7 @@ namespace CarbonCall.Metadata {
       }
       reportContext_.Add(other.reportContext_);
       propertyContexts_.Add(other.propertyContexts_);
+      relatedReports_.Add(other.relatedReports_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2273,6 +2295,10 @@ namespace CarbonCall.Metadata {
             propertyContexts_.AddEntriesFrom(input, _repeated_propertyContexts_codec);
             break;
           }
+          case 170: {
+            relatedReports_.AddEntriesFrom(input, _repeated_relatedReports_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2374,6 +2400,10 @@ namespace CarbonCall.Metadata {
           }
           case 162: {
             propertyContexts_.AddEntriesFrom(ref input, _repeated_propertyContexts_codec);
+            break;
+          }
+          case 170: {
+            relatedReports_.AddEntriesFrom(ref input, _repeated_relatedReports_codec);
             break;
           }
         }

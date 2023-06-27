@@ -1,5 +1,5 @@
 {
-  "grid": "SDJQ.BPUN.15",
+  "grid": "KFCZ.PNQB.7",
   "organizationIdentifier": "LEI: 254900OPPU84GM83MG36",
   "organizationName": "CarbonCall",
   "domicile": "US",
@@ -59,5 +59,9 @@
         }
       ]
     }
+  ],
+  "relatedReports": [
+    "SDJQ.BPUN.15",
+    "ADCF.GPOM.16"
   ]
 }

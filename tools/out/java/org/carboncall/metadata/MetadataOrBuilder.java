@@ -418,4 +418,45 @@ public interface MetadataOrBuilder extends
    */
   org.carboncall.metadata.PropertyContextOrBuilder getPropertyContextsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   *GR.IDs of related reports
+   * </pre>
+   *
+   * <code>repeated string related_reports = 21;</code>
+   * @return A list containing the relatedReports.
+   */
+  java.util.List<java.lang.String>
+      getRelatedReportsList();
+  /**
+   * <pre>
+   *GR.IDs of related reports
+   * </pre>
+   *
+   * <code>repeated string related_reports = 21;</code>
+   * @return The count of relatedReports.
+   */
+  int getRelatedReportsCount();
+  /**
+   * <pre>
+   *GR.IDs of related reports
+   * </pre>
+   *
+   * <code>repeated string related_reports = 21;</code>
+   * @param index The index of the element to return.
+   * @return The relatedReports at the given index.
+   */
+  java.lang.String getRelatedReports(int index);
+  /**
+   * <pre>
+   *GR.IDs of related reports
+   * </pre>
+   *
+   * <code>repeated string related_reports = 21;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the relatedReports at the given index.
+   */
+  com.google.protobuf.ByteString
+      getRelatedReportsBytes(int index);
 }

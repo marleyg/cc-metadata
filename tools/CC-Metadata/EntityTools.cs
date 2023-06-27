@@ -50,6 +50,7 @@ public static class EntityTools
             ReportHash = "dftaae3297i89798adsdf832adfs912231azsdf",
             ReportContext = { GetReportMetatags() },
             PropertyContexts = { GetPropertyContexts() },
+            RelatedReports = { "SDJQ.BPUN.15", "ADCF.GPOM.16" },
         };
         return m;
     }

@@ -106,6 +106,11 @@ export class Metadata extends jspb.Message {
   setPropertyContextsList(value: Array<PropertyContext>): void;
   addPropertyContexts(value?: PropertyContext, index?: number): PropertyContext;
 
+  clearRelatedReportsList(): void;
+  getRelatedReportsList(): Array<string>;
+  setRelatedReportsList(value: Array<string>): void;
+  addRelatedReports(value: string, index?: number): string;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Metadata.AsObject;
   static toObject(includeInstance: boolean, msg: Metadata): Metadata.AsObject;
@@ -138,6 +143,7 @@ export namespace Metadata {
     reportHash: string,
     reportContextList: Array<Metatag.AsObject>,
     propertyContextsList: Array<PropertyContext.AsObject>,
+    relatedReportsList: Array<string>,
   }
 }
 

@@ -34,6 +34,7 @@ private static final long serialVersionUID = 0L;
     reportHash_ = "";
     reportContext_ = java.util.Collections.emptyList();
     propertyContexts_ = java.util.Collections.emptyList();
+    relatedReports_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -241,6 +242,15 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(org.carboncall.metadata.PropertyContext.parser(), extensionRegistry));
             break;
           }
+          case 170: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+              relatedReports_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000010;
+            }
+            relatedReports_.add(s);
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -269,6 +279,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((mutable_bitField0_ & 0x00000008) != 0)) {
         propertyContexts_ = java.util.Collections.unmodifiableList(propertyContexts_);
+      }
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+        relatedReports_ = relatedReports_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -1103,6 +1116,57 @@ private static final long serialVersionUID = 0L;
     return propertyContexts_.get(index);
   }
 
+  public static final int RELATED_REPORTS_FIELD_NUMBER = 21;
+  private com.google.protobuf.LazyStringList relatedReports_;
+  /**
+   * <pre>
+   *GR.IDs of related reports
+   * </pre>
+   *
+   * <code>repeated string related_reports = 21;</code>
+   * @return A list containing the relatedReports.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getRelatedReportsList() {
+    return relatedReports_;
+  }
+  /**
+   * <pre>
+   *GR.IDs of related reports
+   * </pre>
+   *
+   * <code>repeated string related_reports = 21;</code>
+   * @return The count of relatedReports.
+   */
+  public int getRelatedReportsCount() {
+    return relatedReports_.size();
+  }
+  /**
+   * <pre>
+   *GR.IDs of related reports
+   * </pre>
+   *
+   * <code>repeated string related_reports = 21;</code>
+   * @param index The index of the element to return.
+   * @return The relatedReports at the given index.
+   */
+  public java.lang.String getRelatedReports(int index) {
+    return relatedReports_.get(index);
+  }
+  /**
+   * <pre>
+   *GR.IDs of related reports
+   * </pre>
+   *
+   * <code>repeated string related_reports = 21;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the relatedReports at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getRelatedReportsBytes(int index) {
+    return relatedReports_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1185,6 +1249,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < propertyContexts_.size(); i++) {
       output.writeMessage(20, propertyContexts_.get(i));
+    }
+    for (int i = 0; i < relatedReports_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 21, relatedReports_.getRaw(i));
     }
     unknownFields.writeTo(output);
   }
@@ -1281,6 +1348,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, propertyContexts_.get(i));
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < relatedReports_.size(); i++) {
+        dataSize += computeStringSizeNoTag(relatedReports_.getRaw(i));
+      }
+      size += dataSize;
+      size += 2 * getRelatedReportsList().size();
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1336,6 +1411,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getReportContextList())) return false;
     if (!getPropertyContextsList()
         .equals(other.getPropertyContextsList())) return false;
+    if (!getRelatedReportsList()
+        .equals(other.getRelatedReportsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1398,6 +1475,10 @@ private static final long serialVersionUID = 0L;
     if (getPropertyContextsCount() > 0) {
       hash = (37 * hash) + PROPERTY_CONTEXTS_FIELD_NUMBER;
       hash = (53 * hash) + getPropertyContextsList().hashCode();
+    }
+    if (getRelatedReportsCount() > 0) {
+      hash = (37 * hash) + RELATED_REPORTS_FIELD_NUMBER;
+      hash = (53 * hash) + getRelatedReportsList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -1590,6 +1671,8 @@ private static final long serialVersionUID = 0L;
       } else {
         propertyContextsBuilder_.clear();
       }
+      relatedReports_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -1669,6 +1752,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.propertyContexts_ = propertyContextsBuilder_.build();
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        relatedReports_ = relatedReports_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.relatedReports_ = relatedReports_;
       onBuilt();
       return result;
     }
@@ -1846,6 +1934,16 @@ private static final long serialVersionUID = 0L;
             propertyContextsBuilder_.addAllMessages(other.propertyContexts_);
           }
         }
+      }
+      if (!other.relatedReports_.isEmpty()) {
+        if (relatedReports_.isEmpty()) {
+          relatedReports_ = other.relatedReports_;
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          ensureRelatedReportsIsMutable();
+          relatedReports_.addAll(other.relatedReports_);
+        }
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -4173,6 +4271,152 @@ private static final long serialVersionUID = 0L;
         propertyContexts_ = null;
       }
       return propertyContextsBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringList relatedReports_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureRelatedReportsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        relatedReports_ = new com.google.protobuf.LazyStringArrayList(relatedReports_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+    /**
+     * <pre>
+     *GR.IDs of related reports
+     * </pre>
+     *
+     * <code>repeated string related_reports = 21;</code>
+     * @return A list containing the relatedReports.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRelatedReportsList() {
+      return relatedReports_.getUnmodifiableView();
+    }
+    /**
+     * <pre>
+     *GR.IDs of related reports
+     * </pre>
+     *
+     * <code>repeated string related_reports = 21;</code>
+     * @return The count of relatedReports.
+     */
+    public int getRelatedReportsCount() {
+      return relatedReports_.size();
+    }
+    /**
+     * <pre>
+     *GR.IDs of related reports
+     * </pre>
+     *
+     * <code>repeated string related_reports = 21;</code>
+     * @param index The index of the element to return.
+     * @return The relatedReports at the given index.
+     */
+    public java.lang.String getRelatedReports(int index) {
+      return relatedReports_.get(index);
+    }
+    /**
+     * <pre>
+     *GR.IDs of related reports
+     * </pre>
+     *
+     * <code>repeated string related_reports = 21;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the relatedReports at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRelatedReportsBytes(int index) {
+      return relatedReports_.getByteString(index);
+    }
+    /**
+     * <pre>
+     *GR.IDs of related reports
+     * </pre>
+     *
+     * <code>repeated string related_reports = 21;</code>
+     * @param index The index to set the value at.
+     * @param value The relatedReports to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRelatedReports(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRelatedReportsIsMutable();
+      relatedReports_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *GR.IDs of related reports
+     * </pre>
+     *
+     * <code>repeated string related_reports = 21;</code>
+     * @param value The relatedReports to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRelatedReports(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRelatedReportsIsMutable();
+      relatedReports_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *GR.IDs of related reports
+     * </pre>
+     *
+     * <code>repeated string related_reports = 21;</code>
+     * @param values The relatedReports to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllRelatedReports(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureRelatedReportsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, relatedReports_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *GR.IDs of related reports
+     * </pre>
+     *
+     * <code>repeated string related_reports = 21;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRelatedReports() {
+      relatedReports_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *GR.IDs of related reports
+     * </pre>
+     *
+     * <code>repeated string related_reports = 21;</code>
+     * @param value The bytes of the relatedReports to add.
+     * @return This builder for chaining.
+     */
+    public Builder addRelatedReportsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      ensureRelatedReportsIsMutable();
+      relatedReports_.add(value);
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
